@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fondo · Private budget planner · Minimal Habits</title>
+<meta name="description" content="Fondo is a private budget planner for iPhone: plan every paycheck, track bills and subscriptions, fund savings goals and see your debt-free date. No account, no bank login, no ads.">
+<meta property="og:title" content="Fondo · Private budget planner">
+<meta property="og:description" content="Plan every paycheck, track bills and subscriptions, and see your debt-free date. No account, no bank login, no ads.">
+<meta property="og:image" content="https://minimalhabits.github.io/assets/fondo-home.png">
+<meta property="og:url" content="https://minimalhabits.github.io/fondo.html">
+<meta property="og:type" content="website">
+<meta name="apple-itunes-app" content="app-id=6811070728">
+<meta name="theme-color" content="#EEF1FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090B18" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://minimalhabits.github.io/fondo.html">
+<link rel="icon" href="assets/fondo-icon.png">
+<style>
+:root{
+  --bg:#EEF1FB; --card:#FFFFFF; --ink:#12142A; --ink2:#565E80; --line:#D9DFF3;
+  --accent:#2563EB; --accent-ink:#FFFFFF; --label:#4F46E5; --glow:none;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#090B18; --card:#12152A; --ink:#F3F4FF; --ink2:#A9B1D6; --line:#252A47;
+    --accent:#22D3EE; --accent-ink:#06121A; --label:#22D3EE;
+    --glow:radial-gradient(circle at 8% 0%, rgba(79,70,229,.42), transparent 46%),
+      radial-gradient(circle at 100% 30%, rgba(34,211,238,.16), transparent 40%),
+      radial-gradient(circle at 40% 100%, rgba(217,70,239,.2), transparent 46%); }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;min-height:100vh;background:var(--glow);background-attachment:fixed;color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.02em;text-decoration:none;color:inherit}
+.brand svg{width:44px;height:31px}
+nav a{margin-left:18px;font-weight:600;font-size:15px;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:28px 0 56px}
+.app{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.app img{width:64px;height:64px;border-radius:15px;box-shadow:0 6px 18px rgba(9,11,24,.25)}
+.app b{font-size:20px}
+.app span{display:block;color:var(--ink2);font-size:14px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:0 0 16px;letter-spacing:-1px;text-wrap:balance}
+.lead{font-size:19px;color:var(--ink2);margin:0 0 26px;max-width:34em}
+.get{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:800;padding:14px 22px;border-radius:14px}
+.btn:hover{filter:brightness(1.06)}
+.soon{display:inline-block;border:1px solid var(--line);color:var(--ink2);font-weight:600;font-size:15px;padding:13px 20px;border-radius:14px}
+.note{color:var(--ink2);font-size:14px;margin-top:12px}
+.shots{display:flex;gap:14px;justify-content:center}
+.shots img{width:31%;max-width:210px;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(9,11,24,.22)}
+.shots img:nth-child(2){transform:translateY(22px)}
+h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--label);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--ink2);font-size:15.5px}
+.pro{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--label);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.look{padding-bottom:78px}
+.plans{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-bottom:56px}
+.plans h3{margin:0 0 8px;font-size:20px}
+.plans p{margin:0 0 10px;color:var(--ink2);max-width:46em}
+.plans p:last-child{margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--ink2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+footer a{font-weight:600}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding-bottom:44px}
+  .grid{grid-template-columns:1fr}
+  nav a{margin-left:14px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./" aria-label="Minimal Habits, home">
+      <svg viewBox="80 136 350 250" aria-hidden="true"><g transform="translate(6 -16)">
+        <path d="M112 196V356M112 236a50 50 0 0 1 100 0V356M212 236a50 50 0 0 1 100 0V356" fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="388" cy="350" r="31" fill="#FF6A3D"/>
+      </g></svg>
+      <span>minimal habits</span>
+    </a>
+    <nav>
+      <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Privacy</a>
+      <a href="mailto:hello.minimalhabits@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="app">
+        <img src="assets/fondo-icon.png" alt="Fondo app icon" width="64" height="64">
+        <div><b>Fondo</b><span>Budget Planner</span></div>
+      </div>
+      <h1>Private budgeting that stays on your phone.</h1>
+      <p class="lead">Plan every paycheck, keep track of bills and subscriptions, and see your debt-free date. No account, no bank login, no ads.</p>
+      <div class="get">
+        <a class="btn" href="https://apps.apple.com/app/id6811070728">Download on the App Store</a>
+        <span class="soon">Google Play: in review</span>
+      </div>
+      <div class="note">Free to download. Available in English, Spanish and Arabic.</div>
+    </div>
+    <div class="shots">
+      <img src="assets/fondo-home.png" alt="Fondo home screen showing what is left to spend this month" width="420" height="911">
+      <img src="assets/fondo-debts.png" alt="Fondo debts screen with a debt-free forecast date" width="420" height="911">
+      <img src="assets/fondo-dark.png" alt="Fondo home screen in dark mode" width="420" height="911">
+    </div>
+  </section>
+
+  <h2>What Fondo does</h2>
+  <section class="grid">
+    <div class="card"><h3>One number: what's left</h3><p>Add what you earn and what you owe, and Fondo shows what's left to spend this month. Weekly and biweekly amounts become one monthly figure.</p></div>
+    <div class="card"><h3>Bills and subscriptions</h3><p>Give each bill a due day and Fondo reminds you when it comes around. Tick items off as you pay, and see what your subscriptions really cost per year.</p></div>
+    <div class="card"><h3>Savings goals</h3><p>Set money aside every cycle and split it across your goals by priority. Watch your savings total grow.</p></div>
+    <div class="card"><h3>A plan for debt</h3><p>Track cards and loans, choose snowball or avalanche, and always know what to pay next. Pro adds the month you'll be debt-free.</p></div>
+    <div class="card"><h3>Look ahead <span class="pro">PRO</span></h3><p>Test a raise or a new bill in the what-if planner before you commit, and follow your balance day by day in the cashflow calendar.</p></div>
+    <div class="card"><h3>Private by design</h3><p>Your budget is stored on your device. No account, no bank login, no ads, no analytics. Lock the app with Face ID and keep a backup file you own.</p></div>
+  </section>
+
+  <h2>A closer look</h2>
+  <section class="shots look">
+    <img src="assets/fondo-savings.png" alt="Fondo savings screen with a savings total and goals" width="420" height="911" loading="lazy">
+    <img src="assets/fondo-whatif.png" alt="Fondo what-if planner comparing now with a possible change" width="420" height="911" loading="lazy">
+    <img src="assets/fondo-cashflow.png" alt="Fondo cashflow screen projecting the balance day by day" width="420" height="911" loading="lazy">
+  </section>
+
+  <h2>Free and Pro</h2>
+  <section class="plans">
+    <h3>The budget is free.</h3>
+    <p>Planning your month, bill reminders, debt tracking, two savings goals, the app lock and full backups cost nothing and need no account.</p>
+    <p>Fondo Pro is an optional subscription with a 3-day free trial: US$9.99 a month or US$83.88 a year (prices vary by country). It adds the what-if planner, cashflow calendar, debt-free forecast, subscription radar, multi-month projections, search across months, full-history insights, unlimited savings goals, calculators, CSV export and encrypted backups. Cancel anytime.</p>
+  </section>
+
+  <footer>
+    <div>© 2026 Minimal Habits</div>
+    <div>
+      <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Privacy Policy</a> ·
+      <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
