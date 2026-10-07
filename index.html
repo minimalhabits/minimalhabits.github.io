@@ -3,49 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Minimal Habits · Cactara</title>
-<meta name="description" content="Minimal Habits makes Cactara, a private habit tracker and budget planner that grows a plant with every streak.">
-<link rel="icon" href="assets/favicon.png">
+<title>Minimal Habits · small apps and games</title>
+<meta name="description" content="Minimal Habits is a small studio making simple, useful apps and games: Fondo, a private budget planner, and Cactara, a habit tracker and budget.">
+<meta property="og:title" content="Minimal Habits · small apps and games">
+<meta property="og:description" content="A small studio making simple, useful apps and games.">
+<meta property="og:image" content="https://minimalhabits.github.io/assets/share.png">
+<meta property="og:url" content="https://minimalhabits.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16181D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://minimalhabits.github.io/">
+<link rel="icon" href="assets/studio-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/studio-icon-512.png">
 <style>
 :root{
-  --bg:#F5EFE2; --card:#FFFDF8; --ink:#1C4B3C; --ink2:#5B6B63; --line:#E7DCC5;
-  --accent:#1C7A4E; --accent-ink:#FFFFFF; --gold:#7A5F32;
+  --bg:#F3F1EC; --card:#FBFAF7; --ink:#16181D; --ink2:#66625B; --line:#DFDBD2; --dot:#FF6A3D;
+  --btn:#16181D; --btn-ink:#F3F1EC;
 }
 @media (prefers-color-scheme: dark){
-  :root{ --bg:#121815; --card:#1B231F; --ink:#E9F2EC; --ink2:#9DB0A6; --line:#2C3832;
-    --accent:#4FCB85; --accent-ink:#0E1A14; --gold:#C9A96A; }
+  :root{ --bg:#16181D; --card:#1E2128; --ink:#F3F1EC; --ink2:#A29E96; --line:#2E323B; --btn:#F3F1EC; --btn-ink:#16181D; }
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--accent)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0}
-.brand{font-weight:800;letter-spacing:.2px;font-size:18px}
-nav a{margin-left:18px;font-weight:600;font-size:15px;text-decoration:none}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:28px 0 56px}
-.app{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.app img{width:64px;height:64px;border-radius:15px;box-shadow:0 6px 18px rgba(18,51,40,.18)}
-.app b{font-size:20px}
-.app span{display:block;color:var(--ink2);font-size:14px}
-h1{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:0 0 16px;letter-spacing:-1px;text-wrap:balance}
-.lead{font-size:19px;color:var(--ink2);margin:0 0 26px;max-width:34em}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:800;padding:14px 22px;border-radius:14px}
-.btn:hover{filter:brightness(1.06)}
-.note{color:var(--ink2);font-size:14px;margin-top:12px}
-.shots{display:flex;gap:14px;justify-content:center}
-.shots img{width:31%;max-width:210px;border-radius:16px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(18,51,40,.16)}
-.shots img:nth-child(2){transform:translateY(22px)}
-h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:56px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.card h3{margin:0 0 6px;font-size:18px}
-.card p{margin:0;color:var(--ink2);font-size:15.5px}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--ink2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.02em;text-decoration:none}
+.brand svg{width:44px;height:31px}
+nav a{margin-left:20px;font-weight:600;font-size:15px;text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:64px 0 72px;max-width:780px}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.045em;margin:0;text-wrap:balance}
+h1 i{font-style:normal;color:var(--dot)}
+.lead{font-size:20px;color:var(--ink2);margin:22px 0 0;max-width:30em}
+
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin:0 0 18px;font-weight:700}
+.app{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px;margin-bottom:22px}
+.id{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.id img{width:60px;height:60px;border-radius:14px}
+.id b{display:block;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.id span{display:block;color:var(--ink2);font-size:14.5px}
+h3{font-size:clamp(26px,3.4vw,34px);line-height:1.12;letter-spacing:-.035em;margin:0 0 14px;text-wrap:balance}
+.app p{margin:0;color:var(--ink2);max-width:30em}
+.get{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:26px}
+.btn{display:inline-block;background:var(--btn);color:var(--btn-ink);text-decoration:none;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px}
+.btn:hover{opacity:.86}
+.soon{display:inline-block;border:1px solid var(--line);color:var(--ink2);font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px}
+.more{font-weight:600;font-size:15.5px;margin-left:4px}
+.shots{display:flex;gap:12px;justify-content:center}
+.shots img{width:31.5%;max-width:200px;height:auto;border-radius:16px;border:1px solid var(--line)}
+.shots img:nth-child(2){transform:translateY(20px)}
+
+.next{border:1px dashed var(--line);border-radius:28px;padding:34px 40px;margin-bottom:64px;color:var(--ink2)}
+.next b{display:block;color:var(--ink);font-size:21px;letter-spacing:-.02em;margin-bottom:4px}
+
+footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--ink2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 footer a{font-weight:600}
 @media (max-width:820px){
-  .hero{grid-template-columns:1fr;padding-bottom:44px}
-  .grid{grid-template-columns:1fr}
+  .hero{padding:40px 0 48px}
+  .app{grid-template-columns:1fr;padding:26px;gap:34px}
+  .app .shots{order:2;padding-bottom:20px}
+  .next{padding:26px}
   nav a{margin-left:14px}
 }
 </style>
@@ -53,42 +74,78 @@ footer a{font-weight:600}
 <body>
 <div class="wrap">
   <header>
-    <div class="brand">Minimal Habits</div>
+    <a class="brand" href="./" aria-label="Minimal Habits, home">
+      <svg viewBox="80 136 350 250" aria-hidden="true"><g transform="translate(6 -16)">
+        <path d="M112 196V356M112 236a50 50 0 0 1 100 0V356M212 236a50 50 0 0 1 100 0V356" fill="none" stroke="currentColor" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="388" cy="350" r="31" fill="#FF6A3D"/>
+      </g></svg>
+      <span>minimal habits</span>
+    </a>
     <nav>
-      <a href="privacy-policy.html">Privacy</a>
+      <a href="#apps">Apps</a>
       <a href="mailto:hello.minimalhabits@gmail.com">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
+    <h1>We make small apps and games<i>.</i></h1>
+    <p class="lead">Minimal Habits is a small studio. We build simple, useful things and keep them out of your way.</p>
+  </section>
+
+  <h2 id="apps">Our apps</h2>
+
+  <section class="app">
     <div>
-      <div class="app">
-        <img src="assets/cactara-icon.png" alt="Cactara app icon">
-        <div><b>Cactara</b><span>Habit Tracker &amp; Budget</span></div>
+      <div class="id">
+        <img src="assets/fondo-icon.png" alt="Fondo app icon" width="60" height="60">
+        <div><b>Fondo</b><span>Budget Planner</span></div>
       </div>
-      <h1>Habits and budget that grow with you.</h1>
-      <p class="lead">Build daily habits, plan your money month by month, and watch a living plant grow with every streak. Everything stays on your phone. No account, no cloud.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.pace.habit">Get Cactara on Google Play</a>
-      <div class="note">Free to download. Available in English, Spanish and Arabic.</div>
+      <h3>Private budgeting that stays on your phone.</h3>
+      <p>Plan every paycheck, keep track of bills and subscriptions, and see your debt-free date. No account, no bank login, no ads. Free to use, with an optional Pro subscription. In English, Spanish and Arabic.</p>
+      <div class="get">
+        <a class="btn" href="https://apps.apple.com/app/id6811070728">Download on the App Store</a>
+        <span class="soon">Google Play: in review</span>
+      </div>
     </div>
     <div class="shots">
-      <img src="assets/shot-habits.png" alt="Cactara habits screen showing a 78-day streak and a growing plant" loading="lazy">
+      <img src="assets/fondo-home.png" alt="Fondo home screen showing what is left to spend this month" width="420" height="911" loading="lazy">
+      <img src="assets/fondo-debts.png" alt="Fondo debts screen with a debt-free forecast date" width="420" height="911" loading="lazy">
+      <img src="assets/fondo-dark.png" alt="Fondo home screen in dark mode" width="420" height="911" loading="lazy">
+    </div>
+  </section>
+
+  <section class="app">
+    <div>
+      <div class="id">
+        <img src="assets/cactara-icon.png" alt="Cactara app icon" width="60" height="60">
+        <div><b>Cactara</b><span>Habit Tracker &amp; Budget</span></div>
+      </div>
+      <h3>Habits and budget that grow with you.</h3>
+      <p>Build daily habits, plan your money month by month, and watch a living plant grow with every streak. Everything stays on your phone. No account, no cloud.</p>
+      <div class="get">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.pace.habit">Get it on Google Play</a>
+        <a class="more" href="cactara.html">More about Cactara →</a>
+      </div>
+    </div>
+    <div class="shots">
+      <img src="assets/shot-habits.png" alt="Cactara habits screen showing a streak and a growing plant" loading="lazy">
       <img src="assets/shot-budget.png" alt="Cactara monthly budget screen" loading="lazy">
       <img src="assets/shot-garden.png" alt="Cactara garden with collectible plants" loading="lazy">
     </div>
   </section>
 
-  <h2>What Cactara does</h2>
-  <section class="grid">
-    <div class="card"><h3>A streak you can see</h3><p>Pick from 20+ habits. Every day you show up, your plant grows. Miss a day and Streak Shields keep your progress alive.</p></div>
-    <div class="card"><h3>A simple monthly budget</h3><p>Add your income, tick off bills as you pay them, and always see what's left. Plan months ahead and pay off debt your way.</p></div>
-    <div class="card"><h3>Private by design</h3><p>Your habits, money and notes are stored on your device only. No sign-up, no data selling. Lock your budget with your fingerprint.</p></div>
+  <section class="next">
+    <b>More on the way</b>
+    New apps and our first games are in the works. They will show up here when they are ready.
   </section>
 
   <footer>
     <div>© 2026 Minimal Habits</div>
     <div>
-      <a href="privacy-policy.html">Privacy Policy</a> ·
+      Privacy:
+      <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Fondo</a> ·
+      <a href="privacy-policy.html">Cactara</a>
+      &nbsp;·&nbsp;
       <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
     </div>
   </footer>

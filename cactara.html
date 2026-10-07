@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimal Habits · Cactara</title>
+<meta name="description" content="Minimal Habits makes Cactara, a private habit tracker and budget planner that grows a plant with every streak.">
+<link rel="icon" href="assets/favicon.png">
+<style>
+:root{
+  --bg:#F5EFE2; --card:#FFFDF8; --ink:#1C4B3C; --ink2:#5B6B63; --line:#E7DCC5;
+  --accent:#1C7A4E; --accent-ink:#FFFFFF; --gold:#7A5F32;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121815; --card:#1B231F; --ink:#E9F2EC; --ink2:#9DB0A6; --line:#2C3832;
+    --accent:#4FCB85; --accent-ink:#0E1A14; --gold:#C9A96A; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0}
+.brand{font-weight:800;letter-spacing:.2px;font-size:18px}
+nav a{margin-left:18px;font-weight:600;font-size:15px;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:28px 0 56px}
+.app{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.app img{width:64px;height:64px;border-radius:15px;box-shadow:0 6px 18px rgba(18,51,40,.18)}
+.app b{font-size:20px}
+.app span{display:block;color:var(--ink2);font-size:14px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:0 0 16px;letter-spacing:-1px;text-wrap:balance}
+.lead{font-size:19px;color:var(--ink2);margin:0 0 26px;max-width:34em}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:800;padding:14px 22px;border-radius:14px}
+.btn:hover{filter:brightness(1.06)}
+.note{color:var(--ink2);font-size:14px;margin-top:12px}
+.shots{display:flex;gap:14px;justify-content:center}
+.shots img{width:31%;max-width:210px;border-radius:16px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(18,51,40,.16)}
+.shots img:nth-child(2){transform:translateY(22px)}
+h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--ink2);font-size:15.5px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--ink2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+footer a{font-weight:600}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding-bottom:44px}
+  .grid{grid-template-columns:1fr}
+  nav a{margin-left:14px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./" style="color:inherit;text-decoration:none">Minimal Habits</a>
+    <nav>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="mailto:hello.minimalhabits@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="app">
+        <img src="assets/cactara-icon.png" alt="Cactara app icon">
+        <div><b>Cactara</b><span>Habit Tracker &amp; Budget</span></div>
+      </div>
+      <h1>Habits and budget that grow with you.</h1>
+      <p class="lead">Build daily habits, plan your money month by month, and watch a living plant grow with every streak. Everything stays on your phone. No account, no cloud.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.pace.habit">Get Cactara on Google Play</a>
+      <div class="note">Free to download. Available in English, Spanish and Arabic.</div>
+    </div>
+    <div class="shots">
+      <img src="assets/shot-habits.png" alt="Cactara habits screen showing a 78-day streak and a growing plant" loading="lazy">
+      <img src="assets/shot-budget.png" alt="Cactara monthly budget screen" loading="lazy">
+      <img src="assets/shot-garden.png" alt="Cactara garden with collectible plants" loading="lazy">
+    </div>
+  </section>
+
+  <h2>What Cactara does</h2>
+  <section class="grid">
+    <div class="card"><h3>A streak you can see</h3><p>Pick from 20+ habits. Every day you show up, your plant grows. Miss a day and Streak Shields keep your progress alive.</p></div>
+    <div class="card"><h3>A simple monthly budget</h3><p>Add your income, tick off bills as you pay them, and always see what's left. Plan months ahead and pay off debt your way.</p></div>
+    <div class="card"><h3>Private by design</h3><p>Your habits, money and notes are stored on your device only. No sign-up, no data selling. Lock your budget with your fingerprint.</p></div>
+  </section>
+
+  <footer>
+    <div>© 2026 Minimal Habits</div>
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a> ·
+      <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
