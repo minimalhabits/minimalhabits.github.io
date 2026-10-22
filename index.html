@@ -11,166 +11,424 @@
 <meta property="og:url" content="https://minimalhabits.github.io/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F3F1EC" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#16181D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F3F1EC">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://minimalhabits.github.io/">
 <link rel="icon" href="assets/studio-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/studio-icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F3F1EC; --card:#FBFAF7; --ink:#16181D; --ink2:#66625B; --line:#DFDBD2; --dot:#FF6A3D;
-  --btn:#16181D; --btn-ink:#F3F1EC;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#16181D; --card:#1E2128; --ink:#F3F1EC; --ink2:#A29E96; --line:#2E323B; --btn:#F3F1EC; --btn-ink:#16181D; }
+  --bg:#F3F1EC; --ink:#16181D; --ink2:#6B675F; --line:rgba(22,24,29,.1); --dot:#FF6A3D;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --glass:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.14) 55%,rgba(255,255,255,.28));
+  --glass-edge:rgba(255,255,255,.55);
+  --glass-shadow:inset 0 1.5px 1px rgba(255,255,255,.95),inset 0 -1px 1px rgba(255,255,255,.4),inset 1px 0 1px rgba(255,255,255,.35),inset -1px 0 1px rgba(255,255,255,.35),0 20px 44px -20px rgba(22,24,29,.32),0 2px 8px -3px rgba(22,24,29,.1);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
 a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.02em;text-decoration:none}
-.brand svg{width:44px;height:31px}
-nav a{margin-left:20px;font-weight:600;font-size:15px;text-decoration:none;color:var(--ink2)}
-nav a:hover{color:var(--ink)}
+img{max-width:100%}
 
-.hero{padding:64px 0 72px;max-width:780px}
-h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.045em;margin:0;text-wrap:balance}
-h1 i{font-style:normal;color:var(--dot)}
-.lead{font-size:20px;color:var(--ink2);margin:22px 0 0;max-width:30em}
+/* A soft colour wash behind the whole page, drifting slowly: it is what the glass bends and blurs. */
+.bgwash{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bgwash i{position:absolute;width:85vmax;height:85vmax;border-radius:50%;will-change:transform}
+.bgwash .b1{left:-28vmax;top:-34vmax;background:radial-gradient(closest-side,rgba(255,178,140,.62),rgba(255,178,140,0));animation:drift1 34s ease-in-out infinite alternate}
+.bgwash .b2{right:-34vmax;top:-12vmax;background:radial-gradient(closest-side,rgba(190,178,252,.58),rgba(190,178,252,0));animation:drift2 41s ease-in-out infinite alternate}
+.bgwash .b3{left:4vmax;bottom:-46vmax;background:radial-gradient(closest-side,rgba(166,208,248,.58),rgba(166,208,248,0));animation:drift3 47s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(22vmax,26vmax)}}
+@keyframes drift2{to{transform:translate(-20vmax,24vmax)}}
+@keyframes drift3{to{transform:translate(16vmax,-22vmax)}}
+@media (prefers-reduced-motion:reduce){ .bgwash i{animation:none} }
 
-h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin:0 0 18px;font-weight:700}
-.app{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px;margin-bottom:22px}
-.id{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.id img{width:60px;height:60px;border-radius:14px}
-.id b{display:block;font-size:21px;letter-spacing:-.02em;line-height:1.2}
-.id span{display:block;color:var(--ink2);font-size:14.5px}
-h3{font-size:clamp(26px,3.4vw,34px);line-height:1.12;letter-spacing:-.035em;margin:0 0 14px;text-wrap:balance}
-.app p{margin:0;color:var(--ink2);max-width:30em}
-.get{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:26px}
-.btn{display:inline-block;background:var(--btn);color:var(--btn-ink);text-decoration:none;font-weight:700;font-size:16px;padding:13px 22px;border-radius:999px}
-.btn:hover{opacity:.86}
-.soon{display:inline-block;border:1px solid var(--line);color:var(--ink2);font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px}
-.more{font-weight:600;font-size:15.5px;margin-left:4px}
-.shots{display:flex;gap:12px;justify-content:center}
-.shots img{width:31.5%;max-width:200px;height:auto;border-radius:16px;border:1px solid var(--line)}
-.shots img:nth-child(2){transform:translateY(20px)}
+/* Liquid glass: clear, blurred and brightened behind, with light caught along the edges. */
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.9) brightness(1.06);backdrop-filter:blur(18px) saturate(1.9) brightness(1.06);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow)}
 
-.next{border:1px dashed var(--line);border-radius:28px;padding:34px 40px;margin-bottom:64px;color:var(--ink2)}
-.next b{display:block;color:var(--ink);font-size:21px;letter-spacing:-.02em;margin-bottom:4px}
+/* Header: a floating glass bar. */
+header{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;width:min(1080px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.02em;text-decoration:none}
+.brand svg{width:38px;height:27px}
+.brand circle{transition:opacity .25s ease}
+.motion header:not(.home) .brand circle{opacity:0}
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-weight:500;font-size:14.5px;text-decoration:none;color:var(--ink2);padding:8px 12px;border-radius:999px;transition:color .2s ease,background-color .2s ease}
+@media (hover:hover) and (pointer:fine){ nav a:hover{color:var(--ink);background:rgba(255,255,255,.55)} }
+nav .pill{color:#fff;background:var(--ink);padding:9px 18px;margin-left:6px}
+@media (hover:hover) and (pointer:fine){ nav .pill:hover{color:#fff;background:#2a2d35} }
 
-footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--ink2);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+/* The opening film: pinned while you scroll. */
+.stage{display:none}
+.motion .stage{display:block;position:relative;height:820vh}
+.motion .hero{display:none}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.pin canvas{position:absolute;inset:0;width:100%;height:100%}
+.biglogo{position:absolute;left:50%;top:50%;width:min(44vw,300px);transform:translate(-50%,-50%);color:var(--ink)}
+.phrase{position:absolute;left:50%;top:50%;margin:0;transform:translate(-50%,-50%);font-size:clamp(28px,3.6vw,50px);font-weight:650;letter-spacing:-.035em;white-space:nowrap;opacity:0;will-change:opacity,transform}
+.phrase .end{display:inline-block;width:.22em;height:.22em;margin-left:.05em;margin-right:-.27em;border-radius:50%}
+.phrase.low{top:calc(50% + 26vmin)}
+.phrase.inside{color:#fff;font-weight:700}
+.hint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.hint::after{content:"";display:block;width:1px;height:34px;margin:10px auto 0;background:var(--ink2);transform-origin:top;animation:hint 1.8s var(--ease-out) infinite}
+@keyframes hint{0%{transform:scaleY(0)}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+.flyer{position:fixed;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--dot);z-index:30;pointer-events:none;opacity:0;will-change:transform}
+
+/* Plain hero, shown without JavaScript or with reduced motion. */
+.hero{padding:150px 22px 60px;max-width:1080px;margin:0 auto}
+.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.02;letter-spacing:-.05em;margin:0}
+.hero h1 i{font-style:normal;color:var(--dot)}
+.hero p{font-size:21px;color:var(--ink2);margin:20px 0 0}
+
+/* Apps */
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px}
+.intro{text-align:center;padding:40px 0 34px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0}
+.intro h2{font-size:clamp(40px,6vw,76px);line-height:1.02;letter-spacing:-.05em;margin:12px 0 0;font-weight:750}
+.nw{white-space:nowrap}
+.stop{display:inline-block;width:.2em;height:.2em;margin-left:.05em;border-radius:50%;background:var(--dot)}
+
+.product{position:relative;height:min(940px,max(760px,100vh));border-radius:44px;overflow:hidden;margin-bottom:18px;background:radial-gradient(120% 90% at 50% 100%,var(--c),transparent 60%),radial-gradient(80% 70% at 15% 10%,var(--b),transparent 70%),linear-gradient(180deg,var(--a),var(--c))}
+.product .word{position:absolute;left:50%;top:15%;transform:translateX(-50%);margin:0;font-size:min(22vw,290px);line-height:.8;font-weight:800;letter-spacing:-.065em;color:rgba(255,255,255,.75);white-space:nowrap;pointer-events:none;will-change:transform}
+.phones{position:absolute;left:50%;bottom:-140px;width:0;height:0}
+.phone{position:absolute;bottom:0;margin:0;padding:9px;border-radius:44px;background:#0E0F13;box-shadow:inset 0 0 0 1.5px #30333B,0 50px 90px -30px rgba(22,24,29,.5);will-change:transform}
+.phone img{display:block;width:100%;height:auto;border-radius:35px}
+.phone.main{width:300px;left:-150px;z-index:2}
+.phone.l,.phone.r{width:250px;bottom:-30px}
+.phone.l{left:-300px}
+.phone.r{left:50px}
+.copy{position:absolute;left:28px;bottom:28px;width:min(400px,calc(100% - 56px));padding:24px 24px 22px;border-radius:30px;z-index:3}
+.id{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.id img{width:52px;height:52px;border-radius:12px;box-shadow:0 4px 12px -4px rgba(22,24,29,.3)}
+.id b{display:block;font-size:19px;letter-spacing:-.02em;line-height:1.2}
+.id span{display:block;color:var(--ink2);font-size:14px}
+.copy h3{font-size:27px;line-height:1.12;letter-spacing:-.035em;margin:0 0 10px;font-weight:700}
+.copy p{margin:0;color:#4C4943;font-size:15.5px;line-height:1.5}
+.get{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:11px 18px;border-radius:999px;background:var(--ink);color:#fff;transition:transform .16s var(--ease-out),background-color .2s ease}
+.btn.alt{background:rgba(255,255,255,.7);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(22,24,29,.08)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){ .btn:hover{background:#2a2d35} .btn.alt:hover{background:#fff} }
+.soon{display:inline-block;font-weight:600;font-size:14.5px;padding:10px 16px;border-radius:999px;color:var(--ink2);background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(22,24,29,.08)}
+.more{font-weight:600;font-size:14.5px;margin-left:4px;text-decoration:none}
+.more:hover{text-decoration:underline}
+.facts{position:absolute;right:28px;bottom:28px;display:grid;gap:10px;width:230px;z-index:3}
+.fact{padding:16px 18px;border-radius:24px;will-change:transform}
+.fact b{display:block;font-size:30px;line-height:1.05;letter-spacing:-.04em;font-weight:750}
+.fact span{display:block;font-size:13.5px;color:#4C4943;margin-top:4px;line-height:1.35}
+
+.next{text-align:center;padding:70px 22px 90px}
+.next h2{font-size:clamp(34px,4.6vw,56px);letter-spacing:-.045em;line-height:1.05;margin:10px 0 12px;font-weight:750}
+.next p{margin:0 auto;max-width:30em;color:var(--ink2);font-size:18px}
+
+footer{max-width:1240px;margin:0 auto;padding:22px 18px 40px;border-top:1px solid var(--line);color:var(--ink2);font-size:14.5px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 footer a{font-weight:600}
-@media (max-width:820px){
-  .hero{padding:40px 0 48px}
-  .app{grid-template-columns:1fr;padding:26px;gap:34px}
-  .app .shots{order:2;padding-bottom:20px}
-  .next{padding:26px}
-  nav a{margin-left:14px}
+
+.motion .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out)}
+.motion .reveal.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  header{padding-left:14px}
+  nav a:not(.pill){display:none}
+  .product{height:auto;min-height:0;padding:26px 16px 0;display:flex;flex-direction:column}
+  .product .word{position:relative;left:auto;top:auto;transform:none;text-align:center;font-size:26vw;margin:6px 0 -4vw}
+  .copy{position:relative;left:auto;bottom:auto;width:auto;order:1;margin-top:18px}
+  .facts{position:relative;right:auto;bottom:auto;width:auto;grid-template-columns:repeat(3,1fr);order:2;margin-top:10px}
+  .fact{padding:12px}
+  .fact b{font-size:21px}
+  .fact span{font-size:12px}
+  .phones{position:relative;left:auto;bottom:auto;width:auto;height:min(108vw,470px);order:3;margin-top:24px}
+  .phone.main{width:min(56vw,250px);left:calc(50% - min(28vw,125px));bottom:-130px}
+  .phone.l,.phone.r{width:min(44vw,200px);bottom:-150px}
+  .phone.l{left:calc(50% - min(70vw,300px))}
+  .phone.r{left:calc(50% + min(26vw,100px))}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="./" aria-label="Minimal Habits, home">
-      <svg viewBox="80 136 350 250" aria-hidden="true"><g transform="translate(6 -16)">
-        <path d="M115.4 344.9V244.3a47.2 47.2 0 0 1 94.4 0V344.9M209.8 244.3a47.2 47.2 0 0 1 94.4 0V344.9" fill="none" stroke="currentColor" stroke-width="58.8" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="385.2" cy="336" r="33.8" fill="#FF6A3D"/>
-      </g></svg>
-      <span>minimal habits</span>
-    </a>
-    <nav>
-      <a href="#apps">Apps</a>
-      <a href="mailto:hello.minimalhabits@gmail.com">Contact</a>
-    </nav>
-  </header>
+<div class="bgwash" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<header class="glass">
+  <a class="brand" href="./" aria-label="Minimal Habits, home">
+    <svg viewBox="80 136 350 250" aria-hidden="true"><g transform="translate(6 -16)">
+      <path d="M115.4 344.9V244.3a47.2 47.2 0 0 1 94.4 0V344.9M209.8 244.3a47.2 47.2 0 0 1 94.4 0V344.9" fill="none" stroke="currentColor" stroke-width="58.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="385.2" cy="336" r="33.8" fill="#FF6A3D"/>
+    </g></svg>
+    <span>minimal habits</span>
+  </a>
+  <nav>
+    <a href="#fondo">Fondo</a>
+    <a href="#cactara">Cactara</a>
+    <a href="#tilo">Tilo</a>
+    <a class="pill" href="mailto:hello.minimalhabits@gmail.com">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>Tools to use<i>.</i><br>Games to love<i>.</i></h1>
-    <p class="lead">We make apps and games. Small ideas, made properly.</p>
-  </section>
+<section class="stage" aria-hidden="true">
+  <div class="pin">
+    <canvas></canvas>
+    <svg class="biglogo" viewBox="80 136 350 250"><g transform="translate(6 -16)"><path d="M115.4 344.9V244.3a47.2 47.2 0 0 1 94.4 0V344.9M209.8 244.3a47.2 47.2 0 0 1 94.4 0V344.9" fill="none" stroke="currentColor" stroke-width="58.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="385.2" cy="336" r="33.8" fill="#FF6A3D"/></g></svg>
+    <p class="phrase">Tools to use<span class="end"></span></p>
+    <p class="phrase">Games to love<span class="end"></span></p>
+    <p class="phrase low">Small ideas,</p>
+    <p class="phrase inside">made properly.</p>
+    <p class="phrase">We make apps and games<span class="end"></span></p>
+    <div class="hint">Scroll</div>
+  </div>
+</section>
+<div class="flyer" aria-hidden="true"></div>
 
-  <h2 id="apps">Our apps</h2>
+<section class="hero">
+  <h1>Tools to use<i>.</i><br>Games to love<i>.</i></h1>
+  <p>We make apps and games. Small ideas, made properly.</p>
+</section>
 
-  <section class="app">
-    <div>
-      <div class="id">
-        <img src="assets/fondo-icon.png" alt="Fondo app icon" width="60" height="60">
-        <div><b>Fondo</b><span>Budget Planner</span></div>
-      </div>
-      <h3>Private budgeting that stays on your phone.</h3>
-      <p>Plan every paycheck, keep track of bills and subscriptions, and see your debt-free date. No account, no bank login, no ads. Free to use, with an optional Pro subscription. In English, Spanish and Arabic.</p>
+<main class="wrap" id="apps">
+  <div class="intro reveal">
+    <p class="eyebrow">Our apps</p>
+    <h2>Three apps, made to be <span class="nw">used<span class="stop"></span></span></h2>
+  </div>
+
+  <section class="product reveal" id="fondo" style="--a:#F8E4EC;--b:#FFF3F7;--c:#DCE2FB">
+    <p class="word" aria-hidden="true">Fondo</p>
+    <div class="phones">
+      <figure class="phone l"><img src="assets/fondo-debts.png" alt="Fondo debts screen with a debt-free forecast date" width="420" height="911" loading="lazy"></figure>
+      <figure class="phone main"><img src="assets/fondo-home.png" alt="Fondo home screen showing what is left to spend this month" width="420" height="911" loading="lazy"></figure>
+      <figure class="phone r"><img src="assets/fondo-savings.png" alt="Fondo savings screen" width="420" height="911" loading="lazy"></figure>
+    </div>
+    <div class="copy glass">
+      <div class="id"><img src="assets/fondo-icon.png" alt="" width="52" height="52"><div><b>Fondo</b><span>Budget Planner</span></div></div>
+      <h3>Private budgeting that stays on your <span class="nw">phone<span class="stop"></span></span></h3>
+      <p>Plan every paycheck, keep track of bills and subscriptions, and see your debt-free date. Free to use, with an optional Pro subscription.</p>
       <div class="get">
-        <a class="btn" href="https://apps.apple.com/app/id6811070728">Download on the App Store</a>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.fondo.app">Get it on Google Play</a>
-        <a class="more" href="fondo.html">More about Fondo →</a>
+        <a class="btn" href="https://apps.apple.com/app/id6811070728">App Store</a>
+        <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.fondo.app">Google Play</a>
+        <a class="more" href="fondo.html">More →</a>
       </div>
     </div>
-    <div class="shots">
-      <img src="assets/fondo-home.png" alt="Fondo home screen showing what is left to spend this month" width="420" height="911" loading="lazy">
-      <img src="assets/fondo-debts.png" alt="Fondo debts screen with a debt-free forecast date" width="420" height="911" loading="lazy">
-      <img src="assets/fondo-dark.png" alt="Fondo home screen in dark mode" width="420" height="911" loading="lazy">
+    <div class="facts">
+      <div class="fact glass"><b>0</b><span>bank logins and accounts</span></div>
+      <div class="fact glass"><b>No ads</b><span>on the free version either</span></div>
+      <div class="fact glass"><b>3</b><span>languages: English, Spanish, Arabic</span></div>
     </div>
   </section>
 
-  <section class="app">
-    <div>
-      <div class="id">
-        <img src="assets/cactara-icon.png" alt="Cactara app icon" width="60" height="60">
-        <div><b>Cactara</b><span>Habit Tracker &amp; Budget</span></div>
-      </div>
-      <h3>Habits and budget that grow with you.</h3>
-      <p>Build daily habits, plan your money month by month, and watch a living plant grow with every streak. Everything stays on your phone. No account, no cloud.</p>
+  <section class="product reveal" id="cactara" style="--a:#E4F1E4;--b:#F7F5E8;--c:#CFE6D6">
+    <p class="word" aria-hidden="true">Cactara</p>
+    <div class="phones">
+      <figure class="phone l"><img src="assets/shot-budget.png" alt="Cactara monthly budget screen" width="1080" height="1920" loading="lazy"></figure>
+      <figure class="phone main"><img src="assets/shot-habits.png" alt="Cactara habits screen showing a streak and a growing plant" width="1080" height="1920" loading="lazy"></figure>
+      <figure class="phone r"><img src="assets/shot-garden.png" alt="Cactara garden with collectible plants" width="1080" height="1920" loading="lazy"></figure>
+    </div>
+    <div class="copy glass">
+      <div class="id"><img src="assets/cactara-icon.png" alt="" width="52" height="52"><div><b>Cactara</b><span>Habit Tracker &amp; Budget</span></div></div>
+      <h3>Habits and budget that grow with <span class="nw">you<span class="stop"></span></span></h3>
+      <p>Build daily habits, plan your money month by month, and watch a living plant grow with every streak.</p>
       <div class="get">
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.pace.habit">Get it on Google Play</a>
-        <a class="more" href="cactara.html">More about Cactara →</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.pace.habit">Google Play</a>
+        <a class="more" href="cactara.html">More →</a>
       </div>
     </div>
-    <div class="shots">
-      <img src="assets/shot-habits.png" alt="Cactara habits screen showing a streak and a growing plant" loading="lazy">
-      <img src="assets/shot-budget.png" alt="Cactara monthly budget screen" loading="lazy">
-      <img src="assets/shot-garden.png" alt="Cactara garden with collectible plants" loading="lazy">
+    <div class="facts">
+      <div class="fact glass"><b>1</b><span>plant that grows with every streak</span></div>
+      <div class="fact glass"><b>No cloud</b><span>everything stays on your phone</span></div>
+      <div class="fact glass"><b>0</b><span>accounts to create</span></div>
     </div>
   </section>
 
-  <section class="app">
-    <div>
-      <div class="id">
-        <img src="assets/tilo-icon.png" alt="Tilo app icon" width="60" height="60">
-        <div><b>Tilo</b><span>All-in-One Tools</span></div>
-      </div>
-      <h3>106 everyday tools in one app.</h3>
-      <p>Calculators, a unit converter, QR and barcode scanners, PDF and image tools. Works offline, with no account. Free with ads, with an optional Pro subscription. In English and Spanish, on iPhone, iPad and Android.</p>
+  <section class="product reveal" id="tilo" style="--a:#E3EAFB;--b:#F2EEFF;--c:#D9DEF7">
+    <p class="word" aria-hidden="true">Tilo</p>
+    <div class="phones">
+      <figure class="phone l"><img src="assets/tilo-convert.png" alt="Tilo unit converter turning feet into centimeters" width="420" height="911" loading="lazy"></figure>
+      <figure class="phone main"><img src="assets/tilo-home-light.png" alt="Tilo home screen" width="420" height="911" loading="lazy"></figure>
+      <figure class="phone r"><img src="assets/tilo-tip.png" alt="Tilo tip calculator splitting a bill between four people" width="420" height="911" loading="lazy"></figure>
+    </div>
+    <div class="copy glass">
+      <div class="id"><img src="assets/tilo-icon.png" alt="" width="52" height="52"><div><b>Tilo</b><span>All-in-One Tools</span></div></div>
+      <h3>106 everyday tools in one <span class="nw">app<span class="stop"></span></span></h3>
+      <p>Calculators, a unit converter, QR and barcode scanners, PDF and image tools. Free with ads, with an optional Pro subscription.</p>
       <div class="get">
         <span class="soon">App Store: coming soon</span>
         <span class="soon">Google Play: coming soon</span>
       </div>
     </div>
-    <div class="shots">
-      <img src="assets/tilo-home.png" alt="Tilo home screen answering 15% of 650" width="420" height="911" loading="lazy">
-      <img src="assets/tilo-convert.png" alt="Tilo unit converter turning feet into centimeters" width="420" height="911" loading="lazy">
-      <img src="assets/tilo-tip.png" alt="Tilo tip calculator splitting a bill between four people" width="420" height="911" loading="lazy">
+    <div class="facts">
+      <div class="fact glass"><b>106</b><span>tools: calculators, scanners, PDF and more</span></div>
+      <div class="fact glass"><b>Offline</b><span>works without internet, no account</span></div>
+      <div class="fact glass"><b>2</b><span>languages, on iPhone, iPad and Android</span></div>
     </div>
   </section>
 
-  <section class="next">
-    <b>More on the way</b>
-    New apps and our first games are in the works. They will show up here when they are ready.
+  <section class="next reveal">
+    <p class="eyebrow">Next</p>
+    <h2>More on the <span class="nw">way<span class="stop"></span></span></h2>
+    <p>New apps and our first games are in the works. They will show up here when they are ready.</p>
   </section>
+</main>
 
-  <footer>
-    <div>© 2026 Minimal Habits</div>
-    <div>
-      Privacy:
-      <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Fondo</a> ·
-      <a href="privacy-policy.html">Cactara</a> ·
-      <a href="https://common-report-52e.notion.site/Tilo-Privacy-Policy-3ebd1a9ccc828045acdadd9ffea66b4b">Tilo</a>
-      &nbsp;·&nbsp;
-      <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
-    </div>
-  </footer>
-</div>
+<footer>
+  <div>© 2026 Minimal Habits</div>
+  <div>
+    Privacy:
+    <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Fondo</a> ·
+    <a href="privacy-policy.html">Cactara</a> ·
+    <a href="https://common-report-52e.notion.site/Tilo-Privacy-Policy-3ebd1a9ccc828045acdadd9ffea66b4b">Tilo</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('motion');
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const io2 = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);      // ease-in-out, for movement on screen
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const box = (el) => { const r = el.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2, r: r.width / 2 }; };
+
+  // ---------- The opening film ----------
+  const stage = document.querySelector('.stage'), cv = stage.querySelector('canvas'), ctx = cv.getContext('2d');
+  const logo = stage.querySelector('.biglogo'), logoM = logo.querySelector('path'), logoDot = logo.querySelector('circle');
+  const phrases = [...stage.querySelectorAll('.phrase')], ends = [...stage.querySelectorAll('.end')], hint = stage.querySelector('.hint');
+  const header = document.querySelector('header'), homeDot = header.querySelector('.brand circle'), flyer = document.querySelector('.flyer');
+  const INK = '22,24,29', ORANGE = '#FF6A3D';
+
+  // 56 small dots with fixed random traits: the film is the same on every visit and plays backwards when scrolled up.
+  let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const N = 56, dots = Array.from({ length: N }, (_, i) => ({
+    s: i % 7 === 0 ? 6 + rnd() * 3 : 2.4 + rnd() * 3, sx: rnd() * 2 - 1, sy: rnd() * 2 - 1, ph: rnd() * 6.283, st: rnd() * 0.35,
+  }));
+  let W = 0, H = 0, M = 0;
+  const size = () => { const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; M = Math.min(W, H); cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); };
+  // A dot of liquid glass: see-through and tinted, so the colour behind shows, with light caught along its edge.
+  // g = 0 draws it solid, g = 1 fully glass.
+  function glass(x, y, r, rgb, a, g, tint) {
+    if (r < 0.3 || a <= 0) return;
+    ctx.save(); ctx.globalAlpha = a;
+    if (g < 0.02) { ctx.fillStyle = `rgb(${rgb})`; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.fill(); ctx.restore(); return; }
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.save(); ctx.clip();
+    ctx.fillStyle = `rgba(${rgb},${1 - (1 - tint) * g})`; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+    const hl = ctx.createRadialGradient(x - r * 0.3, y - r * 0.55, 0, x - r * 0.3, y - r * 0.55, r * 1.1);
+    hl.addColorStop(0, `rgba(255,255,255,${0.2 * g})`); hl.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = hl; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+    const lo = ctx.createLinearGradient(0, y, 0, y + r); lo.addColorStop(0, 'rgba(255,255,255,0)'); lo.addColorStop(1, `rgba(255,255,255,${0.22 * g})`);
+    ctx.fillStyle = lo; ctx.fillRect(x - r, y, 2 * r, r);
+    ctx.restore();
+    if (r > 1.6) {      // a crisp bright edge, strongest along the top, like light caught in the glass
+      const lw = Math.max(0.8, r * 0.045), edge = ctx.createLinearGradient(0, y - r, 0, y + r);
+      edge.addColorStop(0, `rgba(255,255,255,${0.95 * g})`); edge.addColorStop(0.5, `rgba(255,255,255,${0.25 * g})`); edge.addColorStop(1, `rgba(255,255,255,${0.6 * g})`);
+      ctx.lineWidth = lw; ctx.strokeStyle = edge; ctx.beginPath(); ctx.arc(x, y, r - lw / 2, 0, 6.283); ctx.stroke();
+    }
+    ctx.restore();
+  }
+  addEventListener('resize', size); size();
+
+  // Where each dot sits in each picture, relative to the middle of the screen.
+  const ring = (i, spin) => { const a = (i / N) * 6.283 + spin; return [Math.cos(a) * 0.34 * M, Math.sin(a) * 0.34 * M]; };
+  const field = (d, t) => [d.sx * W * 0.44 + Math.sin(t * 0.5 + d.ph) * 10, d.sy * H * 0.38 + Math.cos(t * 0.6 + d.ph) * 8];
+  const cluster = (i) => { const a = i * 2.39996 + 0.6, r = 0.11 * M + 0.016 * M * Math.sqrt(i + 1); return [Math.cos(a) * r, Math.sin(a) * r]; };
+  const stagger = (k, d) => io2(clamp(k * 1.35 - d.st));
+
+  // The script, as fractions of the stage's scroll: [line, in, out].
+  const LINES = [[0, 0.11, 0.25], [1, 0.29, 0.44], [2, 0.48, 0.62], [3, 0.68, 0.79], [4, 0.82, 0.95]];
+
+  function film(t) {
+    const r = stage.getBoundingClientRect(), span = r.height - innerHeight, p = clamp(-r.top / span);
+    header.classList.toggle('home', p >= 0.995);
+    if (r.bottom < 0) { flyer.style.opacity = 0; return; }
+    const C = cv.getBoundingClientRect(), cx = W / 2, cy = H / 2;
+    const at = (el) => { const b = box(el); return { x: b.x - C.left, y: b.y - C.top, r: b.r }; };
+
+    const k0 = io2(seg(p, 0.02, 0.08));
+    logoM.style.opacity = 1 - seg(p, 0.015, 0.05); logoDot.style.opacity = k0 > 0 ? 0 : 1;
+    hint.style.opacity = 1 - seg(p, 0, 0.02);
+    const k1 = seg(p, 0.07, 0.16), k2 = seg(p, 0.25, 0.33), k3 = seg(p, 0.43, 0.51), k4 = seg(p, 0.60, 0.66);
+    const grow = io2(seg(p, 0.62, 0.69)), shrink = io2(seg(p, 0.78, 0.83)), home = io2(seg(p, 0.92, 0.995));
+
+    // Lines of type: in, then out. While a line shows, the dots keep clear of it.
+    const shown = LINES.map(([i, a, b]) => {
+      const fin = seg(p, a, a + 0.03), fout = seg(p, b - 0.03, b), o = fin * (1 - fout);
+      phrases[i].style.opacity = o;
+      phrases[i].style.transform = `translate(-50%,calc(-50% + ${(1 - fin) * 12 - fout * 8}px))`;
+      return { el: phrases[i], o, inside: i === 3 };
+    }).filter((s) => s.o > 0 && !s.inside).map((s) => { const q = s.el.getBoundingClientRect(); return { o: s.o, l: q.left - C.left - 26, r: q.right - C.left + 26, t: q.top - C.top - 22, b: q.bottom - C.top + 22 }; });
+
+    ctx.clearRect(0, 0, W, H);
+    const pts = dots.map((d, i) => {
+      const l1 = stagger(k1, d), l2 = stagger(k2, d), l3 = stagger(k3, d), l4 = io2(k4);
+      const [rx, ry] = ring(i, p * 2.2), [fx, fy] = field(d, t), [qx, qy] = cluster(i);
+      let x = lerp(0, rx, l1), y = lerp(0, ry, l1);
+      x = lerp(x, fx, l2); y = lerp(y, fy, l2);
+      x = lerp(x, qx, l3); y = lerp(y, qy, l3);
+      x = lerp(x, 0, l4); y = lerp(y, 0, l4);
+      x += cx; y += cy;
+      for (const z of shown) if (x > z.l && x < z.r && y > z.t && y < z.b) y = lerp(y, y < (z.t + z.b) / 2 ? z.t : z.b, z.o);
+      const sz = d.s * lerp(lerp(0.6, 1, l2), 0.85, l3) * (1 - l4);
+      return { x, y, s: sz, a: clamp(l1 * 3) * (1 - l4) };
+    });
+
+    const lr = clamp(k1 * 2) * (1 - k2);
+    if (lr > 0) {
+      ctx.lineWidth = 1; ctx.strokeStyle = `rgba(${INK},${0.2 * lr})`;
+      ctx.beginPath(); ctx.arc(cx, cy, 0.34 * M * (1 + 0.12 * (1 - io2(k1))), 0, 6.283); ctx.stroke();
+      ctx.beginPath(); for (let i = 0; i <= N; i += 7) { const q = pts[i % N]; i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y); } ctx.closePath(); ctx.stroke();
+    }
+    const lf = k2 * (1 - k3);
+    if (lf > 0) {
+      ctx.lineWidth = 1;
+      for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+        const a = pts[i], b = pts[j], dd = Math.hypot(a.x - b.x, a.y - b.y), lim = 0.16 * M;
+        if (dd < lim) { ctx.strokeStyle = `rgba(${INK},${0.14 * lf * (1 - dd / lim)})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      }
+    }
+    for (const q of pts) glass(q.x, q.y, q.s, INK, q.a, 1, 0.7);      // smoky glass
+
+    // Our dot: out of the logo, the full stop of each line, the big heart of the cluster, a circle holding a line,
+    // the last full stop, then home to the header.
+    flyer.style.opacity = 0;
+    if (k0 > 0 && home < 1) {
+      const L = at(logoDot), E0 = at(ends[0]), E1 = at(ends[1]), E4 = at(ends[2]);
+      const m1 = io2(seg(p, 0.24, 0.29)), m2 = io2(seg(p, 0.42, 0.50));
+      let x = lerp(L.x, E0.x, k0), y = lerp(L.y, E0.y, k0), rad = lerp(L.r, E0.r, k0);
+      x = lerp(x, E1.x, m1); y = lerp(y, E1.y, m1); rad = lerp(rad, E1.r, m1);
+      x = lerp(x, cx, m2); y = lerp(y, cy, m2); rad = lerp(rad, 0.085 * M, m2);
+      rad = lerp(rad, 0.27 * M, grow);
+      x = lerp(x, E4.x, shrink); y = lerp(y, E4.y, shrink); rad = lerp(rad, E4.r, shrink);
+      if (home > 0) {      // above the glass header for the last leg, so it lands crisp in the logo
+        const Hd = box(homeDot), sx = x + C.left, sy = y + C.top;
+        const fx = lerp(sx, Hd.x, home), fy = lerp(sy, Hd.y, home) - Math.sin(Math.PI * home) * 60, fr = lerp(rad, Hd.r, home);
+        flyer.style.opacity = 1; flyer.style.transform = `translate3d(${fx - 10}px,${fy - 10}px,0) scale(${fr / 10})`;
+      } else glass(x, y, rad, '255,106,61', 1, 0, 1);      // our dot stays solid
+    }
+  }
+
+  // ---------- The apps: moved by the scroll, the way a product page moves ----------
+  const products = [...document.querySelectorAll('.product')].map((s) => ({
+    s, word: s.querySelector('.word'), main: s.querySelector('.phone.main'), l: s.querySelector('.phone.l'), r: s.querySelector('.phone.r'), facts: [...s.querySelectorAll('.fact')],
+  }));
+  const narrow = matchMedia('(max-width: 860px)');
+  function apps() {
+    const vh = innerHeight;
+    for (const o of products) {
+      const b = o.s.getBoundingClientRect();
+      if (b.bottom < -100 || b.top > vh + 100) continue;
+      const q = clamp((vh - b.top) / (vh + b.height)), e = io2(clamp(q * 1.6));      // 0 as it enters, 1 once it has risen
+      if (!narrow.matches) o.word.style.transform = `translateX(calc(-50% + ${lerp(6, -6, q)}vw))`;
+      o.main.style.transform = `translateY(${lerp(140, -10, e)}px)`;
+      o.l.style.transform = `translate(${lerp(90, 0, e)}px,${lerp(170, 0, e)}px) rotate(${lerp(0, -7, e)}deg)`;
+      o.r.style.transform = `translate(${lerp(-90, 0, e)}px,${lerp(170, 0, e)}px) rotate(${lerp(0, 7, e)}deg)`;
+      o.facts.forEach((f, i) => { f.style.transform = `translateY(${lerp(50 + i * 30, 0, io2(clamp(q * 1.8 - i * 0.08)))}px)`; });
+    }
+  }
+
+  function frame(now) { film(now / 1000); apps(); requestAnimationFrame(frame); }
+  requestAnimationFrame(frame);
+})();
+</script>
 </body>
 </html>
