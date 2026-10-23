@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work with us · Minimal Habits</title>
+<meta name="description" content="Minimal Habits designs, builds and launches apps and games for iPhone, iPad and Android, and sets up social media that runs on your own Claude account. Tell us the one job.">
+<meta property="og:title" content="Work with us · Minimal Habits">
+<meta property="og:description" content="Your idea, made properly. We design, build and launch apps and games for iPhone, iPad and Android.">
+<meta property="og:image" content="https://minimalhabits.github.io/assets/share.png">
+<meta property="og:url" content="https://minimalhabits.github.io/work.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F1EC">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://minimalhabits.github.io/work.html">
+<link rel="icon" href="assets/studio-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/studio-icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<style>
+:root{
+  --bg:#F3F1EC; --ink:#16181D; --ink2:#5F5B54; --line:rgba(22,24,29,.1); --dot:#FF6A3D; --dot-text:#C2410C;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --spring:cubic-bezier(.34,1.36,.64,1);
+  --glass:linear-gradient(160deg,rgba(255,255,255,.46),rgba(255,255,255,.16) 55%,rgba(255,255,255,.3));
+  --glass-edge:rgba(255,255,255,.6);
+  --glass-shadow:inset 0 1.5px 1px rgba(255,255,255,.95),inset 0 -1px 1px rgba(255,255,255,.4),inset 1px 0 1px rgba(255,255,255,.35),inset -1px 0 1px rgba(255,255,255,.35),0 20px 44px -20px rgba(22,24,29,.32),0 2px 8px -3px rgba(22,24,29,.1);
+  --phone:0 0 0 7px #16181D,0 34px 60px -24px rgba(22,24,29,.5);
+  interpolate-size:allow-keywords;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+button,input,textarea{font:inherit;color:inherit}
+.bgwash{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(60vmax 60vmax at 8% 4%,rgba(255,178,140,.55),rgba(255,178,140,0) 70%),
+  radial-gradient(60vmax 60vmax at 96% 30%,rgba(190,178,252,.5),rgba(190,178,252,0) 70%),
+  radial-gradient(64vmax 64vmax at 40% 108%,rgba(166,208,248,.52),rgba(166,208,248,0) 70%)}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.9) brightness(1.06);backdrop-filter:blur(18px) saturate(1.9) brightness(1.06);border:1px solid var(--glass-edge);box-shadow:var(--glass-shadow)}
+.stop{display:inline-block;width:.2em;height:.2em;margin-left:.05em;border-radius:50%;background:var(--dot)}
+.nw{white-space:nowrap}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--dot-text);outline-offset:3px}
+
+/* header, as on the home page */
+header{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;width:min(1080px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.brand svg{width:38px;height:27px;flex:none}
+nav{display:flex;align-items:center;gap:4px}
+nav a{font-weight:500;font-size:14.5px;text-decoration:none;color:var(--ink2);padding:8px 12px;border-radius:999px;white-space:nowrap;transition:color .2s ease,background-color .2s ease}
+@media (hover:hover) and (pointer:fine){ nav a:hover{color:var(--ink);background:rgba(255,255,255,.55)} }
+nav .pill{color:#fff;background:var(--ink);padding:9px 18px;margin-left:6px}
+@media (hover:hover) and (pointer:fine){ nav .pill:hover{color:#fff;background:#2a2d35} }
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-family:inherit;font-weight:600;font-size:16px;line-height:1;padding:15px 24px;border-radius:999px;background:var(--ink);color:#fff;border:0;cursor:pointer;transition:transform .16s var(--ease-out),background-color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn.alt{background:rgba(255,255,255,.72);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(22,24,29,.08)}
+@media (hover:hover) and (pointer:fine){ .btn:hover{background:#2a2d35} .btn.alt:hover{background:#fff} }
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* hero: the website's loose glass dots gather into a ring, and our dot drops out of it into the headline */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;will-change:opacity}
+.hero .in{position:relative;z-index:1;padding:104px 22px 132px;max-width:920px}
+.emblem{width:200px;height:200px;margin:0 auto 12px;cursor:pointer}
+.hero h1{font-size:clamp(46px,7.6vw,104px);line-height:.98;letter-spacing:-.058em;font-weight:800;margin-top:16px}
+.hero .sub{font-size:clamp(17px,1.8vw,22px);line-height:1.45;color:var(--ink2);margin:22px auto 0;max-width:30em;letter-spacing:-.01em}
+.hero .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px}
+.flydot{position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--dot);z-index:2;pointer-events:none;opacity:0;will-change:transform}
+.motion #hstop{opacity:0;transition:opacity .15s}
+.motion #hstop.on{opacity:1}
+.scroll{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);pointer-events:none}
+.scroll::after{content:"";display:block;width:1px;height:30px;margin:10px auto 0;background:var(--ink2);transform-origin:top;animation:hint 1.8s var(--ease-out) infinite}
+@keyframes hint{0%{transform:scaleY(0)}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* sections */
+section{padding:120px 0 0;scroll-margin-top:90px}
+.sh{text-align:center;max-width:880px;margin:0 auto}
+.sh h2{font-size:clamp(38px,6vw,78px);line-height:1.04;letter-spacing:-.052em;font-weight:780;margin-top:14px}
+.sh p{font-size:clamp(17px,1.6vw,21px);color:var(--ink2);margin:20px auto 0;max-width:34em;line-height:1.5}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .14em;margin-bottom:-.14em}
+.w > span{display:inline-block}
+.motion .w > span{transform:translateY(110%);transition:transform 1s var(--ease-out);transition-delay:calc(var(--i) * 70ms + .1s)}
+.motion .in .w > span{transform:none}
+/* no blur on reveal: blurring glass while it scrolls is what made the shadows shimmer */
+.motion .reveal{opacity:0;transform:translate3d(0,40px,0);transition:opacity .9s var(--ease-out),transform 1.1s var(--ease-out);transition-delay:calc(var(--d,0) * 90ms)}
+.motion .reveal.in{opacity:1;transform:none}
+.motion .reveal.in.tilt{transition:opacity .9s var(--ease-out),transform .6s var(--ease-out);transition-delay:0s}
+.sheen{position:relative}
+.sheen::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.55),rgba(255,255,255,0) 60%);mix-blend-mode:soft-light;z-index:3}
+@media (hover:hover) and (pointer:fine){ .sheen:hover::after{opacity:1} }
+
+/* what we make: a bento you can play with */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:56px}
+.tile{position:relative;overflow:hidden;border-radius:40px;min-height:470px;padding:36px 36px 0;isolation:isolate;display:flex;flex-direction:column}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--paint)}
+.tile h3{font-size:clamp(26px,2.8vw,38px);line-height:1.05;letter-spacing:-.045em;font-weight:760;max-width:14em}
+.tile p{margin-top:12px;font-size:17px;line-height:1.5;color:#45423C;max-width:26em}
+.tile .k{font-size:14px;font-weight:600;color:#45423C;margin:0 0 12px}
+.t1{grid-column:span 4;--paint:radial-gradient(80% 90% at 85% 100%,rgba(255,160,120,.9),transparent 70%),radial-gradient(70% 80% at 0% 0%,rgba(255,214,190,.9),transparent 70%),#FBE7DC}
+.t2{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(150,215,175,.95),transparent 70%),#E3F2E8}
+.t3{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(170,150,252,.85),transparent 70%),#ECE8FB}
+.t4{grid-column:span 4;--paint:radial-gradient(70% 90% at 100% 100%,rgba(130,190,250,.9),transparent 70%),radial-gradient(60% 70% at 0% 100%,rgba(190,178,252,.7),transparent 70%),#E3EDF9}
+.t5{grid-column:span 6;min-height:0;padding:40px;--paint:radial-gradient(60% 120% at 100% 0%,rgba(190,178,252,.75),transparent 70%),radial-gradient(50% 100% at 0% 100%,rgba(255,190,160,.7),transparent 70%),#F1EDF8}
+.t5in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.stagec{position:relative;flex:1;min-height:220px;margin-top:22px;will-change:transform}
+.chip{position:absolute;border-radius:22px;padding:14px 18px;min-width:180px;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .3s}
+.chip small{display:block;font-size:12.5px;font-weight:600;color:#55514A;transition:opacity .25s}
+.chip b{display:block;font-size:22px;letter-spacing:-.035em;line-height:1.15;margin-top:2px;font-variant-numeric:tabular-nums;transition:opacity .25s}
+.chip .bar{display:block;height:8px;border-radius:6px;background:rgba(22,24,29,.1);margin-top:10px;overflow:hidden}
+.chip .bar i{display:block;height:100%;width:var(--w);border-radius:6px;background:var(--ink);transition:width .7s var(--spring)}
+.chip.dk{background:var(--ink);color:#fff;border:0;box-shadow:0 20px 40px -20px rgba(22,24,29,.6)}
+.chip.dk small{color:rgba(255,255,255,.65)}
+.chip.done b::after,.day.done em::before{content:"";display:inline-block;width:.42em;height:.24em;margin-left:.3em;border-left:.12em solid currentColor;border-bottom:.12em solid currentColor;transform:rotate(-45deg) translateY(-.16em)}
+.chip .live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dot);margin-right:6px;vertical-align:1px;animation:live 1.6s ease-in-out infinite}
+@keyframes live{50%{opacity:.25}}
+@keyframes pop{0%{scale:1}35%{scale:1.07}100%{scale:1}}
+.chip:active{scale:.96}
+.swap{opacity:0}
+.motion .chip{opacity:0;transform:translate3d(0,30px,0) scale(.9);transition:opacity .7s var(--ease-out),transform 1.1s var(--spring);transition-delay:calc(var(--d,0) * 140ms + .3s)}
+.motion .in .chip{opacity:1;transform:none;animation:float 7s ease-in-out infinite;animation-delay:calc(1.6s + var(--d,0) * .8s)}
+.chip.pop,.motion .in .chip.pop{animation:pop .5s var(--spring),float 7s ease-in-out .5s infinite}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.motion .chip .bar i{width:0;transition:width 1.6s var(--ease-out);transition-delay:calc(var(--d,0) * 140ms + 1s)}
+.motion .in .chip .bar i{width:var(--w)}
+.motion .in .chip.touched .bar i{transition:width .7s var(--spring)}
+.storepill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 18px;font-weight:650;font-size:15px}
+.spark{position:absolute;width:6px;height:6px;margin:-3px;border-radius:50%;background:rgba(22,24,29,.7);box-shadow:inset 0 1px 1px rgba(255,255,255,.9);pointer-events:none;z-index:5;animation:spark .7s var(--ease-out) forwards}
+@keyframes spark{to{transform:translate(var(--sx),var(--sy)) scale(.2);opacity:0}}
+.hintpill{position:absolute;right:20px;bottom:20px;z-index:4;font-size:13px;font-weight:600;color:var(--ink);padding:9px 14px;border-radius:999px;transition:opacity .6s ease;pointer-events:none}
+.hintpill.gone{opacity:0}
+.gamefield{position:absolute;inset:0;touch-action:none}
+.t4{cursor:crosshair}
+.gdot{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.35),rgba(255,255,255,0) 45%),rgba(22,24,29,.7);box-shadow:inset 0 1.5px 1px rgba(255,255,255,.9),inset 0 -1px 1px rgba(255,255,255,.45),0 8px 16px -8px rgba(22,24,29,.45)}
+.odot{position:absolute;border-radius:50%;background:var(--dot)}
+/* the marketing week */
+.week{position:relative}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{border-radius:16px;padding:10px 6px 9px;text-align:center;font-size:12px;font-weight:650;transition:transform .5s var(--spring),background-color .4s}
+.day .thumb{display:block;aspect-ratio:9/16;border-radius:9px;margin:7px 0;background:linear-gradient(160deg,#FBE3D6,#E6E1FB 60%,#DCEBFA);box-shadow:inset 0 0 0 1px rgba(22,24,29,.06);transition:box-shadow .4s}
+.day em{font-style:normal;font-weight:600;font-size:11px;color:var(--ink2);white-space:nowrap}
+.day.done{transform:translateY(-6px)}
+.day.done .thumb{box-shadow:inset 0 0 0 2px var(--ink)}
+.day.done em{color:var(--ink)}
+.wkrow{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+.approve{position:relative;display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;background:var(--ink);color:#fff;font-weight:650;font-size:15px;cursor:pointer;transition:transform .16s var(--ease-out)}
+.approve:active{transform:scale(.96)}
+.wkrow small{font-size:13.5px;color:#55514A}
+
+/* why: pick a reason, watch it play */
+.why2{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:center;margin-top:60px}
+.flist{display:grid;gap:4px}
+.fi{display:block;width:100%;text-align:left;background:none;border:0;border-radius:24px;padding:16px 22px;cursor:pointer;transition:background-color .4s ease}
+.fi h3{font-size:clamp(20px,2vw,25px);letter-spacing:-.035em;font-weight:720;line-height:1.2;color:rgba(22,24,29,.38);transition:color .4s ease}
+.fi .fd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease-out)}
+.fi .fd > div{overflow:hidden}
+.fi p{padding-top:8px;font-size:16px;line-height:1.55;color:var(--ink2)}
+.fi .fb{display:block;height:2px;margin-top:14px;border-radius:2px;background:rgba(22,24,29,.1);overflow:hidden}
+.fi .fb i{display:block;height:100%;background:var(--ink);transform-origin:left;transform:scaleX(var(--p,0))}
+.fi.on{background:rgba(255,255,255,.55)}
+.fi.on h3{color:var(--ink)}
+.fi.on .fd{grid-template-rows:1fr}
+@media (hover:hover) and (pointer:fine){ .fi:not(.on):hover h3{color:rgba(22,24,29,.7)} }
+.fstage{position:relative;border-radius:40px;min-height:520px;overflow:hidden;isolation:isolate}
+.fstage::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 20% 10%,rgba(255,200,170,.55),transparent 70%),radial-gradient(70% 70% at 90% 90%,rgba(180,200,252,.55),transparent 70%)}
+.scene{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(.96);transition:opacity .5s ease,transform .8s var(--ease-out);pointer-events:none}
+.scene.on{opacity:1;transform:none}
+.ph{position:relative;background:#fff;border-radius:36px;box-shadow:var(--phone);overflow:hidden}
+.sk{display:block;height:10px;border-radius:6px;background:#ECEAE5;margin:0 0 12px}
+/* 1. it explains itself */
+.s1 .ph{width:190px;height:350px;padding:44px 18px}
+.s1 .tip{position:absolute;left:14px;right:14px;bottom:88px;background:#fff;border-radius:14px;padding:10px 12px;font-size:12px;line-height:1.35;color:var(--ink2);box-shadow:0 12px 26px -10px rgba(22,24,29,.4),0 0 0 1px rgba(22,24,29,.06);opacity:0}
+.s1 .tip::after{content:"";position:absolute;left:10px;right:10px;top:50%;height:2px;border-radius:2px;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.s1 .pbtn{position:absolute;left:18px;right:18px;bottom:28px;height:46px;border-radius:999px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:650;font-size:15px}
+.s1 .pbtn span{grid-area:1/1}
+.s1 .l2{opacity:0}
+.s1 .tap{position:absolute;left:50%;bottom:40px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--dot);opacity:0}
+.s1.on .tip{animation:tip 5s var(--ease-out) infinite}
+.s1.on .tip::after{animation:strike 5s var(--ease-out) infinite}
+.s1.on .tap{animation:tap 5s var(--ease-out) infinite}
+.s1.on .pbtn{animation:press 5s var(--ease-out) infinite}
+.s1.on .l1{animation:l1 5s ease infinite}
+.s1.on .l2{animation:l2 5s ease infinite}
+@keyframes tip{0%{opacity:0;translate:0 8px}8%,40%{opacity:1;translate:0 0}48%,100%{opacity:0;translate:0 -8px}}
+@keyframes strike{0%,24%{transform:scaleX(0)}34%,100%{transform:scaleX(1)}}
+@keyframes tap{0%,52%{opacity:0;scale:1.9}58%{opacity:1;scale:1}66%,100%{opacity:0;scale:.5}}
+@keyframes press{0%,56%{scale:1}60%{scale:.93}68%,100%{scale:1}}
+@keyframes l1{0%,60%{opacity:1}63%,94%{opacity:0}100%{opacity:1}}
+@keyframes l2{0%,60%{opacity:0}63%,94%{opacity:1}100%{opacity:0}}
+/* 2. every device */
+.devs{display:flex;align-items:flex-end;gap:22px}
+.dcol{display:grid;justify-items:center;gap:16px;font-size:13px;font-weight:600;color:var(--ink2)}
+.dv{background:#fff;box-shadow:0 0 0 5px var(--ink),0 24px 44px -20px rgba(22,24,29,.45);padding:18px 12px;overflow:hidden}
+.dv.tab{width:250px;height:180px;border-radius:20px;padding:18px 16px}
+.dv.p1{width:96px;height:192px;border-radius:24px}
+.dv.p2{width:92px;height:186px;border-radius:14px}
+.dv .hd{height:8px;width:50%;border-radius:4px;background:var(--ink);margin-bottom:12px}
+.dv .r{height:18px;border-radius:7px;background:#F0EEE9;margin-bottom:8px}
+.s2.on .dcol{animation:devin 1s var(--spring) both}
+.s2.on .dcol:nth-child(2){animation-delay:.12s}
+.s2.on .dcol:nth-child(3){animation-delay:.24s}
+.s2.on .dv .r:nth-child(3){animation:hl 2.6s ease-in-out 1s infinite}
+@keyframes devin{from{opacity:0;transform:translateY(46px) scale(.9)}}
+@keyframes hl{0%,100%{background:#F0EEE9}50%{background:#D9D6CF}}
+/* 3. private */
+.s3 .ph{width:180px;height:330px;display:grid;place-items:center}
+.orb{position:relative;width:0;height:0}
+.orb i{position:absolute;width:12px;height:12px;margin:-6px;border-radius:50%;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.4),rgba(255,255,255,0) 45%),rgba(22,24,29,.75);transform:rotate(calc(var(--k) * 60deg)) translateX(48px)}
+.orb::before{content:"";position:absolute;left:-48px;top:-48px;width:96px;height:96px;border-radius:50%;border:1px solid rgba(22,24,29,.15)}
+.s3.on .orb{animation:spin 9s linear infinite}
+.s3 .lock{position:absolute;top:40px;left:50%;width:30px;height:30px;margin-left:-15px}
+.s3 .stay{position:absolute;bottom:34px;left:0;right:0;text-align:center;font-size:12px;font-weight:650;color:var(--ink2)}
+.s3 .cloud{position:absolute;top:16%;right:13%;width:88px;opacity:.55}
+.s3 .cloud line{stroke-dasharray:1;stroke-dashoffset:1}
+.s3.on .cloud line{animation:cross .8s var(--ease-out) .7s forwards}
+@keyframes cross{to{stroke-dashoffset:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* 4. store-ready */
+.s4 .stack{display:grid;justify-items:center;gap:18px;width:min(400px,86%)}
+.listing{display:flex;align-items:center;gap:14px;width:100%;background:#fff;border-radius:26px;padding:16px 18px;box-shadow:0 24px 44px -22px rgba(22,24,29,.45),0 0 0 1px rgba(22,24,29,.05)}
+.listing img{width:64px;height:64px;border-radius:15px;flex:none}
+.listing b{display:block;font-size:17px;letter-spacing:-.02em}
+.listing small{display:block;font-size:13px;color:var(--ink2);line-height:1.3}
+.get{position:relative;margin-left:auto;flex:none;width:78px;height:34px;display:grid;place-items:center;border-radius:999px;background:#EDEBE6;font-weight:750;font-size:14px}
+.get span{grid-area:1/1}
+.get .g3{opacity:0}
+.get .ring{position:absolute;inset:3px;border-radius:50%;border:2.5px solid rgba(22,24,29,.15);border-top-color:var(--ink);opacity:0}
+.s4.on .get{animation:getw 4.6s var(--ease-out) infinite}
+.s4.on .g1{animation:g1 4.6s ease infinite}
+.s4.on .g3{animation:g3 4.6s ease infinite}
+.s4.on .ring{animation:ringv 4.6s ease infinite,spin .8s linear infinite}
+@keyframes getw{0%,32%{width:78px;background:#EDEBE6}38%,70%{width:34px;background:#fff}76%,100%{width:78px;background:#EDEBE6}}
+@keyframes g1{0%,30%{opacity:1}34%,96%{opacity:0}100%{opacity:1}}
+@keyframes g3{0%,72%{opacity:0}78%,94%{opacity:1}100%{opacity:0}}
+@keyframes ringv{0%,37%{opacity:0}41%,68%{opacity:1}72%,100%{opacity:0}}
+.stores{display:flex;gap:8px}
+.stores span{font-size:13px;font-weight:650;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px rgba(22,24,29,.06)}
+.s4.on .listing{animation:devin .9s var(--spring) both}
+/* 5. language */
+.s5 .stack{display:grid;justify-items:center;gap:20px;width:min(380px,86%)}
+.msgs{position:relative;width:100%;height:86px}
+.msg{position:absolute;inset:0;display:flex;align-items:center;gap:12px;background:#fff;border-radius:24px;padding:14px 18px;box-shadow:0 24px 44px -22px rgba(22,24,29,.45),0 0 0 1px rgba(22,24,29,.05);opacity:0}
+.msg .av{width:44px;height:44px;border-radius:50%;flex:none;background:linear-gradient(150deg,#FFC9B0,#C9C0FA)}
+.msg p{font-size:18px;font-weight:650;letter-spacing:-.02em}
+.msg[dir=rtl] p{font-size:20px;letter-spacing:0}
+.lp{display:flex;gap:8px}
+.lp span{font-size:13px;font-weight:650;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.55);color:var(--ink2)}
+.s5.on .msg{animation:msg 7.5s var(--ease-out) infinite}
+.s5.on .lp span{animation:lpon 7.5s ease infinite}
+.s5.on .msg:nth-child(2),.s5.on .lp span:nth-child(2){animation-delay:2.5s}
+.s5.on .msg:nth-child(3),.s5.on .lp span:nth-child(3){animation-delay:5s}
+@keyframes msg{0%{opacity:0;translate:0 12px}5%,30%{opacity:1;translate:0 0}35%,100%{opacity:0;translate:0 -12px}}
+@keyframes lpon{0%{background:rgba(255,255,255,.55);color:var(--ink2)}4%,30%{background:var(--ink);color:#fff}35%,100%{background:rgba(255,255,255,.55);color:var(--ink2)}}
+/* 6. launch film */
+.film{position:relative;width:180px;height:320px;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -24px rgba(22,24,29,.5);background:radial-gradient(90% 60% at 0% 0%,#FFD2BD,transparent 70%),radial-gradient(90% 60% at 100% 40%,#DAD2FB,transparent 70%),radial-gradient(90% 60% at 30% 110%,#CFE3F8,transparent 70%),#F3F1EC}
+.fring{position:absolute;left:50%;top:40%;width:0;height:0}
+.fring i{position:absolute;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:rgba(22,24,29,.7);transform:rotate(calc(var(--k) * 30deg)) translateX(44px)}
+.fwrap{position:absolute;inset:0}
+.fdot{position:absolute;left:50%;top:40%;width:16px;height:16px;margin:-8px;border-radius:50%;background:var(--dot);transform:scale(0)}
+.ftxt{position:absolute;left:0;right:0;top:63%;text-align:center;font-size:21px;font-weight:800;letter-spacing:-.045em;opacity:0}
+.fbar{position:absolute;left:16px;right:16px;bottom:16px;height:3px;border-radius:3px;background:rgba(22,24,29,.12);overflow:hidden}
+.fbar i{display:block;height:100%;background:var(--ink);transform-origin:left;transform:scaleX(0)}
+.s6.on .fring{animation:spin 10s linear infinite}
+.s6.on .fwrap{animation:gather 5s var(--ease-out) infinite}
+.s6.on .fdot{animation:fdot 5s var(--spring) infinite}
+.s6.on .ftxt{animation:ftxt 5s var(--ease-out) infinite}
+.s6.on .fbar i{animation:fbar 5s linear infinite}
+@keyframes gather{0%{opacity:0;scale:1.7}25%,90%{opacity:1;scale:1}100%{opacity:0;scale:1}}
+@keyframes fdot{0%,26%{transform:scale(0)}36%,90%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes ftxt{0%,40%{opacity:0;translate:0 10px}50%,90%{opacity:1;translate:0 0}100%{opacity:0}}
+@keyframes fbar{to{transform:scaleX(1)}}
+
+/* outcome: one paragraph that lights up as you read it */
+/* outcome: drag between the usual way and an app made with us */
+.seg{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;padding:5px;border-radius:999px;margin-top:30px}
+.seg button{position:relative;z-index:1;border:0;background:none;padding:11px 22px;border-radius:999px;font-weight:650;font-size:15px;cursor:pointer;color:var(--ink2);transition:color .35s}
+.seg button[aria-pressed=true]{color:#fff}
+.seg .thumb{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:var(--ink);transition:transform .55s var(--spring)}
+.seg.right .thumb{transform:translateX(100%)}
+.cmp{position:relative;display:grid;margin-top:34px;border-radius:40px;overflow:hidden;-webkit-user-select:none;user-select:none;--x:100;box-shadow:0 30px 60px -30px rgba(22,24,29,.35)}
+.cl{grid-area:1/1;padding:clamp(26px,4vw,52px) clamp(22px,4vw,56px)}
+.cl .tag{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:650;margin-bottom:18px}
+.crow{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:baseline;padding:20px 0;border-top:1px solid rgba(22,24,29,.08)}
+.crow .n{font-size:14px;font-weight:650;font-variant-numeric:tabular-nums}
+.crow p{font-size:clamp(21px,3vw,40px);font-weight:760;letter-spacing:-.045em;line-height:1.1}
+.usual{background:#E6E3DD;color:#97938B}
+.usual .crow p{font-weight:650;letter-spacing:-.03em}
+.mess{position:absolute;right:4%;top:50%;font-size:12.5px;font-weight:650;letter-spacing:0;color:#77736B;background:#F4F2EE;border-radius:10px;padding:6px 10px;box-shadow:0 6px 14px -8px rgba(22,24,29,.35);white-space:nowrap}
+.good{color:var(--ink);background:radial-gradient(70% 90% at 100% 0%,rgba(255,206,184,.75),transparent 70%),radial-gradient(70% 90% at 0% 100%,rgba(196,214,252,.7),transparent 70%),#FBFAF8;clip-path:inset(0 0 0 calc(var(--x) * 1%))}
+.good .tag{text-align:right;color:var(--ink)}
+.good .crow{border-top-color:rgba(22,24,29,.1)}
+.good .n{color:var(--ink2)}
+.handle{position:absolute;top:0;bottom:0;left:calc(var(--x) * 1%);width:2px;margin-left:-1px;background:#fff;pointer-events:none;box-shadow:0 0 12px rgba(22,24,29,.2)}
+.knob{position:absolute;top:calc(clamp(26px,4vw,52px) + 8px);left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;display:grid;place-items:center;transition:transform .3s var(--spring)}
+.knob svg{width:26px;height:26px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.cmp.drag .knob{transform:scale(1.12)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.cmp input:focus-visible ~ .handle .knob{outline:2px solid var(--dot-text);outline-offset:3px}
+.cmphint{text-align:center;margin-top:16px;font-size:14px;color:var(--ink2)}
+
+/* build: pick features, watch the app come together */
+.builder{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;margin-top:60px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{display:inline-flex;align-items:center;gap:10px;padding:10px 12px 10px 12px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.5);box-shadow:0 6px 16px -10px rgba(22,24,29,.3);transition:background-color .3s,color .3s,border-color .3s,transform .16s var(--ease-out);-webkit-tap-highlight-color:transparent}
+.opt:active{transform:scale(.96)}
+.opt .pl{position:relative;width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor;flex:none;transition:transform .4s var(--spring)}
+.opt .pl::before,.opt .pl::after{content:"";position:absolute;left:5px;right:5px;top:9.25px;height:1.5px;border-radius:1px;background:currentColor}
+.opt .pl::after{transform:rotate(90deg)}
+.opt[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.opt[aria-pressed=true] .pl{transform:rotate(45deg)}
+.opt .oi{display:flex;padding-left:4px}
+.opt .oi img{width:20px;height:20px;border-radius:6px;margin-left:-6px;box-shadow:0 0 0 2px #fff}
+@media (hover:hover) and (pointer:fine){ .opt[aria-pressed=false]:hover{background:rgba(255,255,255,.85)} }
+.legend{margin-top:18px;font-size:14px;color:var(--ink2)}
+.phwrap{display:grid;justify-items:center;gap:20px}
+.ph.big{width:290px;height:560px;padding:20px 14px;transition:background-color .6s ease,color .6s ease}
+.ph.big::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(255,255,255,0),#fff);pointer-events:none;transition:opacity .6s}
+.ph-top{display:flex;align-items:center;justify-content:space-between;padding:6px 8px 14px;font-weight:750;font-size:19px;letter-spacing:-.03em}
+.ph-top i{width:9px;height:9px;border-radius:50%;background:var(--dot)}
+.rows{display:grid;gap:8px}
+.r2{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:18px;background:#F4F2EE;transition:background-color .6s}
+.r2.enter{animation:rin .7s var(--spring) both}
+.r2.leave{animation:rout .35s var(--ease-out) forwards}
+@keyframes rin{from{opacity:0;transform:translateY(-14px) scale(.9)}}
+@keyframes rout{to{opacity:0;transform:scale(.9);height:0;padding-top:0;padding-bottom:0;margin-top:-8px}}
+.gl{width:36px;height:36px;border-radius:12px;background:#fff;display:grid;place-items:center;flex:none;transition:background-color .6s}
+.gl svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.r2 b{display:block;font-size:14px;letter-spacing:-.01em;line-height:1.25}
+.r2 small{display:block;font-size:12px;color:var(--ink2);line-height:1.3;transition:color .6s}
+.r2 .tg{margin-left:auto;width:34px;height:20px;border-radius:999px;background:var(--ink);position:relative;flex:none}
+.r2 .tg::after{content:"";position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#fff}
+.mb{display:flex;align-items:flex-end;gap:3px;height:22px;margin-top:3px}
+.mb i{width:7px;border-radius:2px;background:var(--ink);transition:background-color .6s}
+.empty{position:absolute;inset:0;display:grid;place-items:center;font-size:14px;color:var(--ink2);pointer-events:none;transition:opacity .3s}
+.ph.big.dark{background:#16181D;color:#fff}
+.ph.big.dark::after{opacity:0}
+.ph.big.dark .r2{background:#24262D}
+.ph.big.dark .gl{background:#30333B}
+.ph.big.dark .r2 small{color:rgba(255,255,255,.6)}
+.ph.big.dark .mb i,.ph.big.dark .tg{background:#fff}
+.ph.big.dark .tg::after{background:#16181D}
+.sum{font-size:15px;color:var(--ink2);text-align:center;min-height:1.5em}
+
+/* process: four steps, our dot travels the line as you read */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:64px;padding-top:46px}
+.track{position:absolute;top:13px;left:0;width:0;height:2px;background:rgba(22,24,29,.1);border-radius:2px;z-index:2}
+.track > i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ink);border-radius:2px}
+.mk{position:absolute;top:-6px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 2px rgba(22,24,29,.25);transition:background-color .3s,box-shadow .3s}
+.mk.on{background:var(--ink);box-shadow:none}
+.traveller{position:absolute;top:-11px;left:0;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--dot);will-change:transform;z-index:1}
+.step{position:relative;border-radius:32px;padding:30px 26px 30px;text-align:center;min-width:0}
+.step small{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.step h3{font-size:24px;letter-spacing:-.035em;margin-top:10px;font-weight:740;line-height:1.15}
+.step p{margin-top:10px;font-size:16px;line-height:1.55;color:var(--ink2)}
+
+/* questions */
+.faq{max-width:860px;margin:48px auto 0;display:grid;gap:12px}
+details{border-radius:28px;padding:0 28px}
+details::details-content{height:0;overflow:clip;transition:height .45s var(--ease-out),content-visibility .45s allow-discrete}
+details[open]::details-content{height:auto}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;font-size:20px;font-weight:650;letter-spacing:-.025em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--ink);transition:background-color .3s,transform .4s var(--spring)}
+details[open] summary::after{background:var(--dot);transform:scale(1.3)}
+details p{padding:0 0 26px;font-size:17px;line-height:1.6;color:var(--ink2);max-width:40em}
+
+/* the ask: a short form on ink */
+.ask{position:relative;overflow:hidden;border-radius:48px;margin-top:120px;padding:clamp(40px,6vw,80px) clamp(22px,5vw,72px);background:var(--ink);color:#fff;isolation:isolate}
+.ask canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.7}
+.askgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.askl{position:sticky;top:120px}
+.ask h2{font-size:clamp(40px,5.6vw,80px);line-height:1;letter-spacing:-.058em;font-weight:800;margin-top:16px}
+.askl > p{font-size:clamp(17px,1.6vw,20px);color:rgba(255,255,255,.72);margin-top:20px;max-width:24em}
+.alt-mail{margin-top:30px;font-size:15px;color:rgba(255,255,255,.6);line-height:1.7}
+.alt-mail a{color:#fff;font-weight:650;text-decoration:none}
+.alt-mail button{background:none;border:0;padding:0;margin-left:6px;color:rgba(255,255,255,.75);font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ask .socials{margin-top:22px;font-size:15px;color:rgba(255,255,255,.6);display:flex;flex-wrap:wrap;gap:6px 22px}
+.ask .socials a{color:#fff;font-weight:600;text-decoration:none}
+.aform{display:grid;gap:26px;border-radius:32px;padding:clamp(22px,3vw,34px);background:rgba(255,255,255,.06);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(255,255,255,.08)}
+.aform fieldset{border:0;margin:0;padding:0;min-width:0}
+.lab{display:block;font-size:14px;font-weight:650;color:rgba(255,255,255,.75);margin-bottom:12px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills button{border:0;border-radius:999px;padding:11px 16px;font-size:15px;font-weight:600;background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);cursor:pointer;transition:background-color .25s,color .25s,transform .16s var(--ease-out)}
+.pills button:active{transform:scale(.96)}
+.pills button[aria-pressed=true]{background:#fff;color:var(--ink)}
+@media (hover:hover) and (pointer:fine){ .pills button[aria-pressed=false]:hover{background:rgba(255,255,255,.16)} }
+.aform textarea,.aform input{width:100%;border:0;border-radius:20px;padding:15px 18px;font-size:17px;background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);transition:box-shadow .25s,background-color .25s;resize:vertical}
+.aform textarea{min-height:110px;line-height:1.45}
+.aform textarea::placeholder,.aform input::placeholder{color:rgba(255,255,255,.4)}
+.aform textarea:focus,.aform input:focus{outline:none;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.picked .pills button{background:rgba(255,255,255,.14);padding-right:12px}
+.picked .pills button::after{content:"×";margin-left:8px;opacity:.6}
+.need{animation:shake .4s var(--ease-out)}
+.need .lab{color:var(--dot)}
+@keyframes shake{20%{translate:-6px 0}45%{translate:5px 0}70%{translate:-3px 0}100%{translate:0 0}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ferr{font-size:14px;color:#FFB59C;margin-top:-12px}
+.send[aria-busy=true]{opacity:.7;pointer-events:none}
+.send{background:var(--dot);color:var(--ink);font-size:17px;padding:18px 26px;justify-self:start}
+@media (hover:hover) and (pointer:fine){ .send:hover{background:#ff7d55} }
+.fnote{font-size:13.5px;color:rgba(255,255,255,.55);margin-top:-12px}
+.sent{display:none;text-align:center;border-radius:32px;padding:56px 28px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.sent .ok{width:64px;height:64px;margin:0 auto 22px;border-radius:50%;background:var(--dot);display:grid;place-items:center;animation:okpop .8s var(--spring)}
+.sent .ok svg{width:30px;height:30px;fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.sent h3{font-size:clamp(26px,3vw,36px);letter-spacing:-.045em;font-weight:780}
+.sent p{margin:12px auto 0;color:rgba(255,255,255,.72);max-width:26em}
+.sent .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.sent .btn.alt{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.ask.done .aform{display:none}
+.ask.done .sent{display:block}
+@keyframes okpop{from{transform:scale(0)}}
+
+footer{max-width:1240px;margin:90px auto 0;padding:22px 18px 40px;border-top:1px solid var(--line);color:var(--ink2);font-size:14.5px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{font-weight:600}
+
+@media (max-width:980px){
+  .bento{grid-template-columns:1fr 1fr}
+  .t1,.t4,.t5{grid-column:span 2}.t2,.t3{grid-column:span 1}
+  .t5in{grid-template-columns:1fr;gap:26px}
+  .why2,.builder,.askgrid{grid-template-columns:1fr}
+  .why2{gap:22px}
+  .fstage{order:-1;min-height:420px}
+  .builder{gap:40px}
+  .askl{position:static}
+  .steps{grid-template-columns:1fr 1fr;padding-top:0}
+  .track{display:none}
+}
+@media (max-width:860px){
+  header{padding-left:14px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  header{top:10px;width:calc(100% - 20px)}
+  .brand{font-size:16px;gap:8px}
+  .brand svg{width:32px;height:23px}
+  .hero .in{padding:112px 18px 64px}
+  .emblem{width:150px;height:150px;margin-bottom:6px}
+  .hero h1{font-size:clamp(42px,12.5vw,60px)}
+  .hero .row{flex-direction:column;align-items:center}
+  .scroll{display:none}
+  section{padding-top:88px}
+  .bento,.steps{grid-template-columns:1fr}
+  .t1,.t2,.t3,.t4,.t5{grid-column:span 1}
+  .tile{min-height:0;padding:28px 24px 28px;border-radius:34px}
+  .stagec{min-height:0;display:flex;flex-direction:column;gap:10px;margin-top:22px}
+  .chip,.storepill{position:relative!important;left:auto!important;right:auto!important;top:auto!important;min-width:0;align-self:flex-start;padding:12px 16px}
+  .chip:nth-child(2),.storepill:nth-child(2){align-self:flex-end}
+  .chip b{font-size:19px}
+  .t4 .stagec{min-height:230px;display:block}
+  .hintpill{right:14px;bottom:14px}
+  .days{gap:5px}
+  .day{padding:8px 3px 7px;font-size:11px;border-radius:12px}
+  .day em{font-size:9.5px}
+  .fi{padding:14px 18px}
+  .fstage{min-height:360px;border-radius:32px}
+  .s1 .ph{transform:scale(.86)}
+  .devs{transform:scale(.72)}
+  .s3 .ph,.film{transform:scale(.86)}
+  .cmp{border-radius:30px}
+  .crow{grid-template-columns:26px minmax(0,1fr);gap:8px;padding:16px 0}
+  .crow p{font-size:clamp(20px,6.2vw,26px)}
+  .mess{display:none}
+  .seg button{padding:10px 16px;font-size:14px}
+  /* phone first, the features in a sideways strip under it, so you see each one land */
+  .builder{display:flex;flex-direction:column;gap:18px}
+  .builder > div:first-child{order:2;width:100%}
+  .phwrap{display:contents}
+  .ph.big{order:1;width:min(290px,100%);height:400px;align-self:center}
+  .sum{order:3;align-self:center}
+  #sendpick{order:4;align-self:center}
+  .opts{display:grid;grid-template-rows:repeat(3,auto);grid-auto-flow:column;grid-auto-columns:max-content;justify-content:start;justify-items:start;overflow-x:auto;margin:0 -22px;padding:4px 22px 10px;scroll-padding-inline:22px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .opts::-webkit-scrollbar{display:none}
+  .opt{font-size:14px;padding:9px 10px;white-space:nowrap;scroll-snap-align:start}
+  .legend{margin-top:8px;font-size:13px}
+  .step{padding:26px 24px}
+  details{padding:0 22px}
+  summary{font-size:18px}
+  .ask{border-radius:34px;margin-top:88px;padding:40px 18px 22px}
+  .ask canvas{display:none}
+  .ask h2{font-size:44px}
+  .aform{padding:20px 16px;border-radius:26px}
+  .send{justify-self:stretch}
+  .two{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .scene *,.scene{animation:none!important}
+  .seg .thumb{transition:none}
+}
+@media (max-width:560px){ .brand span{display:none} nav{gap:2px} nav a{padding:8px 9px;font-size:14px} nav .pill{padding:9px 14px;margin-left:2px} }
+nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255,.7)}
+</style>
+</head>
+<body>
+<div class="bgwash" aria-hidden="true"></div>
+
+<header class="glass">
+  <a class="brand" href="./" aria-label="Minimal Habits, home">
+    <svg viewBox="80 136 350 250" aria-hidden="true"><g transform="translate(6 -16)">
+      <path d="M115.4 344.9V244.3a47.2 47.2 0 0 1 94.4 0V344.9M209.8 244.3a47.2 47.2 0 0 1 94.4 0V344.9" fill="none" stroke="currentColor" stroke-width="58.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="385.2" cy="336" r="33.8" fill="#FF6A3D"/>
+    </g></svg>
+    <span>minimal habits</span>
+  </a>
+  <nav>
+    <a href="./">Home</a>
+    <a href="apps.html">Apps</a>
+    <a href="games.html">Games</a>
+    <a class="pill" href="#start" aria-current="page">Work with us</a>
+  </nav>
+</header>
+
+<div class="hero" id="hero">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <span class="flydot" id="flydot" aria-hidden="true"></span>
+  <div class="in">
+    <div class="emblem" id="emblem" aria-hidden="true"></div>
+    <p class="eyebrow">Work with us</p>
+    <h1>Your idea, made <span class="nw">properly<span class="stop" id="hstop"></span></span></h1>
+    <p class="sub">We design, build and launch apps and games for iPhone, iPad and Android. Yours gets the same care as our own.</p>
+    <div class="row"><a class="btn" href="#start">Tell us your idea</a><a class="btn alt" href="#make">See what we make</a></div>
+  </div>
+  <span class="scroll" aria-hidden="true">Scroll</span>
+</div>
+
+<main class="wrap">
+
+  <section id="make">
+    <div class="sh reveal">
+      <p class="eyebrow">What we can make for you</p>
+      <h2 class="split">One job, done <span class="nw">beautifully<span class="stop"></span></span></h2>
+      <p>Most good apps start as one sentence. Tap the cards below and they work, the way your app would.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t1 reveal sheen tilt">
+        <p class="k">For your customers</p>
+        <h3>An app your customers keep on their home screen</h3>
+        <p>Booking, ordering, loyalty, a calculator for your service. The one thing they open your app to do, made effortless.</p>
+        <div class="stagec">
+          <button type="button" class="chip glass" data-act="book" style="--d:0;left:0;top:26px"><small>Table for two</small><b>Tonight, 7:30</b></button>
+          <button type="button" class="chip dk" data-act="order" style="--d:1;left:34%;top:104px"><small><span class="live"></span>Your order</small><b>Ready in <span data-count="4" data-from="12">4</span> min</b></button>
+          <button type="button" class="chip glass" data-act="points" style="--d:2;right:0;top:6px"><small>Points</small><b><span data-count="340">340</span> of 500</b><span class="bar"><i style="--w:68%"></i></span></button>
+        </div>
+      </article>
+      <article class="tile t2 reveal sheen tilt" style="--d:1">
+        <p class="k">For your team</p>
+        <h3>A tool your team actually opens</h3>
+        <p>Checklists, logs and trackers that replace the spreadsheet nobody enjoys.</p>
+        <div class="stagec">
+          <button type="button" class="chip glass" data-act="check" style="--d:0;left:0;top:18px;right:0"><small>Closing checklist</small><b><span data-count="8">8</span> of 12 done</b><span class="bar"><i style="--w:66%"></i></span></button>
+          <button type="button" class="chip glass" data-act="stock" style="--d:1;left:10%;top:128px;right:0"><small>Stock</small><b>3 items running low</b></button>
+        </div>
+      </article>
+      <article class="tile t3 reveal sheen tilt">
+        <p class="k">For you</p>
+        <h3>Your own product, under your name</h3>
+        <p>The idea you have carried around for years, live on the App Store and Google Play.</p>
+        <div class="stagec">
+          <button type="button" class="storepill glass chip" data-act="store" data-store="the App Store" style="--d:0;left:0;top:30px;min-width:0"><span class="odot" style="position:static;width:12px;height:12px"></span><span class="lbl">Get it on the App Store</span></button>
+          <button type="button" class="storepill glass chip" data-act="store" data-store="Google Play" style="--d:1;left:14%;top:104px;min-width:0"><span class="odot" style="position:static;width:12px;height:12px;background:var(--ink)"></span><span class="lbl">Get it on Google Play</span></button>
+        </div>
+      </article>
+      <article class="tile t4 reveal sheen tilt" style="--d:1" id="gametile">
+        <p class="k">For fun</p>
+        <h3>A small game people come back to</h3>
+        <p>Quick to learn, satisfying to play, and polished down to the sound of every tap. Our own first games are in the works.</p>
+        <div class="stagec"><div class="gamefield" id="game" aria-label="A tiny game: move our dot to push the glass dots" role="img"></div></div>
+        <span class="hintpill glass" id="gamehint">Move here to play</span>
+      </article>
+      <article class="tile t5 reveal sheen">
+        <div class="t5in">
+          <div>
+            <p class="k">For your marketing</p>
+            <h3>Social media that keeps posting, with you in charge</h3>
+            <p>We set up Claude in your own account to plan your week, draft the captions and prepare the posts. You approve the week once, and it goes out on schedule. Nothing posts without your yes.</p>
+          </div>
+          <div class="week" id="week">
+            <div class="days" id="days"></div>
+            <div class="wkrow"><button type="button" class="approve" id="approve">Approve the week</button><small id="wknote">Seven posts are ready for your review.</small></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="sh reveal">
+      <p class="eyebrow">Why work with us</p>
+      <h2 class="split">One small studio. Your whole <span class="nw">app<span class="stop"></span></span></h2>
+      <p>The people who design your app are the people who build it and launch it. Nothing gets lost between agencies.</p>
+    </div>
+    <div class="why2 reveal" id="why2">
+      <div class="flist" id="flist" role="tablist" aria-label="Why work with us">
+        <button type="button" class="fi on" role="tab"><h3>It explains itself</h3><span class="fd"><div><p>Our second rule is no manual. If a screen needs a tooltip, the screen gets another pass, so your users never need a tutorial.</p><span class="fb"><i></i></span></div></span></button>
+        <button type="button" class="fi" role="tab"><h3>iPhone, iPad and Android</h3><span class="fd"><div><p>One project for every phone and tablet your customers use, tested on real devices, not only in a simulator.</p><span class="fb"><i></i></span></div></span></button>
+        <button type="button" class="fi" role="tab"><h3>Private by design</h3><span class="fd"><div><p>Data stays on the phone unless your app truly needs a server, and nobody is asked to sign up just to look around.</p><span class="fb"><i></i></span></div></span></button>
+        <button type="button" class="fi" role="tab"><h3>Store-ready, start to finish</h3><span class="fd"><div><p>App Store and Google Play listings, screenshots, privacy pages and the review process. You get a link people can tap.</p><span class="fb"><i></i></span></div></span></button>
+        <button type="button" class="fi" role="tab"><h3>In your customers' language</h3><span class="fd"><div><p>Our apps already ship in English, Spanish and Arabic, with right-to-left layouts done properly.</p><span class="fb"><i></i></span></div></span></button>
+        <button type="button" class="fi" role="tab"><h3>A launch that looks finished</h3><span class="fd"><div><p>Launch films and posts in our studio's style, each with its own sound, so your app arrives looking as good as it works.</p><span class="fb"><i></i></span></div></span></button>
+      </div>
+      <div class="fstage glass" aria-hidden="true">
+        <div class="scene s1 on"><div class="ph"><i class="sk" style="width:70%"></i><i class="sk" style="width:45%"></i><i class="sk" style="width:60%"></i><i class="sk" style="width:35%"></i><div class="tip">Tap here, then pick a category, then swipe left to…</div><span class="pbtn"><span class="l1">Add expense</span><span class="l2">Added</span></span><i class="tap"></i></div></div>
+        <div class="scene s2"><div class="devs">
+          <div class="dcol"><div class="dv p1"><i class="hd" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block;width:70%"></i></div>iPhone</div>
+          <div class="dcol"><div class="dv tab"><i class="hd" style="display:block;width:30%"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block;width:60%"></i></div>iPad</div>
+          <div class="dcol"><div class="dv p2"><i class="hd" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block"></i><i class="r" style="display:block;width:70%"></i></div>Android</div>
+        </div></div>
+        <div class="scene s3">
+          <svg class="cloud" viewBox="0 0 88 60"><path d="M24 50h40a14 14 0 0 0 0-28 20 20 0 0 0-38-4A16 16 0 0 0 24 50z" fill="none" stroke="#16181D" stroke-width="3" stroke-linejoin="round"/><line x1="8" y1="8" x2="80" y2="56" pathLength="1" stroke="#16181D" stroke-width="3.5" stroke-linecap="round"/></svg>
+          <div class="ph"><svg class="lock" viewBox="0 0 24 24" fill="none" stroke="#16181D" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="3"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div class="orb"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i></div><span class="stay">Stays on this phone</span></div>
+        </div>
+        <div class="scene s4"><div class="stack"><div class="listing"><img src="assets/studio-icon-512.png" alt=""><div><b>Your app</b><small>The one job, done beautifully</small></div><span class="get"><span class="g1">Get</span><i class="ring"></i><span class="g3">Open</span></span></div><div class="stores"><span>App Store</span><span>Google Play</span></div></div></div>
+        <div class="scene s5"><div class="stack"><div class="msgs"><div class="msg" dir="ltr"><i class="av"></i><p>Hello, your table is ready</p></div><div class="msg" dir="ltr" lang="es"><i class="av"></i><p>Hola, tu mesa está lista</p></div><div class="msg" dir="rtl" lang="ar"><i class="av"></i><p>مرحبا، طاولتك جاهزة</p></div></div><div class="lp"><span>English</span><span>Español</span><span lang="ar">العربية</span></div></div></div>
+        <div class="scene s6"><div class="film"><div class="fwrap"><div class="fring"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i></div></div><i class="fdot"></i><b class="ftxt">Out now</b><span class="fbar"><i></i></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outcome">
+    <div class="sh reveal">
+      <p class="eyebrow">What you get out of it</p>
+      <h2 class="split">Feel the <span class="nw">difference<span class="stop"></span></span></h2>
+      <div class="seg glass" id="seg"><span class="thumb" aria-hidden="true"></span><button type="button" aria-pressed="true" data-x="100">The usual way</button><button type="button" aria-pressed="false" data-x="0">Made with us</button></div>
+    </div>
+    <div class="cmp reveal" id="cmp">
+      <div class="cl usual">
+        <p class="tag">The usual way</p>
+        <div class="crow"><span class="n">01</span><p>People need a tutorial to get started</p><span class="mess" style="rotate:-3deg">Tap here first →</span></div>
+        <div class="crow"><span class="n">02</span><p>Your inbox fills with "how do I…?"</p><span class="mess" style="rotate:2deg">See the guide</span></div>
+        <div class="crow"><span class="n">03</span><p>Something you keep explaining</p><span class="mess" style="rotate:-2deg">Step 1 of 9</span></div>
+        <div class="crow"><span class="n">04</span><p>On your own after launch day</p><span class="mess" style="rotate:3deg">Ticket #4127</span></div>
+      </div>
+      <div class="cl good">
+        <p class="tag">Made with us</p>
+        <div class="crow"><span class="n">01</span><p>People understand it on the first try</p></div>
+        <div class="crow"><span class="n">02</span><p>Fewer questions from confused users</p></div>
+        <div class="crow"><span class="n">03</span><p>Something you are proud to put your name on</p></div>
+        <div class="crow"><span class="n">04</span><p>A studio that still cares after launch <span class="nw">day<span class="stop"></span></span></p></div>
+      </div>
+      <input type="range" min="0" max="100" value="100" id="cmpr" aria-label="Slide between the usual way and an app made with us">
+      <div class="handle" aria-hidden="true"><span class="knob glass"><svg viewBox="0 0 26 26"><path d="M9 8l-5 5 5 5M17 8l5 5-5 5"/></svg></span></div>
+    </div>
+    <p class="cmphint">Drag the handle, or tap the switch, to compare.</p>
+  </section>
+
+  <section id="build">
+    <div class="sh reveal">
+      <p class="eyebrow">Already inside our own apps</p>
+      <h2 class="split">Pick what your app <span class="nw">needs<span class="stop"></span></span></h2>
+      <p>Every feature here already ships in Fondo, Cactara or Tilo. Tap one to add it, and watch your app come together.</p>
+    </div>
+    <div class="builder reveal">
+      <div>
+        <div class="opts" id="opts"></div>
+        <p class="legend">The small icons show which of our apps already has it.</p>
+      </div>
+      <div class="phwrap">
+        <div class="ph big" id="myapp"><div class="ph-top"><span>Your app</span><i></i></div><div class="rows" id="rows"></div><div class="empty" id="empty">Tap a feature to add it</div></div>
+        <p class="sum" id="sum"></p>
+        <a class="btn" href="#start" id="sendpick">Send this to us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="sh reveal">
+      <p class="eyebrow">How it goes</p>
+      <h2 class="split">From one sentence to the <span class="nw">store<span class="stop"></span></span></h2>
+    </div>
+    <div class="steps" id="steps">
+      <div class="track" id="track" aria-hidden="true"><i id="trackfill"></i></div>
+      <div class="step glass reveal sheen" style="--d:0"><small>Step 1</small><h3>Tell us the one job</h3><p>A few answers in the form below: what it does, who it is for, and when you would like it out.</p></div>
+      <div class="step glass reveal sheen" style="--d:1"><small>Step 2</small><h3>Tap through it first</h3><p>We send a design you can try on your own phone before any building starts.</p></div>
+      <div class="step glass reveal sheen" style="--d:2"><small>Step 3</small><h3>We build and test</h3><p>On real iPhones and Android phones, in every language you need, until it feels right.</p></div>
+      <div class="step glass reveal sheen" style="--d:3"><small>Step 4</small><h3>We launch it with you</h3><p>The store listing, the screenshots and the films that announce it.</p></div>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="sh reveal">
+      <p class="eyebrow">Questions</p>
+      <h2 class="split">Good to <span class="nw">know<span class="stop"></span></span></h2>
+    </div>
+    <div class="faq">
+      <details class="glass reveal"><summary>What does it cost?</summary><p>It depends on what your app needs to do. Tell us the one job, and we will reply with a plan and a quote before any work starts.</p></details>
+      <details class="glass reveal"><summary>How long does it take?</summary><p>It depends on the size of the job. You get a timeline with the quote, and keeping the app to one job keeps that timeline honest.</p></details>
+      <details class="glass reveal"><summary>Which devices does it run on?</summary><p>iPhone, iPad and Android phones and tablets, from one project.</p></details>
+      <details class="glass reveal"><summary>Can it be in my language?</summary><p>Yes. Our own apps ship in English, Spanish and Arabic, including right-to-left layouts, and we can add the languages your customers speak.</p></details>
+      <details class="glass reveal"><summary>How does the social media service work?</summary><p>We set it up inside your own Claude account and connect it to the scheduling tool you use. Each week it prepares your posts and captions, then waits. Nothing goes out until you approve it, and your accounts and content stay yours.</p></details>
+      <details class="glass reveal"><summary>What happens after launch?</summary><p>We can keep improving it with you: fixes, new versions, and updates for new phones and new store rules.</p></details>
+    </div>
+  </section>
+
+  <section id="start" style="padding-top:0">
+    <div class="ask reveal" id="ask">
+      <canvas id="askdots" aria-hidden="true"></canvas>
+      <div class="askgrid">
+        <div class="askl">
+          <p class="eyebrow" style="color:rgba(255,255,255,.62)">Start here</p>
+          <h2>Tell us the one <span class="nw">job<span class="stop"></span></span></h2>
+          <p>A few answers is enough. We reply with how we would make it, and what it would take.</p>
+          <p class="alt-mail">Prefer to write it yourself?<br><a href="mailto:hello.minimalhabits@gmail.com?subject=An%20app%20idea" id="mail">hello.minimalhabits@gmail.com</a><button type="button" id="copy">Copy</button></p>
+          <div class="socials"><span>Instagram <a href="https://www.instagram.com/minimalhabits.apps/">@minimalhabits.apps</a></span><span>YouTube <a href="https://www.youtube.com/@minimalhabitsapps">@minimalhabitsapps</a></span></div>
+        </div>
+        <div>
+          <form class="aform" id="aform" novalidate>
+            <fieldset id="f-kind"><legend class="lab">What are you making?</legend><div class="pills" data-group="kind"><button type="button" aria-pressed="false">An app</button><button type="button" aria-pressed="false">A game</button><button type="button" aria-pressed="false">A tool for my team</button><button type="button" aria-pressed="false">Social media automation</button><button type="button" aria-pressed="false">Not sure yet</button></div></fieldset>
+            <div id="f-job"><label class="lab" for="job">The one job it should do</label><textarea id="job" rows="3"></textarea></div>
+            <fieldset class="picked" id="picked" hidden><legend class="lab">Features you picked</legend><div class="pills" id="pickedchips"></div></fieldset>
+            <fieldset><legend class="lab">When would you like it?</legend><div class="pills" data-group="when"><button type="button" aria-pressed="false">As soon as possible</button><button type="button" aria-pressed="false">In the next few months</button><button type="button" aria-pressed="false">Just exploring</button></div></fieldset>
+            <div class="two"><div id="f-name"><label class="lab" for="nm">Your name</label><input id="nm" autocomplete="name" required></div><div id="f-email"><label class="lab" for="em">Your email</label><input id="em" type="email" autocomplete="email" inputmode="email" required placeholder="So we can reply"></div></div>
+            <div><label class="lab" for="co">Company name</label><input id="co" autocomplete="organization" placeholder="Optional"></div>
+            <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+            <button class="btn send" type="submit" id="sendbtn">Send it to us</button>
+            <p class="fnote" id="fnote">We only use your email to reply to you.</p>
+          </form>
+          <div class="sent" id="sent" role="status">
+            <div class="ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+            <h3 id="senth">We have your idea</h3>
+            <p id="sentp">Thank you. We will reply with how we would make it.</p>
+            <div class="row"><button type="button" class="btn alt" id="copymsg" hidden>Email app didn't open? Copy it</button><button type="button" class="btn alt" id="again">Send another</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 Minimal Habits</div>
+  <div>
+    <a href="./">Home</a> ·
+    <a href="apps.html">Apps</a> ·
+    <a href="games.html">Games</a> ·
+    <a href="brand/">Brand book</a> ·
+    Privacy:
+    <a href="https://common-report-52e.notion.site/Fondo-Privacy-Policy-3d6d1a9ccc8280b991caf64ec0d14e5e">Fondo</a> ·
+    <a href="privacy-policy.html">Cactara</a> ·
+    <a href="https://common-report-52e.notion.site/Tilo-Privacy-Policy-3ebd1a9ccc828045acdadd9ffea66b4b">Tilo</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const io2 = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const spring = (t, response = 0.5, damping = 1) => { if (t <= 0) return 0; const w = (2 * Math.PI) / response; if (damping >= 1) return 1 - (1 + w * t) * Math.exp(-w * t); const wd = w * Math.sqrt(1 - damping * damping); return 1 - Math.exp(-damping * w * t) * (Math.cos(wd * t) + (damping * w / wd) * Math.sin(wd * t)); };
+  const INK = '22,24,29', MAIL = 'hello.minimalhabits@gmail.com';
+  const $ = (s) => document.querySelector(s);
+  if (!reduce) document.documentElement.classList.add('motion');
+
+  // ---------- headings rise word by word ----------
+  document.querySelectorAll('h2.split').forEach((h) => {
+    let i = 0; const out = [];
+    h.childNodes.forEach((n) => {
+      if (n.nodeType === 3) n.textContent.split(/(\s+)/).forEach((p) => { if (!p) return; if (/^\s+$/.test(p)) out.push(document.createTextNode(' ')); else { const w = document.createElement('span'); w.className = 'w'; w.innerHTML = `<span style="--i:${i++}"></span>`; w.firstChild.textContent = p; out.push(w); } });
+      else { const w = document.createElement('span'); w.className = 'w'; const s = document.createElement('span'); s.style.setProperty('--i', i++); s.append(n.cloneNode(true)); w.append(s); out.push(w); }
+    });
+    h.replaceChildren(...out);
+  });
+
+  const copyText = (text, btn, label) => {
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = label; }, 1600); };
+    try { navigator.clipboard.writeText(text).then(done, () => { btn.textContent = 'Copy failed, select it instead'; }); } catch (_) { btn.textContent = 'Copy failed, select it instead'; }
+  };
+  $('#copy').addEventListener('click', (e) => copyText(MAIL, e.currentTarget, 'Copy'));
+
+  // the website's smoky glass dot
+  function glass(ctx, x, y, r, rgb, a) {
+    if (r < 0.3 || a <= 0) return;
+    ctx.save(); ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.save(); ctx.clip();
+    ctx.fillStyle = `rgba(${rgb},.7)`; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+    const hl = ctx.createRadialGradient(x - r * 0.3, y - r * 0.55, 0, x - r * 0.3, y - r * 0.55, r * 1.1); hl.addColorStop(0, 'rgba(255,255,255,.2)'); hl.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = hl; ctx.fillRect(x - r, y - r, 2 * r, 2 * r); ctx.restore();
+    if (r > 1.6) { const lw = Math.max(0.8, r * 0.045), e = ctx.createLinearGradient(0, y - r, 0, y + r); e.addColorStop(0, 'rgba(255,255,255,.95)'); e.addColorStop(0.5, 'rgba(255,255,255,.25)'); e.addColorStop(1, 'rgba(255,255,255,.6)');
+      ctx.lineWidth = lw; ctx.strokeStyle = e; ctx.beginPath(); ctx.arc(x, y, r - lw / 2, 0, 6.283); ctx.stroke(); }
+    ctx.restore();
+  }
+  let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const makeDots = (n) => Array.from({ length: n }, (_, i) => ({ s: i % 7 === 0 ? 6 + rnd() * 3 : 2.4 + rnd() * 3, sx: rnd() * 2 - 1, sy: rnd() * 2 - 1, ph: rnd() * 6.283, st: rnd() * 0.35, ox: 0, oy: 0 }));
+  const fit = (c, g) => { const d = Math.min(2, devicePixelRatio || 1), w = c.clientWidth, h = c.clientHeight; c.width = w * d; c.height = h * d; g.setTransform(d, 0, 0, d, 0, 0); return [w, h]; };
+
+  // ---------- hero: dots gather into the ring; our dot appears in it and drops into the headline.
+  //            The dots move out of the pointer's way, and a click bursts the ring outward and lets it spring back. ----------
+  const hero = $('#hero'), cv = $('#field'), ctx = cv.getContext('2d'), emblem = $('#emblem'), hstop = $('#hstop'), fly = $('#flydot');
+  const N = 42, dots = makeDots(N);
+  let W = 0, H = 0, heroH = 0, E = { x: 0, y: 0, r: 80 }, S = { x: 0, y: 0, r: 8 }, T = { x: 0, y: 0, w: 0, h: 0 }, P = { x: -999, y: -999 }, burst = -99, spinBoost = 0;
+  const rel = (el, base) => { const a = el.getBoundingClientRect(), b = base.getBoundingClientRect(); return { x: a.left - b.left + a.width / 2, y: a.top - b.top + a.height / 2, w: a.width, h: a.height }; };
+  const t0 = performance.now(), LAND = 3.7;
+  hero.addEventListener('pointermove', (e) => { const b = hero.getBoundingClientRect(); P = { x: e.clientX - b.left, y: e.clientY - b.top }; });
+  hero.addEventListener('pointerleave', () => { P = { x: -999, y: -999 }; });
+  hero.addEventListener('pointerdown', (e) => { if (e.target.closest('a,button')) return; burst = (performance.now() - t0) / 1000; spinBoost = 1; });
+  let spinAcc = 0, lastT = 0;
+  function drawHero(now, y) {
+    if (y > heroH + 50) return;
+    const t = reduce ? 99 : (now - t0) / 1000, R = E.r, leave = clamp(y / (heroH * 0.65));
+    const dt = Math.min(0.05, t - lastT); lastT = t; spinBoost *= 0.96; spinAcc += dt * (0.05 + spinBoost * 1.4);
+    cv.style.opacity = 1 - leave;
+    ctx.clearRect(0, 0, W, H);
+    const k = reduce ? 1 : clamp((t - 0.7) / 1.7), grow = 1 + leave * 1.8;
+    const bt = t - burst, bamp = bt > 0 && bt < 3 ? Math.exp(-bt * 3.2) * Math.sin(bt * 9) : 0;     // out, then springs back
+    const pts = dots.map((d, i) => {
+      let fx = d.sx * W * 0.47, fy = d.sy * H * 0.44;
+      const ex = Math.max(T.w * 0.5 + 40, 120), ey = Math.max(T.h * 0.5 + 30, 120), cy0 = T.y - H / 2, e = Math.hypot(fx / ex, (fy - cy0) / ey);
+      if (e < 1) { const s = 1 / (e || 1); fx *= s; fy = cy0 + (fy - cy0) * s; }
+      fx += W / 2 + Math.sin(t * 0.5 + d.ph) * 10; fy += H / 2 + Math.cos(t * 0.6 + d.ph) * 8;
+      const a = (i / N) * 6.283 + (reduce ? 0 : spinAcc), l = io2(clamp(k * 1.35 - d.st)), rr = R * grow * (1 + bamp * (0.9 + d.st * 1.4));
+      let x = lerp(fx, E.x + Math.cos(a) * rr, l), yy = lerp(fy, E.y + Math.sin(a) * rr, l);
+      const dx = x - P.x, dy = yy - P.y, dd = Math.hypot(dx, dy) || 1, push = Math.max(0, 1 - dd / 110) * 34;      // out of the pointer's way
+      d.ox = lerp(d.ox, (dx / dd) * push, 0.16); d.oy = lerp(d.oy, (dy / dd) * push, 0.16);
+      return { x: x + d.ox, y: yy + d.oy, s: d.s * lerp(1, 0.78, l) * (W < 640 ? 0.85 : 1), a: clamp(t * 1.4) };
+    });
+    ctx.lineWidth = 1;
+    const lf = 1 - k;
+    if (lf > 0) { const lim = 0.12 * Math.min(W, H) + 70; for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) { const a = pts[i], b = pts[j], dd = Math.hypot(a.x - b.x, a.y - b.y); if (dd < lim) { ctx.strokeStyle = `rgba(${INK},${0.13 * lf * (1 - dd / lim) * a.a})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); } } }
+    const lr = clamp(k * 1.5) * (1 - Math.abs(bamp) * 0.6);
+    if (lr > 0) {
+      ctx.strokeStyle = `rgba(${INK},${0.2 * lr})`; ctx.beginPath(); ctx.arc(E.x, E.y, R * grow * (1 + 0.14 * (1 - io2(k))), 0, 6.283); ctx.stroke();
+      ctx.beginPath(); for (let i = 0; i <= N; i += 6) { const q = pts[i % N]; i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y); } ctx.closePath(); ctx.stroke();
+    }
+    for (const q of pts) glass(ctx, q.x, q.y, q.s, INK, q.a);
+    if (reduce || t >= LAND) { fly.style.opacity = 0; hstop.classList.add('on'); return; }
+    const appear = spring(t - 2.0, 0.55, 0.7), go = io2(clamp((t - 2.95) / (LAND - 2.95)));
+    const r0 = R * 0.26, r = lerp(r0 * appear, S.r, go), x = lerp(E.x, S.x, go), yy = lerp(E.y, S.y, go) - Math.sin(Math.PI * go) * 40;
+    fly.style.opacity = appear > 0.01 ? 1 : 0;
+    fly.style.transform = `translate3d(${x - 10}px,${yy - 10}px,0) scale(${r / 10})`;
+  }
+
+  // ---------- the bento: every card does something when tapped ----------
+  const sparks = (el, x, y) => { for (let i = 0; i < 7; i++) { const s = document.createElement('span'), a = (i / 7) * 6.283 + Math.random() * 0.5, d = 26 + Math.random() * 22; s.className = 'spark'; s.style.left = `${x}px`; s.style.top = `${y}px`; s.style.setProperty('--sx', `${Math.cos(a) * d}px`); s.style.setProperty('--sy', `${Math.sin(a) * d}px`); el.append(s); setTimeout(() => s.remove(), 750); } };
+  const burstAt = (box, el) => { const st = box.getBoundingClientRect(), c = el.getBoundingClientRect(); sparks(box, c.left - st.left + c.width / 2, c.top - st.top + c.height / 2); };
+  const countTo = (el, to, dur = 600) => { const from = +el.textContent || 0, st = performance.now(); const f = (n) => { const p = clamp((n - st) / dur); el.textContent = Math.round(lerp(from, to, 1 - (1 - p) ** 3)); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); };
+  const swapText = (chip, small, b) => { const s = chip.querySelector('small'), bb = chip.querySelector('b'); s.classList.add('swap'); bb.classList.add('swap'); setTimeout(() => { if (small != null) s.lastChild.textContent = small; if (b != null) bb.innerHTML = b; s.classList.remove('swap'); bb.classList.remove('swap'); }, 220); };
+  const ORDER = ['Ready in 4 min', 'Being made now', 'On its way', 'At your door'];
+  let orderI = 0, points = 340, done = 8, booked = false, stocked = false;
+  document.querySelectorAll('[data-act]').forEach((chip) => chip.addEventListener('click', () => {
+    chip.classList.remove('pop'); void chip.offsetWidth; chip.classList.add('pop', 'touched');
+    burstAt(chip.closest('.stagec'), chip);
+    const act = chip.dataset.act;
+    if (act === 'book') { booked = !booked; chip.classList.toggle('done', booked); swapText(chip, booked ? 'Booked, table 12' : 'Table for two', booked ? 'See you at 7:30' : 'Tonight, 7:30'); }
+    if (act === 'order') { orderI = (orderI + 1) % ORDER.length; swapText(chip, null, ORDER[orderI]); }
+    if (act === 'points') { points = points >= 500 ? 120 : Math.min(500, points + 40); countTo(chip.querySelector('[data-count]'), points); chip.querySelector('.bar i').style.setProperty('--w', `${points / 5}%`); if (points === 500) swapText(chip, 'Reward unlocked', null); else chip.querySelector('small').textContent = 'Points'; }
+    if (act === 'check') { done = done >= 12 ? 8 : done + 1; countTo(chip.querySelector('[data-count]'), done, 400); chip.querySelector('.bar i').style.setProperty('--w', `${(done / 12) * 100}%`); chip.classList.toggle('done', done === 12); }
+    if (act === 'stock') { stocked = !stocked; chip.classList.toggle('done', stocked); swapText(chip, 'Stock', stocked ? 'All restocked' : '3 items running low'); }
+    if (act === 'store') { const on = chip.classList.toggle('done'); const l = chip.querySelector('.lbl'); l.style.opacity = 0; setTimeout(() => { l.textContent = on ? `Installed from ${chip.dataset.store}` : `Get it on ${chip.dataset.store}`; l.style.opacity = 1; }, 200); }
+  }));
+
+  // ---------- the marketing week: approve once, each day gets scheduled ----------
+  const daysEl = $('#days'), approve = $('#approve'), wknote = $('#wknote');
+  const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  daysEl.innerHTML = DAYS.map((d) => `<span class="day glass"><span>${d}</span><i class="thumb"></i><em>18:00</em></span>`).join('');
+  const dayEls = [...daysEl.children];
+  let approved = false;
+  approve.addEventListener('click', () => {
+    approved = !approved; burstAt($('#week'), approve);
+    approve.textContent = approved ? 'Undo' : 'Approve the week';
+    wknote.textContent = approved ? 'Scheduled. Each post goes out at 18:00.' : 'Seven posts are ready for your review.';
+    dayEls.forEach((d, i) => setTimeout(() => { d.classList.toggle('done', approved); d.querySelector('em').textContent = approved ? 'Set' : '18:00'; }, reduce ? 0 : i * 110));
+  });
+
+  // ---------- the game tile: our dot follows your pointer or finger and pushes the glass dots ----------
+  const game = $('#game'), gtile = $('#gametile'), ghint = $('#gamehint');
+  if (!fine) ghint.textContent = 'Tap and drag to play';
+  const gd = [[18, 30, 16], [46, 18, 9], [70, 42, 14], [30, 70, 8], [60, 76, 12], [86, 20, 7], [8, 60, 6], [90, 70, 10], [38, 46, 6], [78, 60, 8], [55, 30, 6], [14, 86, 9]].map(([x, y, s]) => { const el = document.createElement('span'); el.className = 'gdot'; el.style.cssText = `left:${x}%;top:${y}%;width:${s}px;height:${s}px`; game.append(el); return { el, x, y, s, vx: 0, vy: 0, px: 0, py: 0 }; });
+  const od = document.createElement('span'); od.className = 'odot'; od.style.cssText = 'width:24px;height:24px;left:0;top:0'; game.append(od);
+  const G = { x: 50, y: 48, tx: 50, ty: 48, until: 0 };
+  const aim = (e) => { const b = game.getBoundingClientRect(); G.tx = clamp((e.clientX - b.left) / b.width, 0.03, 0.97) * 100; G.ty = clamp((e.clientY - b.top) / b.height, 0.05, 0.95) * 100; G.until = performance.now() + 2500; ghint.classList.add('gone'); };
+  gtile.addEventListener('pointermove', (e) => { if (fine || e.buttons) aim(e); });
+  game.addEventListener('pointerdown', aim);
+  function drawGame(now, t) {
+    if (now > G.until) { G.tx = 50 + Math.cos(t * 0.6) * 28; G.ty = 48 + Math.sin(t * 0.9) * 26; }
+    G.x = lerp(G.x, G.tx, 0.14); G.y = lerp(G.y, G.ty, 0.14);
+    od.style.transform = `translate3d(calc(${(G.x / 100) * game.clientWidth}px - 12px),calc(${(G.y / 100) * game.clientHeight}px - 12px),0)`;
+    gd.forEach((d, i) => {
+      const cx = d.x + d.px, cy = d.y + d.py, dx = cx - G.x, dy = (cy - G.y) * 0.6, dist = Math.hypot(dx, dy) || 1, f = Math.max(0, 16 - dist) * 0.09;
+      d.vx += (dx / dist) * f - d.px * 0.02; d.vy += (dy / dist) * f - d.py * 0.02; d.vx *= 0.86; d.vy *= 0.86; d.px += d.vx; d.py += d.vy;
+      d.el.style.transform = `translate3d(${(d.px / 100) * game.clientWidth + Math.sin(t * 0.7 + i) * 4}px,${(d.py / 100) * game.clientHeight + Math.cos(t * 0.8 + i) * 4}px,0)`;
+    });
+  }
+
+  // ---------- why: tap a reason (or let it play); the stage acts it out ----------
+  const fis = [...document.querySelectorAll('.fi')], scenes = [...document.querySelectorAll('.scene')], why2 = $('#why2');
+  const WDUR = 5600; let wi = 0, wel = 0, wPaused = false, wOn = false;
+  function wshow(i) {
+    wi = (i + fis.length) % fis.length; wel = 0;
+    fis.forEach((b, j) => { b.classList.toggle('on', j === wi); b.setAttribute('aria-selected', j === wi); b.querySelector('.fb i').style.setProperty('--p', 0); });
+    scenes.forEach((s, j) => s.classList.toggle('on', j === wi));
+  }
+  fis.forEach((b, i) => b.addEventListener('click', () => wshow(i)));
+  if (fine) { why2.addEventListener('pointerenter', () => { wPaused = true; }); why2.addEventListener('pointerleave', () => { wPaused = false; }); }
+  function drawWhy(dt) {
+    if (reduce) return;
+    if (wOn && !wPaused) wel += dt;
+    fis[wi].querySelector('.fb i').style.setProperty('--p', clamp(wel / WDUR));
+    if (wel >= WDUR) wshow(wi + 1);
+  }
+
+  // ---------- outcome: drag (or switch) between the usual way and made with us ----------
+  const cmp = $('#cmp'), cmpr = $('#cmpr'), seg = $('#seg'), segBtns = [...seg.querySelectorAll('button')];
+  const C = { x: 100, tx: 100, swept: false };
+  const setSeg = (x) => { const right = x < 50; seg.classList.toggle('right', right); segBtns[0].setAttribute('aria-pressed', !right); segBtns[1].setAttribute('aria-pressed', right); };
+  cmpr.addEventListener('input', () => { C.tx = +cmpr.value; C.swept = true; setSeg(C.tx); });
+  cmpr.addEventListener('change', () => { C.tx = C.tx < 50 ? 0 : 100; cmpr.value = C.tx; setSeg(C.tx); });   // let go and it settles on a side
+  cmpr.addEventListener('pointerdown', () => cmp.classList.add('drag'));
+  addEventListener('pointerup', () => cmp.classList.remove('drag'));
+  segBtns.forEach((b) => b.addEventListener('click', () => { C.tx = +b.dataset.x; C.swept = true; cmpr.value = C.tx; setSeg(C.tx); }));
+  // the two sides wrap differently, so each pair of rows takes the taller height and the lines stay level
+  const cRows = [[...cmp.querySelectorAll('.usual .crow')], [...cmp.querySelectorAll('.good .crow')]];
+  function levelRows() {
+    cRows.flat().forEach((r) => { r.style.minHeight = ''; });
+    cRows[0].forEach((r, i) => { const h = Math.max(r.offsetHeight, cRows[1][i].offsetHeight); r.style.minHeight = cRows[1][i].style.minHeight = `${h}px`; });
+  }
+  function drawCmp() {
+    C.x = lerp(C.x, C.tx, reduce ? 1 : 0.12);
+    if (Math.abs(C.x - C.tx) < 0.05) C.x = C.tx;
+    cmp.style.setProperty('--x', C.x.toFixed(2));
+    const w = cmp.clientWidth, px = (C.x / 100) * w;                 // the knob stays fully inside the panel at either end
+    knob.style.translate = `${(clamp(px, 36, w - 36) - px).toFixed(1)}px 0`;
+  }
+  const knob = cmp.querySelector('.knob');
+  // the first time it comes into view, it sweeps across on its own and lands on "Made with us"
+  new IntersectionObserver(([e], ob) => { if (!e.isIntersecting || C.swept) return; ob.disconnect(); setTimeout(() => { if (C.swept) return; C.swept = true; C.tx = 0; cmpr.value = 0; setSeg(0); }, reduce ? 0 : 500); }, { threshold: 0.55 }).observe(cmp);
+
+  // ---------- build: pick features, they appear in the phone ----------
+  const IC = {
+    lock: '<rect x="5" y="11" width="14" height="10" rx="3"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+    bell: '<path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
+    star: '<path d="M12 3.5l2.5 5.3 5.8.7-4.3 4 1.1 5.8L12 16.5l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7z"/>',
+    bag: '<path d="M5.5 8h13l-1 12.5h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/>',
+    shield: '<path d="M12 3l7 3v5c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V6z"/><path d="M9 12l2 2 4-4"/>',
+    chart: '<path d="M5 20v-6M10 20V8M15 20v-9M20 20V4"/>',
+    file: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+    wifi: '<path d="M3 9.5a14 14 0 0 1 18 0M6.5 13a9 9 0 0 1 11 0M10 16.5a4 4 0 0 1 4 0"/><path d="M4 4l16 16"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 20.5a8 8 0 0 1 16 0"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/>',
+    sprout: '<path d="M12 21v-8"/><path d="M12 13c0-4 3-7 8-7 0 4-3 7-8 7zM12 15c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/>',
+    ad: '<rect x="3" y="6" width="18" height="12" rx="3"/><path d="M7.5 15l2-6 2 6M8.2 13.2h2.6M14.5 9v6h1.2a3 3 0 0 0 0-6z"/>',
+    scan: '<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10"/>',
+    calc: '<rect x="5" y="3" width="14" height="18" rx="3"/><path d="M8.5 7.5h7M8.5 12h1M12 12h1M15.5 12h0M8.5 16h1M12 16h1M15.5 16h0"/>',
+    moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+  };
+  const FEATS = [
+    ['offline', 'Works offline', ['fondo', 'cactara', 'tilo'], 'wifi', 'Offline', 'Everything still works'],
+    ['noacct', 'No account needed', ['fondo', 'cactara', 'tilo'], 'user', 'No sign-up', 'Open it and start'],
+    ['iap', 'In-app purchases', ['fondo', 'cactara', 'tilo'], 'bag', 'Premium', 'Unlocked'],
+    ['trial', 'Subscriptions with a free trial', ['fondo'], 'star', 'Pro', 'Free trial, then monthly'],
+    ['lock', 'Face ID and fingerprint lock', ['fondo'], 'lock', 'App lock', 'Face ID to open', 'tg'],
+    ['remind', 'Reminders', ['fondo'], 'bell', 'Rent is due Friday', 'Reminder at 9:00'],
+    ['charts', 'Charts and insights', ['fondo'], 'chart', 'This month', 'mb'],
+    ['backup', 'Encrypted backups', ['fondo'], 'shield', 'Backup saved', 'Encrypted, on your phone'],
+    ['csv', 'CSV export', ['fondo'], 'file', 'report.csv', 'Exported'],
+    ['dark', 'Light and dark themes', ['fondo'], 'moon', 'Dark mode', 'On', 'tg'],
+    ['arabic', 'Arabic, right to left', ['fondo', 'cactara'], 'globe', 'مرحبا', 'من اليمين إلى اليسار', 'rtl'],
+    ['streak', 'A plant that grows with your streak', ['cactara'], 'sprout', 'Day 12', 'Your plant grew'],
+    ['ads', 'In-app ads', ['cactara', 'tilo'], 'ad', 'Ad space', 'Sponsored'],
+    ['scan', 'QR and barcode scanner', ['tilo'], 'scan', 'Scanned', 'Barcode found'],
+    ['pdf', 'PDF and image tools', ['tilo'], 'file', 'scan.pdf', 'Saved as PDF'],
+    ['calc', 'Calculators and converters', ['fondo', 'tilo'], 'calc', '12 × 4 = 48', 'Calculator'],
+  ];
+  const BYKEY = Object.fromEntries(FEATS.map((f) => [f[0], f]));
+  const picks = new Set(['offline', 'remind', 'lock']);
+  const optsEl = $('#opts'), rowsEl = $('#rows'), myapp = $('#myapp'), emptyEl = $('#empty'), sumEl = $('#sum'), rowEls = {};
+  const NAMES = { fondo: 'Fondo', cactara: 'Cactara', tilo: 'Tilo' };
+  optsEl.innerHTML = FEATS.map(([k, label, apps]) => `<button type="button" class="opt" data-k="${k}" aria-pressed="false" title="Inside ${apps.map((a) => NAMES[a]).join(', ')}"><span class="pl" aria-hidden="true"></span><span>${label}</span><span class="oi" aria-hidden="true">${apps.map((a) => `<img src="assets/${a}-icon.png" alt="">`).join('')}</span></button>`).join('');
+  const rowHTML = ([k, , , ic, title, sub, extra]) => {
+    const subHTML = sub === 'mb' ? `<span class="mb">${[40, 70, 55, 90, 65, 80].map((h) => `<i style="height:${h}%"></i>`).join('')}</span>` : `<small>${sub}</small>`;
+    return `<span class="gl"><svg viewBox="0 0 24 24">${IC[ic]}</svg></span><div><b>${title}</b>${subHTML}</div>${extra === 'tg' ? '<span class="tg"></span>' : ''}`;
+  };
+  function addRow(k, animate) {
+    const f = BYKEY[k], r = document.createElement('div'); r.className = 'r2' + (animate && !reduce ? ' enter' : ''); r.innerHTML = rowHTML(f);
+    if (f[6] === 'rtl') { r.dir = 'rtl'; r.lang = 'ar'; }
+    rowsEl.prepend(r); rowEls[k] = r;
+  }
+  function removeRow(k) { const r = rowEls[k]; delete rowEls[k]; if (!r) return; if (reduce) { r.remove(); return; } r.classList.add('leave'); setTimeout(() => r.remove(), 360); }
+  function syncBuild() {
+    optsEl.querySelectorAll('.opt').forEach((b) => b.setAttribute('aria-pressed', picks.has(b.dataset.k)));
+    myapp.classList.toggle('dark', picks.has('dark'));
+    emptyEl.style.opacity = picks.size ? 0 : 1;
+    sumEl.textContent = picks.size ? `${picks.size} ${picks.size === 1 ? 'feature' : 'features'}, every one already working in our apps.` : 'Pick a few to see your app.';
+    renderPicked();
+  }
+  function togglePick(k) {
+    if (picks.has(k)) { picks.delete(k); removeRow(k); } else { picks.add(k); addRow(k, true); }
+    syncBuild();
+  }
+  optsEl.addEventListener('click', (e) => { const b = e.target.closest('.opt'); if (b) togglePick(b.dataset.k); });
+  [...picks].forEach((k) => addRow(k, false));
+
+  // ---------- the ask: a short form that hands everything to your email app ----------
+  const form = $('#aform'), job = $('#job'), nm = $('#nm'), askEl = $('#ask'), pickedEl = $('#picked'), pickedChips = $('#pickedchips');
+  const choice = {};
+  form.querySelectorAll('[data-group]').forEach((g) => g.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    g.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b && on));
+    choice[g.dataset.group] = on ? b.textContent : null;
+    g.closest('fieldset').classList.remove('need');
+  }));
+  function renderPicked() {
+    pickedEl.hidden = !picks.size;
+    pickedChips.innerHTML = [...picks].map((k) => `<button type="button" data-k="${k}" aria-label="Remove ${BYKEY[k][1]}">${BYKEY[k][1]}</button>`).join('');
+  }
+  pickedChips.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) togglePick(b.dataset.k); });
+  $('#sendpick').addEventListener('click', () => { if (!choice.kind) { const b = form.querySelector('[data-group=kind] button'); b.click(); } });
+  // the empty box suggests a few one-line jobs, typed out slowly
+  const EX = ['Let my customers book a table in two taps', 'Track my team\'s closing checklist', 'A small puzzle game for the bus ride', 'Post three videos a week without writing them myself'];
+  let exI = 0, exC = 0, exDir = 1, exWait = 0;
+  function typeHint(dt) {
+    if (reduce) { job.placeholder = EX[0]; return; }
+    if (job.value || document.activeElement === job) { if (job.placeholder) job.placeholder = ''; return; }
+    exWait -= dt; if (exWait > 0) return;
+    const s = EX[exI]; exC += exDir; job.placeholder = s.slice(0, exC); exWait = exDir > 0 ? 45 : 18;
+    if (exC >= s.length) { exDir = -1; exWait = 1800; } else if (exC <= 0) { exDir = 1; exI = (exI + 1) % EX.length; exWait = 400; }
+  }
+  // Web3Forms delivers the form to our inbox. Its access key is meant to sit in the page (it can only send to us).
+  // Until the key is filled in, the form falls back to opening the visitor's email app with everything written.
+  const W3F_KEY = '';
+  const em = $('#em'), sendBtn = $('#sendbtn'), fnote = $('#fnote');
+  const co = $('#co');
+  if (!W3F_KEY) fnote.textContent = 'This opens your email app with everything filled in, so you can read it over before it goes.';
+  let message = '';
+  const showErr = (text) => { let el = form.querySelector('.ferr'); if (!el) { el = document.createElement('p'); el.className = 'ferr'; el.setAttribute('role', 'alert'); sendBtn.after(el); } el.textContent = text; };
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const miss = [];
+    if (!choice.kind) miss.push($('#f-kind'));
+    if (!job.value.trim()) miss.push($('#f-job'));
+    if (!nm.value.trim()) miss.push($('#f-name'));
+    if (!/^\S+@\S+\.\S+$/.test(em.value.trim())) miss.push($('#f-email'));
+    if (miss.length) { miss.forEach((m) => { m.classList.remove('need'); void m.offsetWidth; m.classList.add('need'); }); miss[0].querySelector('button,textarea,input').focus(); return; }
+    const lines = [`What I am making: ${choice.kind}`, `The one job: ${job.value.trim()}`];
+    if (picks.size) lines.push(`Features: ${[...picks].map((k) => BYKEY[k][1]).join(', ')}`);
+    if (choice.when) lines.push(`When: ${choice.when}`);
+    const who = [nm.value.trim(), co.value.trim(), em.value.trim()].filter(Boolean).join(', ');
+    message = lines.join('\n') + (who ? `\n\nFrom: ${who}` : '');
+    const subject = `${choice.kind}: ${job.value.trim().slice(0, 60)}`;
+    if (!W3F_KEY) {
+      location.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      $('#senth').textContent = 'Your message is ready'; $('#sentp').textContent = 'Press send in your email app and we will reply with how we would make it.'; $('#copymsg').hidden = false;
+      askEl.classList.add('done'); return;
+    }
+    sendBtn.setAttribute('aria-busy', 'true'); sendBtn.textContent = 'Sending…'; showErr('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: W3F_KEY, subject: `Work with us: ${subject}`, from_name: 'Minimal Habits website', name: nm.value.trim(), company: co.value.trim() || 'Not given', email: em.value.trim(), replyto: em.value.trim(), message, botcheck: $('#botcheck').checked }) });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || !out.success) throw new Error(out.message || 'Not sent');
+      $('#senth').textContent = 'We have your idea'; $('#sentp').textContent = `Thank you. We will reply to ${em.value.trim()} with how we would make it.`; $('#copymsg').hidden = true;
+      askEl.classList.add('done');
+    } catch (_) {
+      showErr(`It didn't send. Please try again, or email us at ${MAIL}.`);
+    } finally { sendBtn.removeAttribute('aria-busy'); sendBtn.textContent = 'Send it to us'; }
+  });
+  $('#copymsg').addEventListener('click', (e) => copyText(`To: ${MAIL}\n\n${message}`, e.currentTarget, "Email app didn't open? Copy it"));
+  $('#again').addEventListener('click', () => askEl.classList.remove('done'));
+  job.addEventListener('input', () => $('#f-job').classList.remove('need'));
+  em.addEventListener('input', () => $('#f-email').classList.remove('need'));
+  nm.addEventListener('input', () => $('#f-name').classList.remove('need'));
+  syncBuild();
+
+  // ---------- the ask's backdrop: a slow ring of light glass dots on ink, leaning towards the pointer ----------
+  const askCv = $('#askdots'), actx = askCv.getContext('2d'), AD = makeDots(48);
+  let AW = 0, AH = 0, askTop = 0, AP = { x: 0.5, y: 0.5 }; const APs = { x: 0.5, y: 0.5 };
+  if (fine) askEl.addEventListener('pointermove', (e) => { const b = askEl.getBoundingClientRect(); AP = { x: (e.clientX - b.left) / b.width, y: (e.clientY - b.top) / b.height }; });
+  function drawAsk(t, y) {
+    if (!AW || askTop - y > innerHeight || askTop + AH - y < 0) return;
+    APs.x = lerp(APs.x, AP.x, 0.06); APs.y = lerp(APs.y, AP.y, 0.06);
+    actx.clearRect(0, 0, AW, AH);
+    const cx = AW / 2 + (APs.x - 0.5) * 50, cy = AH / 2 + (APs.y - 0.5) * 34, rx = AW * 0.47, ry = AH * 0.46;
+    actx.lineWidth = 1; actx.strokeStyle = 'rgba(255,255,255,.06)'; actx.beginPath(); actx.ellipse(cx, cy, rx, ry, 0, 0, 6.283); actx.stroke();
+    AD.forEach((d, i) => { const a = (i / AD.length) * 6.283 + (reduce ? 0 : t * 0.03); glass(actx, cx + Math.cos(a) * rx, cy + Math.sin(a) * ry, d.s * 0.85, '243,241,236', 0.45); });
+  }
+
+  // ---------- the steps: markers sit on the line, our dot travels it and lands on each ----------
+  const steps = $('#steps'), track = $('#track'), fill = $('#trackfill'), cards = [...steps.querySelectorAll('.step')];
+  const marks = cards.map(() => { const m = document.createElement('span'); m.className = 'mk'; track.append(m); return m; });
+  const trav = document.createElement('span'); trav.className = 'traveller'; track.append(trav);
+  let stepsTop = 0, stepsH = 0, trackW = 0;
+  function drawSteps(y) {
+    if (!trackW) return;
+    const p = io2(clamp((y + innerHeight * 0.75 - stepsTop) / (stepsH + innerHeight * 0.2)));
+    fill.style.width = `${p * trackW}px`; trav.style.transform = `translate3d(${p * trackW}px,0,0)`;
+    marks.forEach((m, i) => m.classList.toggle('on', p * 3 >= i - 0.02 && p > 0.005));
+  }
+
+  // ---------- the bento tiles move with the scroll ----------
+  const tiles = [...document.querySelectorAll('.tile')].map((el) => ({ el, stage: el.querySelector('.stagec'), top: 0, h: 0 })).filter((o) => o.stage);
+  function drawTiles(y) {
+    if (innerWidth < 640 || reduce) return;
+    const vh = innerHeight;
+    for (const o of tiles) { const top = o.top - y; if (top + o.h < -100 || top > vh + 100) continue; const q = clamp((vh - top) / (vh + o.h)); o.stage.style.transform = `translate3d(0,${lerp(26, -26, q).toFixed(1)}px,0)`; }
+  }
+
+  function measure() {
+    [W, H] = fit(cv, ctx); heroH = hero.offsetHeight;
+    const e = rel(emblem, hero); E = { x: e.x, y: e.y, r: e.w * 0.44 };
+    const s = rel(hstop, hero); S = { x: s.x, y: s.y, r: s.w / 2 };
+    const h1 = rel(hero.querySelector('h1'), hero), row = rel(hero.querySelector('.row'), hero); T = { x: h1.x, y: (h1.y - h1.h / 2 + row.y + row.h / 2) / 2, w: Math.max(h1.w, 300), h: row.y + row.h / 2 - (h1.y - h1.h / 2) };
+    if (getComputedStyle(askCv).display !== 'none') { [AW, AH] = fit(askCv, actx); } else AW = 0;
+    askTop = askEl.getBoundingClientRect().top + scrollY;
+    stepsTop = steps.getBoundingClientRect().top + scrollY; stepsH = steps.offsetHeight;
+    const sb = steps.getBoundingClientRect(), cs = cards.map((c) => { const r = c.getBoundingClientRect(); return r.left - sb.left + r.width / 2; });
+    track.style.left = `${cs[0]}px`; trackW = cs.at(-1) - cs[0]; track.style.width = `${trackW}px`;
+    marks.forEach((m, i) => { m.style.left = `${cs[i] - cs[0]}px`; });
+    levelRows();
+    for (const o of tiles) { o.top =o.el.getBoundingClientRect().top + scrollY; o.h = o.el.offsetHeight; }
+  }
+  measure();
+  addEventListener('resize', measure); addEventListener('load', measure);
+  if (document.fonts) document.fonts.ready.then(measure);
+  if (window.ResizeObserver) { const ro = new ResizeObserver(() => measure()); ro.observe(steps); ro.observe(document.querySelector('main')); }
+
+  if (reduce) { drawHero(performance.now(), 0); drawSteps(1e9); drawGame(0, 0); typeHint(0); drawAsk(0, 0); const rl = () => { drawCmp(); requestAnimationFrame(rl); }; rl(); return; }
+
+  const countUp = (root) => root.querySelectorAll('[data-count]').forEach((el, j) => {
+    const to = +el.dataset.count, from = el.dataset.from != null ? +el.dataset.from : 0, start = performance.now() + 700 + j * 160;
+    const step = (now) => { if (el.closest('.touched')) return;      // a tap has taken over
+      const p = clamp((now - start) / 1300), v = Math.round(lerp(from, to, 1 - Math.pow(1 - p, 3))); el.textContent = v; if (p < 1) requestAnimationFrame(step); };
+    el.textContent = from; requestAnimationFrame(step);
+  });
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add('in'); if (e.target.classList.contains('tile')) countUp(e.target); io.unobserve(e.target); }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  new IntersectionObserver(([e]) => { wOn = e.isIntersecting; }, { threshold: 0.35 }).observe(why2);
+
+  if (fine) document.querySelectorAll('.sheen').forEach((el) => {
+    el.addEventListener('pointermove', (e) => {
+      const b = el.getBoundingClientRect(), px = (e.clientX - b.left) / b.width, py = (e.clientY - b.top) / b.height;
+      el.style.setProperty('--mx', `${px * 100}%`); el.style.setProperty('--my', `${py * 100}%`);
+      if (el.classList.contains('tilt') && el.classList.contains('in')) el.style.transform = `perspective(1400px) rotateX(${((0.5 - py) * 4).toFixed(2)}deg) rotateY(${((px - 0.5) * 5).toFixed(2)}deg)`;
+    });
+    el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+  });
+
+  const lenis = window.Lenis ? new Lenis({ lerp: 0.09, smoothWheel: true }) : null;
+  document.querySelectorAll('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
+    const t = document.querySelector(a.getAttribute('href')); if (!t || !lenis) return;
+    e.preventDefault(); lenis.scrollTo(t, { offset: -84, duration: 1.4 });
+  }));
+  let last = performance.now();
+  function frame(now) {
+    if (lenis) lenis.raf(now);
+    const y = scrollY, t = now / 1000, dt = Math.min(100, now - last); last = now;
+    drawHero(now, y); drawGame(now, t); drawAsk(t, y); drawSteps(y); drawTiles(y); drawCmp(); drawWhy(dt); typeHint(dt);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+});
+</script>
+</body>
+</html>
