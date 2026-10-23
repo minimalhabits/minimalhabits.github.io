@@ -170,6 +170,10 @@ section{padding:120px 0 0;scroll-margin-top:90px}
 .fi.on h3{color:var(--ink)}
 .fi.on .fd{grid-template-rows:1fr}
 @media (hover:hover) and (pointer:fine){ .fi:not(.on):hover h3{color:rgba(22,24,29,.7)} }
+.fnow{display:none}
+.fnow p{font-size:16px;line-height:1.55;color:var(--ink2);text-align:center;min-height:4.7em;max-width:30em;margin:0 auto}
+.fnow .fb{display:block;height:2px;margin:14px auto 0;max-width:30em;border-radius:2px;background:rgba(22,24,29,.1);overflow:hidden}
+.fnow .fb i{display:block;height:100%;background:var(--ink);transform-origin:left;transform:scaleX(var(--p,0))}
 .fstage{position:relative;border-radius:40px;min-height:520px;overflow:hidden;isolation:isolate}
 .fstage::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 60% at 20% 10%,rgba(255,200,170,.55),transparent 70%),radial-gradient(70% 70% at 90% 90%,rgba(180,200,252,.55),transparent 70%)}
 .scene{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(.96);transition:opacity .5s ease,transform .8s var(--ease-out);pointer-events:none}
@@ -429,6 +433,16 @@ footer a{font-weight:600}
   .why2,.builder,.askgrid{grid-template-columns:1fr}
   .why2{gap:22px}
   .fstage{order:-1;min-height:420px}
+  /* phones and tablets: panel, then a row of reasons to swipe, then the words, all on one screen */
+  .why2{gap:16px}
+  .flist{display:flex;gap:8px;overflow-x:auto;margin:0 -22px;padding:2px 22px 6px;scroll-padding-inline:22px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .flist::-webkit-scrollbar{display:none}
+  .fi{flex:none;width:auto;padding:11px 16px;border-radius:999px;background:rgba(255,255,255,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.75);scroll-snap-align:start}
+  .fi h3{font-size:15px;white-space:nowrap;letter-spacing:-.02em;color:var(--ink2)}
+  .fi .fd{display:none}
+  .fi.on{background:var(--ink);box-shadow:none}
+  .fi.on h3{color:#fff}
+  .fnow{display:block;order:1}
   .builder{gap:40px}
   .askl{position:static}
   .steps{grid-template-columns:1fr 1fr;padding-top:0}
@@ -460,7 +474,6 @@ footer a{font-weight:600}
   .days{gap:5px}
   .day{padding:8px 3px 7px;font-size:11px;border-radius:12px}
   .day em{font-size:9.5px}
-  .fi{padding:14px 18px}
   .fstage{min-height:360px;border-radius:32px}
   .s1 .ph{transform:scale(.86)}
   .devs{transform:scale(.72)}
@@ -895,17 +908,22 @@ addEventListener('DOMContentLoaded', () => {
   // ---------- why: tap a reason (or let it play); the stage acts it out ----------
   const fis = [...document.querySelectorAll('.fi')], scenes = [...document.querySelectorAll('.scene')], why2 = $('#why2');
   const WDUR = 5600; let wi = 0, wel = 0, wPaused = false, wOn = false;
+  const flist = $('#flist'), fnow = document.createElement('div');
+  fnow.className = 'fnow'; fnow.setAttribute('aria-live', 'polite'); fnow.innerHTML = '<p></p><span class="fb"><i></i></span>'; why2.append(fnow);
   function wshow(i) {
     wi = (i + fis.length) % fis.length; wel = 0;
     fis.forEach((b, j) => { b.classList.toggle('on', j === wi); b.setAttribute('aria-selected', j === wi); b.querySelector('.fb i').style.setProperty('--p', 0); });
     scenes.forEach((s, j) => s.classList.toggle('on', j === wi));
+    fnow.querySelector('p').textContent = fis[wi].querySelector('p').textContent; fnow.querySelector('.fb i').style.setProperty('--p', 0);
+    if (flist.scrollWidth > flist.clientWidth + 4) flist.scrollTo({ left: flist.scrollLeft + fis[wi].getBoundingClientRect().left - flist.getBoundingClientRect().left - 22, behavior: reduce ? 'auto' : 'smooth' });   // keep the active reason in view
   }
+  wshow(0);
   fis.forEach((b, i) => b.addEventListener('click', () => wshow(i)));
   if (fine) { why2.addEventListener('pointerenter', () => { wPaused = true; }); why2.addEventListener('pointerleave', () => { wPaused = false; }); }
   function drawWhy(dt) {
     if (reduce) return;
     if (wOn && !wPaused) wel += dt;
-    fis[wi].querySelector('.fb i').style.setProperty('--p', clamp(wel / WDUR));
+    fis[wi].querySelector('.fb i').style.setProperty('--p', clamp(wel / WDUR)); fnow.querySelector('.fb i').style.setProperty('--p', clamp(wel / WDUR));
     if (wel >= WDUR) wshow(wi + 1);
   }
 

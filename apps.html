@@ -113,6 +113,12 @@ nav .pill{color:#fff;background:var(--ink);padding:9px 18px;margin-left:6px}
 .phone .scr{position:absolute;inset:9px;border-radius:39px;overflow:hidden;background:#fff}
 .phone .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 1s var(--ease-out)}
 .phone .scr img.on{opacity:1;transform:none}
+.cap{display:none}
+.cap .ci{grid-area:1/1;opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .6s var(--ease-out)}
+.cap .ci.on{opacity:1;transform:none}
+.cap .num{font-size:12.5px;font-weight:650;letter-spacing:.14em;color:var(--ink2)}
+.cap h3{font-size:clamp(24px,6.6vw,32px);line-height:1.08;letter-spacing:-.045em;font-weight:780;margin-top:6px}
+.cap p{font-size:16px;color:var(--ink2);margin-top:8px}
 .pips{position:absolute;right:-30px;top:50%;transform:translateY(-50%);display:grid;gap:8px}
 .pips i{width:6px;height:6px;border-radius:50%;background:rgba(22,24,29,.2);transition:height .5s var(--ease-out),background-color .3s,border-radius .3s}
 .pips i.on{height:26px;border-radius:4px;background:var(--ink)}
@@ -183,13 +189,14 @@ footer a{font-weight:600}
 .motion .reveal.in{opacity:1;transform:none}
 
 @media (max-width:900px){
-  .story{display:block;margin-top:28px}
-  .stage{display:none}
-  .steps{padding:0}
-  .stp{min-height:0;opacity:1;padding:34px 0;text-align:center;align-items:center}
-  .stp p{margin-left:auto;margin-right:auto}
-  .stp .mphone{display:block;width:min(250px,70%);margin:24px auto 0;padding:7px;border-radius:38px;background:#0E0F13;box-shadow:0 40px 70px -30px rgba(22,24,29,.5)}
-  .stp .mphone img{border-radius:31px;width:100%;height:auto}
+  /* phones get the same pinned phone: it stays put, the screen and the words under it change as you scroll */
+  .story{display:block;position:relative;margin-top:10px;height:calc(var(--n,3) * 75svh + 60svh)}
+  .steps{display:none}
+  .stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding-top:56px}
+  .phone{width:auto;height:min(54svh,560px);padding:7px;border-radius:38px}
+  .phone .scr{inset:7px;border-radius:31px}
+  .pips{right:-22px}
+  .cap{display:grid;align-items:start;width:100%;max-width:30em;min-height:206px;text-align:center}
   .try{grid-template-columns:1fr}
 }
 @media (max-width:860px){ header{padding-left:14px} }
@@ -267,10 +274,10 @@ footer a{font-weight:600}
     </div>
     <div class="story">
       <div class="steps">
-        <div class="stp" data-s="0"><span class="num">01</span><h3>Know what is left</h3><p>One number on the home screen: what is left to spend this month, after bills, savings and everything you have planned.</p><figure class="mphone"><img src="assets/fondo-home.png" alt="Fondo home screen showing what is left this month" loading="lazy" width="420" height="911"></figure></div>
-        <div class="stp" data-s="1"><span class="num">02</span><h3>See the low point before it comes<span class="pro">Pro</span></h3><p>Cashflow plots your balance day by day, so a tight week never takes you by surprise.</p><figure class="mphone"><img src="assets/fondo-cashflow.png" alt="Fondo cashflow screen showing the lowest balance ahead" loading="lazy" width="420" height="911"></figure></div>
-        <div class="stp" data-s="2"><span class="num">03</span><h3>Try a change before you make it<span class="pro">Pro</span></h3><p>What-if is a sandbox for your budget. Change income or bills, see the result, and nothing is saved until you tap Apply.</p><figure class="mphone"><img src="assets/fondo-whatif.png" alt="Fondo what-if screen comparing now with a changed budget" loading="lazy" width="420" height="911"></figure></div>
-        <div class="stp" data-s="3"><span class="num">04</span><h3>See your debt-free date</h3><p>Snowball or avalanche, and the month you will be done. The forecast is part of Pro.</p><figure class="mphone"><img src="assets/fondo-debts.png" alt="Fondo debts screen with a debt-free forecast" loading="lazy" width="420" height="911"></figure></div>
+        <div class="stp" data-s="0"><span class="num">01</span><h3>Know what is left</h3><p>One number on the home screen: what is left to spend this month, after bills, savings and everything you have planned.</p></div>
+        <div class="stp" data-s="1"><span class="num">02</span><h3>See the low point before it comes<span class="pro">Pro</span></h3><p>Cashflow plots your balance day by day, so a tight week never takes you by surprise.</p></div>
+        <div class="stp" data-s="2"><span class="num">03</span><h3>Try a change before you make it<span class="pro">Pro</span></h3><p>What-if is a sandbox for your budget. Change income or bills, see the result, and nothing is saved until you tap Apply.</p></div>
+        <div class="stp" data-s="3"><span class="num">04</span><h3>See your debt-free date</h3><p>Snowball or avalanche, and the month you will be done. The forecast is part of Pro.</p></div>
       </div>
       <div class="stage"><div class="phone"><div class="scr"><img class="on" src="assets/fondo-home.png" alt=""><img src="assets/fondo-cashflow.png" alt=""><img src="assets/fondo-whatif.png" alt=""><img src="assets/fondo-debts.png" alt=""></div><div class="pips"><i class="on"></i><i></i><i></i><i></i></div></div></div>
     </div>
@@ -301,11 +308,11 @@ footer a{font-weight:600}
     </div>
     <div class="story">
       <div class="steps">
-        <div class="stp" data-s="0"><span class="num">01</span><h3>Grow a streak you can see</h3><p>Every day you show up, your plant grows, and you can watch the streak build.</p><figure class="mphone"><img src="assets/shot-habits.png" alt="Cactara habits screen with a streak and a growing plant" loading="lazy" width="1080" height="1920"></figure></div>
-        <div class="stp" data-s="1"><span class="num">02</span><h3>Budget your month in minutes</h3><p>Income, bills and savings side by side with your habits, all on your phone.</p><figure class="mphone"><img src="assets/shot-budget.png" alt="Cactara monthly budget screen" loading="lazy" width="1080" height="1920"></figure></div>
-        <div class="stp" data-s="2"><span class="num">03</span><h3>Collect living plants</h3><p>Grow a garden over time and keep every plant you raise. Some rare plants are a one-off purchase.</p><figure class="mphone"><img src="assets/shot-garden.png" alt="Cactara garden of collectible plants" loading="lazy" width="1080" height="1920"></figure></div>
+        <div class="stp" data-s="0"><span class="num">01</span><h3>Grow a streak you can see</h3><p>Every day you show up, your plant grows, and you can watch the streak build.</p></div>
+        <div class="stp" data-s="1"><span class="num">02</span><h3>Budget your month in minutes</h3><p>Income, bills and savings side by side with your habits, all on your phone.</p></div>
+        <div class="stp" data-s="2"><span class="num">03</span><h3>Collect living plants</h3><p>Grow a garden over time and keep every plant you raise. Some rare plants are a one-off purchase.</p></div>
       </div>
-      <div class="stage"><div class="phone tall"><div class="scr"><img class="on" src="assets/shot-habits.png" alt=""><img src="assets/shot-budget.png" alt=""><img src="assets/shot-garden.png" alt=""></div><div class="pips"><i class="on"></i><i></i><i></i></div></div></div>
+      <div class="stage"><div class="phone"><div class="scr"><img class="on" src="assets/cactara-habits.png" alt=""><img src="assets/cactara-budget.png" alt=""><img src="assets/cactara-garden.png" alt=""></div><div class="pips"><i class="on"></i><i></i><i></i></div></div></div>
     </div>
     <div class="try glass reveal">
       <div><p class="eyebrow">Try it</p><h3>Show up, and watch it grow</h3><p class="note">Tap once for each day you kept your habit. This is how Cactara's plant feels, in miniature.</p>
@@ -343,9 +350,9 @@ footer a{font-weight:600}
     </div>
     <div class="story">
       <div class="steps">
-        <div class="stp" data-s="0"><span class="num">01</span><h3>Every tool, one search away</h3><p>Type what you need, or pin your favorites with a star. Your recent tools stay close.</p><figure class="mphone"><img src="assets/tilo-home-light.png" alt="Tilo home screen with search and recent tools" loading="lazy" width="420" height="911"></figure></div>
-        <div class="stp" data-s="1"><span class="num">02</span><h3>Convert anything</h3><p>Feet to centimeters, kilograms to pounds, and every unit shown at once.</p><figure class="mphone"><img src="assets/tilo-convert.png" alt="Tilo unit converter turning feet into centimeters" loading="lazy" width="420" height="911"></figure></div>
-        <div class="stp" data-s="2"><span class="num">03</span><h3>Split the bill in seconds</h3><p>Pick the tip, set the number of people, and everyone knows what they owe.</p><figure class="mphone"><img src="assets/tilo-tip.png" alt="Tilo tip calculator splitting a bill between four people" loading="lazy" width="420" height="911"></figure></div>
+        <div class="stp" data-s="0"><span class="num">01</span><h3>Every tool, one search away</h3><p>Type what you need, or pin your favorites with a star. Your recent tools stay close.</p></div>
+        <div class="stp" data-s="1"><span class="num">02</span><h3>Convert anything</h3><p>Feet to centimeters, kilograms to pounds, and every unit shown at once.</p></div>
+        <div class="stp" data-s="2"><span class="num">03</span><h3>Split the bill in seconds</h3><p>Pick the tip, set the number of people, and everyone knows what they owe.</p></div>
       </div>
       <div class="stage"><div class="phone"><div class="scr"><img class="on" src="assets/tilo-home-light.png" alt=""><img src="assets/tilo-convert.png" alt=""><img src="assets/tilo-tip.png" alt=""></div><div class="pips"><i class="on"></i><i></i><i></i></div></div></div>
     </div>
@@ -410,7 +417,15 @@ addEventListener('DOMContentLoaded', () => {
 
   // ---------- chapters: tint the page, and the phone follows the step you are reading ----------
   const tints = Object.fromEntries([...document.querySelectorAll('.tint')].map((t) => [t.classList[1], t]));
-  const stories = chapters.map((c) => ({ steps: [...c.querySelectorAll('.stp')], imgs: [...c.querySelectorAll('.stage .scr img')], pips: [...c.querySelectorAll('.pips i')], cur: -1 }));
+  const stories = chapters.map((c) => {
+    const story = c.querySelector('.story'), steps = [...c.querySelectorAll('.stp')], cap = document.createElement('div');
+    // on phones the words of each step sit under the pinned phone, so copy them there
+    cap.className = 'cap'; cap.setAttribute('aria-hidden', 'true');
+    cap.innerHTML = steps.map((s) => `<div class="ci">${s.innerHTML}</div>`).join('');
+    c.querySelector('.stage').append(cap); story.style.setProperty('--n', steps.length);
+    return { story, steps, caps: [...cap.children], imgs: [...c.querySelectorAll('.stage .scr img')], pips: [...c.querySelectorAll('.pips i')], cur: -1 };
+  });
+  const narrow = matchMedia('(max-width: 900px)');
   let tintOn = '';
   function drawStories() {
     const mid = innerHeight * 0.5;
@@ -418,9 +433,15 @@ addEventListener('DOMContentLoaded', () => {
     chapters.forEach((c, ci) => {
       const b = c.getBoundingClientRect(); if (b.top < mid && b.bottom > mid) active = c.dataset.tint;
       if (b.bottom < -200 || b.top > innerHeight + 200) return;
-      const st = stories[ci]; let best = 0, bd = 1e9;
-      st.steps.forEach((s, i) => { const r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid); if (d < bd) { bd = d; best = i; } });
-      if (best !== st.cur) { st.cur = best; st.steps.forEach((s, i) => s.classList.toggle('on', i === best)); st.imgs.forEach((im, i) => im.classList.toggle('on', i === best)); st.pips.forEach((p, i) => p.classList.toggle('on', i === best)); }
+      const st = stories[ci]; let best = 0;
+      if (narrow.matches) {           // pinned: the step follows how far you have scrolled through the chapter's story
+        const r = st.story.getBoundingClientRect(), p = clamp(-r.top / Math.max(1, r.height - innerHeight));
+        best = Math.min(st.steps.length - 1, Math.floor(p * st.steps.length));
+      } else {
+        let bd = 1e9;
+        st.steps.forEach((s, i) => { const r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid); if (d < bd) { bd = d; best = i; } });
+      }
+      if (best !== st.cur) { st.cur = best; [st.steps, st.caps, st.imgs, st.pips].forEach((list) => list.forEach((el, i) => el.classList.toggle('on', i === best))); }
     });
     if (active !== tintOn) { tintOn = active; Object.entries(tints).forEach(([k, el]) => el.classList.toggle('on', k === active)); }
   }
