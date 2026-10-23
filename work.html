@@ -476,8 +476,20 @@ footer a{font-weight:600}
   .day em{font-size:9.5px}
   .fstage{min-height:360px;border-radius:32px}
   .s1 .ph{transform:scale(.86)}
-  .devs{transform:scale(.72)}
-  .s3 .ph,.film{transform:scale(.86)}
+  /* real phone-sized pieces (a scale transform shrinks the look but not the space, so things spilled out) */
+  .devs{gap:10px}
+  .dcol{gap:12px;font-size:12px}
+  .dv{padding:12px 9px;box-shadow:0 0 0 4px var(--ink),0 18px 34px -18px rgba(22,24,29,.45)}
+  .dv.tab{width:min(160px,42vw);height:118px;border-radius:15px;padding:12px 12px}
+  .dv.p1{width:62px;height:126px;border-radius:17px}
+  .dv.p2{width:60px;height:122px;border-radius:11px}
+  .dv .hd{height:6px;margin-bottom:9px}
+  .dv .r{height:12px;border-radius:5px;margin-bottom:6px}
+  .s3 .ph{width:150px;height:272px}
+  .s3 .cloud{top:7%;right:5%;width:58px}
+  .s3 .lock{top:30px}
+  .s3 .stay{bottom:26px;font-size:11.5px}
+  .film{transform:scale(.86)}
   .cmp{border-radius:30px}
   .crow{grid-template-columns:26px minmax(0,1fr);gap:8px;padding:16px 0}
   .crow p{font-size:clamp(20px,6.2vw,26px)}
