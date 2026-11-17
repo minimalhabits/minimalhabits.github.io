@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Games · Minimal Habits</title>
-<meta name="description" content="Play Gather, a tiny game from Minimal Habits: move our dot and gather every glass dot into its ring. Our first full games are coming soon.">
+<meta name="description" content="Play Gather, a tiny game from Minimal Habits: move our dot and gather every glass dot into its ring. Our first full game, Jellup, is coming soon.">
 <meta property="og:title" content="Games · Minimal Habits">
-<meta property="og:description" content="Play Gather, a tiny game in our studio's style. Our first full games are coming soon.">
+<meta property="og:description" content="Play Gather, a tiny game in our studio's style. Our first full game, Jellup, is coming soon.">
 <meta property="og:image" content="https://minimalhabits.github.io/assets/share.png">
 <meta property="og:url" content="https://minimalhabits.github.io/games.html">
 <meta property="og:type" content="website">
@@ -90,6 +90,15 @@ section{padding-top:120px}
 .soon h2{font-size:clamp(38px,6vw,78px);line-height:1.02;letter-spacing:-.055em;font-weight:800;margin-top:14px}
 .soon p{font-size:clamp(17px,1.6vw,20px);color:var(--ink2);margin:18px auto 0;max-width:32em}
 .soon .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+/* Jellup, our first game (coming soon) */
+.jel{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);align-items:center;text-align:left}
+.jel p{margin-left:0}
+.jel .row{justify-content:flex-start}
+.jicon{display:block;width:84px;height:84px;border-radius:20px;margin-top:18px;box-shadow:0 10px 26px -10px rgba(80,30,160,.45)}
+.jtitle{display:block;width:min(360px,80%);height:auto;margin:8px 0 -8px -14px}
+.jel .when{font-weight:700;color:var(--ink)}
+.jplay video{display:block;width:100%;max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:30px;object-fit:cover;background:#7B3BFF;box-shadow:0 30px 60px -30px rgba(60,20,120,.6)}
+@media (max-width:760px){.jel{grid-template-columns:1fr;text-align:center}.jel .row{justify-content:center}.jicon,.jtitle{margin-left:auto;margin-right:auto}}
 .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
 .ph{position:relative;border-radius:28px;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.6),rgba(255,255,255,.25));box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 20px 40px -26px rgba(22,24,29,.4);display:grid;place-items:center}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.65) 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.6s var(--ease-out) infinite;animation-delay:var(--d)}
@@ -179,11 +188,17 @@ footer a{font-weight:600}
   <p class="how" id="how">Move your mouse, or drag your finger, to steer. Arrow keys work too.</p>
 
   <section>
-    <div class="soon glass">
-      <p class="eyebrow">Coming soon</p>
-      <h2>Our first games are on the <span class="nw">way<span class="stop"></span></span></h2>
-      <p>Small games that are quick to learn, satisfying to play, and polished down to the sound of every tap. Follow along to see them first.</p>
+    <div class="soon glass jel">
+      <div>
+      <p class="eyebrow">Coming soon · our first game</p>
+      <img class="jicon" src="assets/jellup-icon.png" alt="Jellup app icon" width="84" height="84">
+      <img class="jtitle" src="assets/jellup-title.png" alt="Jellup" width="360" height="120">
+      <h2>One thumb. Don’t <span class="nw">pop<span class="stop"></span></span></h2>
+      <p>Hold to puff up your balloon, let go to shrink it, and fall through a cave of spikes, shafts and surprises without popping. Quick to learn, hard to put down.</p>
+      <p class="when">Coming soon to the App Store and Google Play.</p>
       <div class="row"><a class="btn" href="https://www.instagram.com/minimalhabits.apps/">Follow on Instagram</a><a class="btn alt" href="https://www.youtube.com/@minimalhabitsapps">Watch on YouTube</a></div>
+      </div>
+      <div class="jplay"><video src="media/video/jellup-gameplay.mp4" poster="assets/jellup-gameplay.jpg" autoplay muted loop playsinline aria-label="Jellup gameplay: a pink balloon falling through a purple cave"></video></div>
     </div>
     <div class="idea glass">
       <div><h3>Have a game idea?</h3><p>We make games for others too, from the first sketch to the store.</p></div>
