@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work with us · Minimal Habits</title>
-<meta name="description" content="Minimal Habits designs, builds and launches apps and games for iPhone, iPad and Android, and sets up social media that runs on your own Claude account. Tell us the one job.">
+<meta name="description" content="Minimal Habits designs, builds and launches apps and games for iPhone, iPad and Android, and offers Arabic and English websites, app translation, store launch kits, brand kits, social media automation, your own AI studio, mobile games and branded mini-games, with prices you can see first.">
 <meta property="og:title" content="Work with us · Minimal Habits">
 <meta property="og:description" content="Your idea, made properly. We design, build and launch apps and games for iPhone, iPad and Android.">
 <meta property="og:image" content="https://minimalhabits.github.io/assets/share.png">
@@ -110,9 +110,11 @@ section{padding:120px 0 0;scroll-margin-top:90px}
 .t2{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(150,215,175,.95),transparent 70%),#E3F2E8}
 .t3{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(170,150,252,.85),transparent 70%),#ECE8FB}
 .t4{grid-column:span 4;--paint:radial-gradient(70% 90% at 100% 100%,rgba(130,190,250,.9),transparent 70%),radial-gradient(60% 70% at 0% 100%,rgba(190,178,252,.7),transparent 70%),#E3EDF9}
-.t5{grid-column:span 6;min-height:0;padding:40px;--paint:radial-gradient(60% 120% at 100% 0%,rgba(190,178,252,.75),transparent 70%),radial-gradient(50% 100% at 0% 100%,rgba(255,190,160,.7),transparent 70%),#F1EDF8}
-.t5in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
 .stagec{position:relative;flex:1;min-height:220px;margin-top:22px;will-change:transform}
+/* the team tile: its cards keep to one line (the text scales with the tile), and the stage leaves room for the scroll drift */
+.t2{container-type:inline-size}
+.t2 .stagec{min-height:236px;margin-bottom:34px}
+.t2 .chip b{white-space:nowrap;font-size:clamp(16px,6.2cqi,22px)}
 .chip{position:absolute;border-radius:22px;padding:14px 18px;min-width:180px;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .3s}
 .chip small{display:block;font-size:12.5px;font-weight:600;color:#55514A;transition:opacity .25s}
 .chip b{display:block;font-size:22px;letter-spacing:-.035em;line-height:1.15;margin-top:2px;font-variant-numeric:tabular-nums;transition:opacity .25s}
@@ -120,7 +122,7 @@ section{padding:120px 0 0;scroll-margin-top:90px}
 .chip .bar i{display:block;height:100%;width:var(--w);border-radius:6px;background:var(--ink);transition:width .7s var(--spring)}
 .chip.dk{background:var(--ink);color:#fff;border:0;box-shadow:0 20px 40px -20px rgba(22,24,29,.6)}
 .chip.dk small{color:rgba(255,255,255,.65)}
-.chip.done b::after,.day.done em::before{content:"";display:inline-block;width:.42em;height:.24em;margin-left:.3em;border-left:.12em solid currentColor;border-bottom:.12em solid currentColor;transform:rotate(-45deg) translateY(-.16em)}
+.chip.done b::after{content:"";display:inline-block;width:.42em;height:.24em;margin-left:.3em;border-left:.12em solid currentColor;border-bottom:.12em solid currentColor;transform:rotate(-45deg) translateY(-.16em)}
 .chip .live{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dot);margin-right:6px;vertical-align:1px;animation:live 1.6s ease-in-out infinite}
 @keyframes live{50%{opacity:.25}}
 @keyframes pop{0%{scale:1}35%{scale:1.07}100%{scale:1}}
@@ -142,19 +144,9 @@ section{padding:120px 0 0;scroll-margin-top:90px}
 .t4{cursor:crosshair}
 .gdot{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.35),rgba(255,255,255,0) 45%),rgba(22,24,29,.7);box-shadow:inset 0 1.5px 1px rgba(255,255,255,.9),inset 0 -1px 1px rgba(255,255,255,.45),0 8px 16px -8px rgba(22,24,29,.45)}
 .odot{position:absolute;border-radius:50%;background:var(--dot)}
-/* the marketing week */
-.week{position:relative}
-.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
-.day{border-radius:16px;padding:10px 6px 9px;text-align:center;font-size:12px;font-weight:650;transition:transform .5s var(--spring),background-color .4s}
-.day .thumb{display:block;aspect-ratio:9/16;border-radius:9px;margin:7px 0;background:linear-gradient(160deg,#FBE3D6,#E6E1FB 60%,#DCEBFA);box-shadow:inset 0 0 0 1px rgba(22,24,29,.06);transition:box-shadow .4s}
-.day em{font-style:normal;font-weight:600;font-size:11px;color:var(--ink2);white-space:nowrap}
-.day.done{transform:translateY(-6px)}
-.day.done .thumb{box-shadow:inset 0 0 0 2px var(--ink)}
-.day.done em{color:var(--ink)}
-.wkrow{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+/* the approve button (social media tile) */
 .approve{position:relative;display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;background:var(--ink);color:#fff;font-weight:650;font-size:15px;cursor:pointer;transition:transform .16s var(--ease-out)}
 .approve:active{transform:scale(.96)}
-.wkrow small{font-size:13.5px;color:#55514A}
 
 /* why: pick a reason, watch it play */
 .why2{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:44px;align-items:center;margin-top:60px}
@@ -368,10 +360,19 @@ section{padding:120px 0 0;scroll-margin-top:90px}
 
 /* questions */
 .faq{max-width:860px;margin:48px auto 0;display:grid;gap:12px}
+.qwrap{text-align:center;margin-top:30px}
+.qf{position:relative;display:inline-flex;max-width:100%;padding:5px;border-radius:999px;overflow-x:auto;scrollbar-width:none}
+.qf::-webkit-scrollbar{display:none}
+.qf button{position:relative;z-index:1;flex:none;border:0;background:none;padding:10px 18px;border-radius:999px;font-weight:650;font-size:15px;color:var(--ink2);cursor:pointer;white-space:nowrap;transition:color .35s;-webkit-tap-highlight-color:transparent}
+.qf button[aria-pressed=true]{color:#fff}
+.qf .thumb{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:999px;background:var(--ink);transition:transform .55s var(--spring),width .55s var(--spring)}
+.faq details[hidden]{display:none}
+.qmore{text-align:center;margin-top:26px;font-size:15px;color:var(--ink2)}
+.qmore a{font-weight:650;color:var(--ink)}
 details{border-radius:28px;padding:0 28px}
 details::details-content{height:0;overflow:clip;transition:height .45s var(--ease-out),content-visibility .45s allow-discrete}
 details[open]::details-content{height:auto}
-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;font-size:20px;font-weight:650;letter-spacing:-.025em}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:21px 0;font-size:19px;font-weight:650;letter-spacing:-.025em}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--ink);transition:background-color .3s,transform .4s var(--spring)}
 details[open] summary::after{background:var(--dot);transform:scale(1.3)}
@@ -401,6 +402,9 @@ details p{padding:0 0 26px;font-size:17px;line-height:1.6;color:var(--ink2);max-
 .aform textarea{min-height:110px;line-height:1.45}
 .aform textarea::placeholder,.aform input::placeholder{color:rgba(255,255,255,.4)}
 .aform textarea:focus,.aform input:focus{outline:none;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.extra .pills button{font-size:14px;padding:9px 14px}
+.extra .pills button::before{content:"+";margin-right:6px;opacity:.6;font-weight:700}
+.extra .pills button[aria-pressed=true]::before{content:"✓";opacity:1}
 .picked .pills button{background:rgba(255,255,255,.14);padding-right:12px}
 .picked .pills button::after{content:"×";margin-left:8px;opacity:.6}
 .need{animation:shake .4s var(--ease-out)}
@@ -423,13 +427,263 @@ details p{padding:0 0 26px;font-size:17px;line-height:1.6;color:var(--ink2);max-
 .ask.done .sent{display:block}
 @keyframes okpop{from{transform:scale(0)}}
 
+/* services: the same painted bento as "what we make", each tile with a glass piece you can play with and a live price */
+.sv{min-height:0;padding:34px 34px 30px}
+.sv h3{max-width:16em}
+.sv1{grid-column:span 4;--paint:radial-gradient(80% 90% at 90% 100%,rgba(255,170,130,.85),transparent 70%),radial-gradient(70% 80% at 0% 0%,rgba(255,220,196,.9),transparent 70%),#FBE9DF}
+.sv2{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(170,150,252,.85),transparent 70%),#ECE8FB}
+.sv3{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(130,190,250,.85),transparent 70%),#E3EDF9}
+.sv4{grid-column:span 2;--paint:radial-gradient(90% 80% at 50% 110%,rgba(150,215,175,.95),transparent 70%),#E3F2E8}
+.sv5{grid-column:span 2;--paint:radial-gradient(90% 80% at 100% 110%,rgba(255,180,150,.75),transparent 70%),radial-gradient(80% 70% at 0% 100%,rgba(190,178,252,.7),transparent 70%),#F3EEF6}
+.sv6{grid-column:span 2;--paint:radial-gradient(80% 80% at 0% 110%,rgba(255,190,160,.75),transparent 70%),radial-gradient(70% 70% at 100% 0%,rgba(190,178,252,.7),transparent 70%),#F1EDF8}
+.sv7{grid-column:span 4;color:#fff;--paint:radial-gradient(60% 90% at 100% 0%,rgba(255,106,61,.28),transparent 70%),radial-gradient(60% 80% at 0% 100%,rgba(120,130,250,.22),transparent 70%),#16181D}
+.sv .svstage{display:grid;grid-template-columns:minmax(0,1fr);place-items:center;min-height:210px;padding-top:20px}
+.sv6 .svstage{padding-top:36px}
+.site-tabs{-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}
+.site[dir=rtl] .site-tabs{-webkit-mask-image:linear-gradient(to left,#000 82%,transparent);mask-image:linear-gradient(to left,#000 82%,transparent)}
+.sv .proof{position:relative;padding-left:18px;margin-top:20px;font-size:14.5px;line-height:1.5;color:var(--ink);max-width:none}
+.sv .proof::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--dot)}
+.svprice{margin-top:16px;border-radius:26px;padding:16px 18px}
+.svfig{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px}
+.svfig small{font-size:14px;font-weight:650;color:#55514A}
+.svfig b{display:inline-block;font-size:clamp(30px,3vw,38px);font-weight:800;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;transform-origin:left bottom}
+.svfig em{font-style:normal;font-size:15px;font-weight:650;color:#55514A}
+.svprice.pop .svfig b{animation:pop .5s var(--spring)}
+.svopts{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.svopts button{border:0;border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:650;color:var(--ink);background:rgba(255,255,255,.62);box-shadow:inset 0 0 0 1px rgba(22,24,29,.08);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .3s,color .3s,transform .16s var(--ease-out)}
+.svopts button:active{transform:scale(.95)}
+.svopts button[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none}
+@media (hover:hover) and (pointer:fine){ .svopts button[aria-pressed=false]:hover{background:#fff} }
+.svnote{display:block;margin-top:10px;font-size:13.5px;line-height:1.45;color:#55514A;transition:opacity .2s}
+.svnote.swap{opacity:0}
+@keyframes svin{from{opacity:0;transform:translateY(8px) scale(.85)}}
+.svin{animation:svin .6s var(--spring) both}
+
+/* 1. websites: a little site that mirrors into Arabic */
+.site{width:100%;max-width:560px;min-width:0;border-radius:24px;padding:12px}
+.site-bar{display:flex;align-items:center;gap:10px}
+.site-dots{display:flex;gap:5px;flex:none}
+.site-dots i{width:8px;height:8px;border-radius:50%;background:rgba(22,24,29,.18)}
+.site-tabs{display:flex;gap:4px;flex:1;min-width:0;overflow:hidden}
+.site-tabs span{flex:none;font-size:12px;font-weight:650;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.65);white-space:nowrap}
+.site-tabs span:first-child{background:var(--ink);color:#fff}
+.site-lang{flex:none;border:0;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700;background:#fff;color:var(--ink);box-shadow:0 6px 14px -8px rgba(22,24,29,.4);cursor:pointer;transition:transform .16s var(--ease-out)}
+.site-lang:active{transform:scale(.94)}
+.site-hero{position:relative;margin-top:12px;border-radius:18px;padding:24px 22px;min-height:168px;background:radial-gradient(70% 90% at 100% 100%,rgba(255,190,150,.65),transparent 70%),rgba(255,255,255,.72);display:flex;flex-direction:column;align-items:flex-start;gap:8px;overflow:hidden}
+.site[dir=rtl] .site-hero{background:radial-gradient(70% 90% at 0% 100%,rgba(255,190,150,.65),transparent 70%),rgba(255,255,255,.72)}
+.site-h{display:block;max-width:62%;font-size:clamp(20px,2.3vw,28px);font-weight:790;letter-spacing:-.045em;line-height:1.08}
+.site[dir=rtl] .site-h{letter-spacing:0;line-height:1.3}
+.site-s{display:block;max-width:62%;font-size:13px;line-height:1.4;color:var(--ink2)}
+.site-btn{margin-top:6px;background:var(--ink);color:#fff;border-radius:999px;padding:9px 15px;font-size:12.5px;font-weight:650}
+.site-pic{position:absolute;inset-inline-end:22px;top:50%;width:96px;height:96px;margin-top:-48px;border-radius:50%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.75),rgba(255,255,255,0) 40%),radial-gradient(circle at 50% 60%,#F7B27A,#E98A4C)}
+.site-pic::after{content:"";position:absolute;inset-inline-end:-6px;bottom:6px;width:22px;height:22px;border-radius:50%;background:var(--dot)}
+.site .sw{transition:opacity .2s}
+.site.flip .sw{opacity:0}
+
+/* 2. translation: one message in every language you ship */
+.tr{display:grid;gap:14px;width:100%;justify-items:center}
+.trmsg{display:flex;align-items:center;gap:12px;width:100%;border:0;text-align:start;border-radius:22px;padding:14px 16px;cursor:pointer;font:inherit;color:inherit;-webkit-tap-highlight-color:transparent;transition:transform .16s var(--ease-out)}
+.trmsg:active{transform:scale(.97)}
+.trmsg .av{width:40px;height:40px;border-radius:50%;flex:none;background:linear-gradient(150deg,#FFC9B0,#C9C0FA)}
+.trmsg .mt{flex:1;font-size:17px;font-weight:680;letter-spacing:-.02em;line-height:1.25;transition:opacity .2s}
+.trmsg[dir=rtl] .mt{font-size:18px;letter-spacing:0}
+.trmsg svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.trmsg[dir=rtl] svg{rotate:180deg}
+.trmsg.flip .mt{opacity:0}
+.langs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.langs span{font-size:12.5px;font-weight:650;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.55);color:var(--ink2);transition:background-color .35s,color .35s}
+.langs span.on{background:var(--ink);color:#fff}
+
+/* 3. launch kit: a store listing that installs */
+.lk{display:grid;gap:12px;width:100%;justify-items:center}
+.lst{display:flex;align-items:center;gap:12px;width:100%;border-radius:22px;padding:12px 14px}
+.lst img{width:52px;height:52px;border-radius:13px;flex:none}
+.lst b{display:block;font-size:15.5px;letter-spacing:-.02em}
+.lst small{display:block;font-size:12px;color:var(--ink2);line-height:1.3}
+.getb{position:relative;margin-left:auto;flex:none;width:68px;height:32px;border:0;border-radius:999px;background:#EDEBE6;font-weight:750;font-size:13.5px;color:var(--ink);cursor:pointer;transition:width .5s var(--spring),background-color .3s}
+.getb .ring{position:absolute;inset:3px;border-radius:50%;border:2.5px solid rgba(22,24,29,.15);border-top-color:var(--ink);opacity:0;animation:spin .8s linear infinite}
+.getb.load{width:32px;background:#fff}
+.getb.load .ring{opacity:1}
+.getb.load span{opacity:0}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;min-height:30px}
+.tags span{font-size:12px;font-weight:650;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px rgba(22,24,29,.06)}
+
+/* 4. brand kit: tap a colour and the whole kit changes */
+.bk{width:100%;border-radius:24px;padding:18px;display:grid;gap:14px}
+.bk .wm{font-size:clamp(26px,2.6vw,32px);font-weight:800;letter-spacing:-.055em;line-height:1}
+.bk .wm i{display:inline-block;width:.22em;height:.22em;margin-left:.05em;border-radius:50%;background:var(--bdot);transition:background-color .5s ease}
+.bk .wm.pop i{animation:pop .5s var(--spring)}
+.bk .lay{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bk .lay span{height:44px;border-radius:12px;background:rgba(255,255,255,.7);display:flex;align-items:flex-end;padding:8px;transition:background-color .5s ease}
+.bk .lay span::after{content:"";width:46%;height:6px;border-radius:3px;background:var(--bdot);transition:background-color .5s ease}
+.bk .lay span:first-child{background:var(--bdot)}
+.bk .lay span:first-child::after{background:rgba(255,255,255,.85)}
+.swat{display:flex;gap:8px}
+.swat button{width:26px;height:26px;border-radius:50%;border:0;cursor:pointer;background:var(--c);box-shadow:0 0 0 2px rgba(255,255,255,.9),0 4px 10px -4px rgba(22,24,29,.4);transition:transform .4s var(--spring),box-shadow .3s}
+.swat button[aria-pressed=true]{transform:scale(1.18);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ink)}
+
+/* 5. AI setup: a morning summary that writes itself */
+.ai{width:100%;border-radius:24px;padding:16px 16px 14px;display:grid;gap:10px}
+.ai .who{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:650;color:var(--ink2)}
+.ai .who i{width:8px;height:8px;border-radius:50%;background:var(--dot);animation:live 1.6s ease-in-out infinite}
+.ai .tx{min-height:4.4em;font-size:15.5px;font-weight:600;letter-spacing:-.015em;line-height:1.42}
+.ai .tx::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-.15em;background:var(--ink);animation:live 1s steps(1) infinite}
+.ai .rt{display:flex;flex-wrap:wrap;gap:6px}
+.ai .rt button{border:0;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:650;color:var(--ink2);background:rgba(255,255,255,.6);cursor:pointer;transition:background-color .3s,color .3s}
+.ai .rt button[aria-pressed=true]{background:var(--ink);color:#fff}
+
+/* 6. social media: approve the week, watch it schedule */
+.so{display:grid;gap:16px;justify-items:center;width:100%}
+.posts{display:flex;justify-content:center;gap:10px}
+.post{position:relative;width:64px;aspect-ratio:9/16;border-radius:14px;background:var(--g);box-shadow:0 0 0 1px rgba(255,255,255,.8),0 16px 26px -14px rgba(22,24,29,.45);transition:transform .7s var(--spring);transition-delay:calc(var(--k) * 70ms)}
+.post:nth-child(1){transform:rotate(-7deg) translateY(6px)}
+.post:nth-child(3){transform:rotate(7deg) translateY(6px)}
+.post::before{content:attr(data-d);position:absolute;left:0;right:0;bottom:-22px;text-align:center;font-size:11px;font-weight:650;color:var(--ink2)}
+.post::after{content:"";position:absolute;top:-7px;right:-7px;width:22px;height:22px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/14px no-repeat;transform:scale(0);transition:transform .5s var(--spring);transition-delay:calc(var(--k) * 90ms + .15s)}
+.so.ok .post{transform:translateY(-6px)}
+.so.ok .post::after{transform:scale(1)}
+.so .approve{margin-top:16px}
+
+/* 7. custom-built apps: on ink, our dot in a ring of glass */
+.sv7 .c7{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px;align-items:center;height:100%}
+.sv7 .k{color:rgba(255,255,255,.62)}
+.sv7 h3{color:#fff}
+.sv.sv7 .d{color:rgba(255,255,255,.72)}
+.sv.sv7 .proof{color:#fff}
+.sv7 .btn{margin-top:24px;background:var(--dot);color:var(--ink)}
+@media (hover:hover) and (pointer:fine){ .sv7 .btn:hover{background:#ff7d55} }
+.orbit{position:relative;width:220px;height:220px;margin:0 auto;transition:transform .6s var(--ease-out)}
+.orbit::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,255,255,.1)}
+.orbit .ring{position:absolute;inset:0;animation:spin 26s linear infinite}
+.orbit .ring i{position:absolute;left:50%;top:50%;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);border-radius:50%;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.55),rgba(255,255,255,0) 50%),rgba(243,241,236,.16);box-shadow:inset 0 1px 1px rgba(255,255,255,.7),inset 0 -1px 1px rgba(255,255,255,.25);transform:rotate(calc(var(--k) * 30deg)) translateX(110px)}
+.orbit .core{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px;border-radius:50%;background:var(--dot);animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.18)}}
+.sv7.go .orbit .ring{animation-duration:3s}
+
+/* 5. your own AI studio: a wide tile, the words on the left, the packages on the right */
+.sv.sv5{grid-column:span 6;padding:40px}
+.c5{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.c5l{display:flex;flex-direction:column}
+.words{display:grid;gap:8px;margin-top:22px;border-radius:24px;padding:16px 18px;font-size:14.5px;line-height:1.5;color:#45423C}
+.words .wt{font-size:12px;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.words b{color:var(--ink)}
+.sv5 .svstage{min-height:0;padding-top:18px}
+.pk{position:relative;display:grid;grid-template-columns:repeat(3,1fr);padding:5px;border-radius:999px;--i:0}
+.pk button{position:relative;z-index:1;border:0;background:none;padding:11px 8px;border-radius:999px;font-weight:650;font-size:15px;color:var(--ink2);cursor:pointer;transition:color .35s;-webkit-tap-highlight-color:transparent}
+.pk button[aria-selected=true]{color:#fff}
+.pk .thumb{position:absolute;top:5px;bottom:5px;left:5px;width:calc((100% - 10px) / 3);border-radius:999px;background:var(--ink);transform:translateX(calc(var(--i) * 100%));transition:transform .55s var(--spring)}
+.pkbox{margin-top:14px;padding:20px 22px}
+.pkwho{display:block;font-size:13px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+.pkcare{font-style:normal}
+.pkplus{display:block;margin-top:16px;font-size:14px;font-weight:700}
+.pklist{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.pklist li{position:relative;padding-left:22px;font-size:14.5px;line-height:1.45;color:#45423C}
+.pklist li::before{content:"";position:absolute;left:0;top:.28em;width:14px;height:14px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/10px no-repeat}
+.sv .small{margin-top:14px;font-size:13px;line-height:1.5;color:#55514A;max-width:none}
+.sv.sv7{grid-column:span 6}
+@media (max-width:980px){ .sv.sv5{grid-column:span 2}.sv.sv7{grid-column:span 2}.c5{grid-template-columns:1fr;gap:26px} }
+@media (max-width:640px){ .sv.sv5,.sv.sv7{grid-column:span 1}.sv.sv5{padding:28px 22px 24px}.pk button{font-size:14px;padding:10px 4px} }
+/* add to my list, and the glass bar that keeps the running total */
+.addb{display:inline-flex;align-items:center;gap:9px;margin-top:14px;border:0;border-radius:999px;padding:10px 16px 10px 12px;font-size:14px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.85);box-shadow:inset 0 0 0 1.5px var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color .3s,color .3s,transform .16s var(--ease-out)}
+.addb:active{transform:scale(.95)}
+.addb i{position:relative;width:18px;height:18px;border-radius:50%;background:var(--dot);flex:none;transition:transform .45s var(--spring)}
+.addb i::before,.addb i::after{content:"";position:absolute;left:5px;right:5px;top:8.25px;height:1.5px;border-radius:1px;background:var(--ink);transition:transform .45s var(--spring),opacity .2s}
+.addb i::after{transform:rotate(90deg)}
+.addb[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none}
+.addb[aria-pressed=true] i{transform:rotate(360deg)}
+.addb[aria-pressed=true] i::before{left:4px;right:auto;width:5px;top:9.5px;transform:rotate(45deg)}
+.addb[aria-pressed=true] i::after{left:6.5px;right:auto;width:8.5px;top:8px;transform:rotate(-50deg)}
+@media (hover:hover) and (pointer:fine){ .addb[aria-pressed=false]:hover{background:#fff} }
+.sv7 .addb{display:none}
+.basket{position:fixed;left:50%;bottom:18px;z-index:30;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 10px;border-radius:999px;width:max-content;max-width:calc(100% - 24px);transform:translate(-50%,160%);visibility:hidden;transition:transform .6s var(--spring),visibility 0s .6s}
+.basket.on{transform:translate(-50%,0);visibility:visible;transition:transform .6s var(--spring)}
+.basket.on.away{transform:translate(-50%,160%);visibility:hidden;transition:transform .6s var(--spring),visibility 0s .6s}
+.bsum{display:flex;align-items:center;gap:12px;border:0;background:none;padding:0;cursor:pointer;text-align:left;color:var(--ink)}
+.bcount{display:grid;place-items:center;min-width:38px;height:38px;border-radius:50%;background:var(--dot);font-weight:800;font-size:16px}
+.btext b{display:block;font-size:16px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.btext small{display:block;font-size:12.5px;color:var(--ink2);white-space:nowrap}
+.basket .btn{padding:13px 20px;font-size:15px}
+.blist{position:absolute;left:0;right:0;bottom:calc(100% + 10px);list-style:none;margin:0;padding:10px;display:grid;gap:4px;border-radius:24px;background:#FBFAF8;box-shadow:0 24px 48px -20px rgba(22,24,29,.4),0 0 0 1px rgba(22,24,29,.06);opacity:0;transform:translateY(10px) scale(.97);transform-origin:bottom center;pointer-events:none;transition:opacity .25s,transform .45s var(--spring)}
+.basket.open .blist{opacity:1;transform:none;pointer-events:auto}
+.blist li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 6px 8px 12px;border-radius:14px;font-size:14px;line-height:1.35;font-weight:600}
+.blist li:nth-child(odd){background:rgba(22,24,29,.04)}
+.blist button{flex:none;width:28px;height:28px;border:0;border-radius:50%;background:rgba(22,24,29,.07);font-size:17px;line-height:1;cursor:pointer;color:var(--ink)}
+.flyb{position:fixed;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--dot);z-index:40;pointer-events:none}
+@media (max-width:640px){ .basket{bottom:12px;gap:8px}.btext b{font-size:15px}.basket .btn{padding:12px 16px;font-size:14px}.bcount{min-width:34px;height:34px} }
+/* 8. mobile games: a playable squeeze, our dot puffs up and shrinks through the gaps */
+.sv.sv8{grid-column:span 3;--paint:radial-gradient(80% 80% at 100% 100%,rgba(130,190,250,.8),transparent 70%),radial-gradient(70% 70% at 0% 0%,rgba(255,214,190,.8),transparent 70%),#EAF0FA}
+.sv.sv9{grid-column:span 3;--paint:radial-gradient(80% 80% at 0% 100%,rgba(255,190,120,.8),transparent 70%),radial-gradient(70% 70% at 100% 0%,rgba(255,170,200,.7),transparent 70%),#FBEDE6}
+.sq{position:relative;width:100%;height:330px;border-radius:24px;overflow:hidden;touch-action:none;cursor:pointer;-webkit-user-select:none;user-select:none}
+.sq canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sqhud{position:absolute;left:14px;right:14px;top:12px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:650;color:var(--ink2);pointer-events:none}
+.sqhud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.sv .sqhint,.sv .mghint{position:absolute;right:auto;left:50%;bottom:14px;transform:translateX(-50%);white-space:nowrap}
+/* 9. branded mini-games: Gather, in a phone browser, recoloured by the swatches */
+.mg{position:relative;width:100%;height:330px;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;-webkit-user-select:none;user-select:none}
+.mgbar{display:flex;align-items:center;gap:8px;margin:10px 10px 0;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.75);font-size:12px;font-weight:650;color:var(--ink2)}
+.mgbar i{width:9px;height:9px;border-radius:50%;background:var(--mg);transition:background-color .4s}
+.mgarena{position:relative;flex:1;margin:8px;border-radius:18px;overflow:hidden;touch-action:none;background:radial-gradient(60% 70% at 15% 10%,rgba(255,200,170,.45),transparent 70%),radial-gradient(60% 70% at 90% 90%,rgba(180,200,252,.5),transparent 70%),rgba(255,255,255,.45)}
+.mgarena.playing{cursor:none}
+.mgarena canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mgarena canvas:focus,.sq:focus{outline:none}
+.mgarena canvas:focus-visible,.sq:focus-visible{outline:2px solid var(--dot-text);outline-offset:-3px}
+.mghud{position:absolute;left:10px;right:10px;top:10px;display:flex;justify-content:space-between;gap:8px;pointer-events:none}
+.mgr{display:flex;gap:6px}
+.mgpill{pointer-events:auto;display:inline-flex;align-items:center;padding:6px 11px;border:0;border-radius:999px;background:rgba(255,255,255,.82);box-shadow:0 4px 12px -6px rgba(22,24,29,.3);font-size:12.5px;font-weight:650;font-variant-numeric:tabular-nums;color:var(--ink)}
+button.mgpill{cursor:pointer}
+.mgover{position:absolute;inset:0;display:grid;place-items:center;padding:14px;text-align:center;transition:opacity .45s var(--ease-out),visibility .45s}
+.mgover.hide{opacity:0;visibility:hidden}
+.mgcard{display:grid;justify-items:center;gap:6px;max-width:300px;border-radius:24px;padding:18px 20px;background:rgba(255,255,255,.72)}
+.mgcard b{font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1.1}
+.mgcard span{font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.mgcard .mgey{font-size:11.5px;font-weight:650;letter-spacing:.14em;text-transform:uppercase}
+.mgcard .mgbig{font-size:40px;color:var(--mg);font-variant-numeric:tabular-nums;transition:color .4s}
+.mgbtn{margin-top:6px;border:0;border-radius:999px;padding:11px 22px;font-weight:700;font-size:14.5px;color:#fff;background:var(--mg);cursor:pointer;transition:transform .16s var(--ease-out),background-color .4s}
+.mgbtn:active{transform:scale(.96)}
+.mgcard .mgprize{margin-top:4px;padding:7px 12px;border-radius:12px;border:1.5px dashed color-mix(in srgb,var(--mg) 60%,transparent);font-size:12.5px;font-weight:650;color:var(--ink)}
+.mgsw{justify-content:center}
+.sv9 .svstage{gap:12px}
+@media (max-width:640px){ .mg{height:380px} }
+@media (max-width:980px){ .sv.sv8,.sv.sv9{grid-column:span 2} }
+@media (max-width:640px){ .sv.sv8,.sv.sv9{grid-column:span 1} }
+/* how we work: the four terms, right under the prices */
+.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.terms .tterm{grid-column:1/-1;text-align:center;margin-bottom:4px}
+.term{display:grid;align-content:start;gap:8px;border-radius:28px;padding:22px 22px 24px;transition:translate .5s var(--spring)}
+@media (hover:hover) and (pointer:fine){ .term:hover{translate:0 -6px} .term:hover .ti{rotate:-8deg;scale:1.08} }
+.term .ti{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:var(--ink);transition:rotate .5s var(--spring),scale .5s var(--spring)}
+.term .ti svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.term:nth-child(2) .ti{background:var(--dot)}
+.term:nth-child(2) .ti svg{stroke:var(--ink)}
+.term b{margin-top:6px;font-size:18px;letter-spacing:-.03em;line-height:1.2}
+.term > span:last-child{font-size:14.5px;line-height:1.5;color:var(--ink2)}
+@media (max-width:980px){ .terms{grid-template-columns:1fr 1fr} }
+@media (max-width:640px){ .terms{grid-template-columns:1fr;gap:10px}.term{grid-template-columns:auto 1fr;column-gap:14px;padding:18px}.term .ti{grid-row:span 2}.term b{margin-top:0} }
+.svnote2{text-align:center;max-width:40em;margin:28px auto 0;font-size:15px;line-height:1.55;color:var(--ink2)}
+@media (max-width:980px){
+  .sv1{grid-column:span 2}.sv2,.sv3,.sv4,.sv6{grid-column:span 1}
+}
+@media (max-width:640px){
+  .sv1,.sv2,.sv3,.sv4,.sv5,.sv6,.sv7{grid-column:span 1}
+  .sv{padding:28px 22px 24px}
+  .sv .svstage{display:grid;min-height:0;margin-top:20px}
+  .site-h,.site-s{max-width:64%}
+  .site-hero{padding:20px 16px;min-height:150px}
+  .site-pic{width:72px;height:72px;margin-top:-36px;inset-inline-end:14px}
+  .sv7 .c7{grid-template-columns:1fr}
+  .orbit{width:170px;height:170px;order:-1}
+  .orbit .ring i{transform:rotate(calc(var(--k) * 30deg)) translateX(85px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .orbit .ring,.orbit .core,.ai .who i,.ai .tx::after{animation:none!important}
+}
+
 footer{max-width:1240px;margin:90px auto 0;padding:22px 18px 40px;border-top:1px solid var(--line);color:var(--ink2);font-size:14.5px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 footer a{font-weight:600}
 
 @media (max-width:980px){
   .bento{grid-template-columns:1fr 1fr}
-  .t1,.t4,.t5{grid-column:span 2}.t2,.t3{grid-column:span 1}
-  .t5in{grid-template-columns:1fr;gap:26px}
+  .t1,.t4{grid-column:span 2}.t2,.t3{grid-column:span 1}
   .why2,.builder,.askgrid{grid-template-columns:1fr}
   .why2{gap:22px}
   .fstage{order:-1;min-height:420px}
@@ -463,17 +717,15 @@ footer a{font-weight:600}
   .scroll{display:none}
   section{padding-top:88px}
   .bento,.steps{grid-template-columns:1fr}
-  .t1,.t2,.t3,.t4,.t5{grid-column:span 1}
+  .t1,.t2,.t3,.t4{grid-column:span 1}
   .tile{min-height:0;padding:28px 24px 28px;border-radius:34px}
   .stagec{min-height:0;display:flex;flex-direction:column;gap:10px;margin-top:22px}
+  .t2 .stagec{min-height:0;margin-bottom:0}
   .chip,.storepill{position:relative!important;left:auto!important;right:auto!important;top:auto!important;min-width:0;align-self:flex-start;padding:12px 16px}
   .chip:nth-child(2),.storepill:nth-child(2){align-self:flex-end}
   .chip b{font-size:19px}
   .t4 .stagec{min-height:230px;display:block}
   .hintpill{right:14px;bottom:14px}
-  .days{gap:5px}
-  .day{padding:8px 3px 7px;font-size:11px;border-radius:12px}
-  .day em{font-size:9.5px}
   .fstage{min-height:360px;border-radius:32px}
   .s1 .ph{transform:scale(.86)}
   /* real phone-sized pieces (a scale transform shrinks the look but not the space, so things spilled out) */
@@ -508,6 +760,7 @@ footer a{font-weight:600}
   .legend{margin-top:8px;font-size:13px}
   .step{padding:26px 24px}
   details{padding:0 22px}
+  .qf button{padding:9px 11px;font-size:14px}
   summary{font-size:18px}
   .ask{border-radius:34px;margin-top:88px;padding:40px 18px 22px}
   .ask canvas{display:none}
@@ -550,8 +803,8 @@ nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255
     <div class="emblem" id="emblem" aria-hidden="true"></div>
     <p class="eyebrow">Work with us</p>
     <h1>Your idea, made <span class="nw">properly<span class="stop" id="hstop"></span></span></h1>
-    <p class="sub">We design, build and launch apps and games for iPhone, iPad and Android. Yours gets the same care as our own.</p>
-    <div class="row"><a class="btn" href="#start">Tell us your idea</a><a class="btn alt" href="#make">See what we make</a></div>
+    <p class="sub">We design, build and launch apps and games for iPhone, iPad and Android, and help with websites, brands, launches, campaign games and AI. Yours gets the same care as our own.</p>
+    <div class="row"><a class="btn" href="#start">Tell us your idea</a><a class="btn alt" href="#make">See what we make</a><a class="btn alt" href="#services">See services and prices</a></div>
   </div>
   <span class="scroll" aria-hidden="true">Scroll</span>
 </div>
@@ -596,24 +849,199 @@ nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255
       <article class="tile t4 reveal sheen tilt" style="--d:1" id="gametile">
         <p class="k">For fun</p>
         <h3>A small game people come back to</h3>
-        <p>Quick to learn, satisfying to play, and polished down to the sound of every tap. Our own first games are in the works.</p>
+        <p>Quick to learn, satisfying to play, and polished down to the sound of every tap.</p>
         <div class="stagec"><div class="gamefield" id="game" aria-label="A tiny game: move our dot to push the glass dots" role="img"></div></div>
         <span class="hintpill glass" id="gamehint">Move here to play</span>
       </article>
-      <article class="tile t5 reveal sheen">
-        <div class="t5in">
-          <div>
-            <p class="k">For your marketing</p>
-            <h3>Social media that keeps posting, with you in charge</h3>
-            <p>We set up Claude in your own account to plan your week, draft the captions and prepare the posts. You approve the week once, and it goes out on schedule. Nothing posts without your yes.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="sh reveal">
+      <p class="eyebrow">Studio services</p>
+      <h2 class="split">Prices you can see <span class="nw">first<span class="stop"></span></span></h2>
+      <p>Everything here already runs our own apps and games. Tap the options and the price follows.</p>
+    </div>
+    <div class="bento">
+      <article class="tile sv sv1 reveal sheen tilt" id="svweb">
+        <p class="k">Websites</p>
+        <h3>Arabic and English websites</h3>
+        <p>A fast, good-looking site or landing page in Arabic and English, with right-to-left layout and Arabic type done properly, and a contact form. Spanish on request.</p>
+        <div class="stagec svstage">
+          <div class="site glass" id="site" dir="ltr" lang="en">
+            <div class="site-bar"><span class="site-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="site-tabs" id="sitetabs"></span><button type="button" class="site-lang" id="sitelang" lang="ar">العربية</button></div>
+            <div class="site-hero"><b class="site-h sw" data-ar="خبز طازج كل صباح">Fresh bread, every morning</b><span class="site-s sw" data-ar="اطلب قبل التاسعة، واستلم قبل العاشرة.">Order by 9, collect by 10.</span><span class="site-btn sw" data-ar="اطلب الآن">Order now</span><i class="site-pic" aria-hidden="true"></i></div>
           </div>
-          <div class="week" id="week">
-            <div class="days" id="days"></div>
-            <div class="wkrow"><button type="button" class="approve" id="approve">Approve the week</button><small id="wknote">Seven posts are ready for your review.</small></div>
+        </div>
+        <p class="proof">The site you are on, and the right-to-left layouts in our own apps.</p>
+        <div class="svprice glass" data-price="web">
+          <div class="svfig"><small>From</small><b>US$<span data-count="560">560</span></b></div>
+          <div class="svopts" role="group" aria-label="Size of the site"><button type="button" aria-pressed="true" data-v="1">One page</button><button type="button" aria-pressed="false" data-v="5">Up to five pages</button></div>
+          <span class="svnote">A one-page site. Hosting and domain are paid by you.</span>
+        </div>
+      </article>
+      <article class="tile sv sv2 reveal sheen tilt" style="--d:1" id="svtr">
+        <p class="k">Translation</p>
+        <h3>Your app, in Arabic</h3>
+        <p>Translated by a native speaker, the layout fixed for right-to-left (arrows, rows, swipes, numbers, text fields), the store listing translated, and a check on a real build.</p>
+        <div class="stagec svstage">
+          <div class="tr">
+            <button type="button" class="trmsg glass" id="trmsg" dir="ltr" aria-label="Show the next language"><i class="av" aria-hidden="true"></i><span class="mt">Hello, your table is ready</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            <div class="langs" id="trlangs"><span class="on">English</span><span lang="ar">العربية</span></div>
+          </div>
+        </div>
+        <p class="proof">Fondo in Arabic, including the right-to-left details most apps miss.</p>
+        <div class="svprice glass" data-price="tr">
+          <div class="svfig"><small>From</small><b>US$<span data-count="900">900</span></b></div>
+          <div class="svopts" role="group" aria-label="Languages"><button type="button" aria-pressed="false" data-v="es">+ Spanish</button></div>
+          <span class="svnote">A small app, up to about 2,000 words. Larger apps quoted per app.</span>
+        </div>
+      </article>
+      <article class="tile sv sv3 reveal sheen tilt" id="svlk">
+        <p class="k">Launch</p>
+        <h3>App Store launch kit</h3>
+        <p>The name, subtitle, keywords, description and screenshots for an app about to launch, written and designed for the App Store, Google Play or both.</p>
+        <div class="stagec svstage">
+          <div class="lk">
+            <div class="lst glass"><img src="assets/studio-icon-512.png" alt=""><div><b>Your app</b><small>The one job, done beautifully</small></div><button type="button" class="getb" id="getb"><span>Get</span><i class="ring"></i></button></div>
+            <div class="tags" id="lktags"></div>
+          </div>
+        </div>
+        <p class="proof">The store listings of Fondo, Cactara and Tilo.</p>
+        <div class="svprice glass" data-price="lk">
+          <div class="svfig"><small>From</small><b>US$<span data-count="450">450</span></b></div>
+          <div class="svopts" role="group" aria-label="Stores and languages"><button type="button" aria-pressed="true" data-v="ios">App Store</button><button type="button" aria-pressed="false" data-v="play">Google Play</button><button type="button" aria-pressed="false" data-v="ar">+ Arabic</button><button type="button" aria-pressed="false" data-v="es">+ Spanish</button></div>
+          <span class="svnote">One store, in English.</span>
+        </div>
+      </article>
+      <article class="tile sv sv4 reveal sheen tilt" style="--d:1" id="svbk">
+        <p class="k">Brand</p>
+        <h3>Brand starter kit</h3>
+        <p>A logo, colours, type, a few ready-made layouts and a short brand book, so everything you make looks like it comes from the same place.</p>
+        <div class="stagec svstage">
+          <div class="bk glass" id="bk" style="--bdot:#FF6A3D">
+            <span class="wm">your brand<i></i></span>
+            <span class="lay" aria-hidden="true"><span></span><span></span></span>
+            <span class="swat" id="swat" role="group" aria-label="Try a colour"></span>
+          </div>
+        </div>
+        <p class="proof">Our own mark and <a href="brand/">brand book</a>.</p>
+        <div class="svprice glass" data-price="bk">
+          <div class="svfig"><small>From</small><b>US$<span data-count="560">560</span></b></div>
+          <span class="svnote">Logo, colours, type, layouts and the brand book.</span>
+        </div>
+      </article>
+      <article class="tile sv sv6 reveal sheen tilt" id="svso">
+        <p class="k">Social media</p>
+        <h3>Social media automation</h3>
+        <p>A weekly batch of short videos and posts, written, made and scheduled with our set of AI tools. You choose how much you check before anything goes out.</p>
+        <div class="stagec svstage">
+          <div class="so" id="so">
+            <div class="posts"><i class="post" data-d="Mon" style="--k:0;--g:linear-gradient(160deg,#FFD2BD,#F7A982)"></i><i class="post" data-d="Wed" style="--k:1;--g:linear-gradient(160deg,#DAD2FB,#A99BF5)"></i><i class="post" data-d="Fri" style="--k:2;--g:linear-gradient(160deg,#CFE3F8,#8DBDF0)"></i></div>
+            <button type="button" class="approve" id="soapprove">Approve the week</button>
+          </div>
+        </div>
+        <p class="proof">Our own weekly films, planned and scheduled the same way.</p>
+        <div class="svprice glass" data-price="so">
+          <div class="svfig"><small>From</small><b>US$<span data-count="350">350</span></b><em>a month</em></div>
+          <span class="svnote">Plus a one-time setup of US$350. Included in the Studio and Full studio AI packages.</span>
+        </div>
+      </article>
+      <article class="tile sv sv5 reveal sheen" id="svai">
+        <div class="c5">
+          <div class="c5l">
+            <p class="k">AI studio</p>
+            <h3>Your own AI studio</h3>
+            <p>We set up an AI assistant that works the way your business does: it knows your brand, it is connected to the tools you already use, and your whole team can use it.</p>
+            <div class="words glass">
+              <span class="wt">In plain words</span>
+              <span><b>Skills</b> are ready-made know-how the AI follows, such as your brand voice or how you write quotes.</span>
+              <span><b>Connectors</b> link it to the apps you already use, such as Gmail, Google Drive, Notion, Figma and your social media scheduler.</span>
+              <span><b>A team plugin</b> bundles your skills and connectors, so the whole team installs them in one click.</span>
+            </div>
+            <div class="stagec svstage">
+              <div class="ai glass">
+                <span class="who"><i></i><span id="aiwho">Morning brief, 8:00</span></span>
+                <span class="tx" id="aitx" aria-live="polite"></span>
+                <span class="rt" id="airt" role="group" aria-label="Things it does"></span>
+              </div>
+            </div>
+            <p class="proof">All of it runs our own studio today: the skills, the connectors, the morning brief, the weekly films and the scheduling.</p>
+          </div>
+          <div class="c5r">
+            <div class="pk glass" id="pkseg" role="tablist" aria-label="Packages"><span class="thumb" aria-hidden="true"></span><button type="button" role="tab" aria-selected="true">Starter</button><button type="button" role="tab" aria-selected="false">Studio</button><button type="button" role="tab" aria-selected="false">Full studio</button></div>
+            <div class="svprice glass pkbox" data-price="ai">
+              <span class="pkwho" id="pkwho">For one person</span>
+              <div class="svfig"><small>From</small><b>US$<span data-count="1200">1,200</span></b><em class="pkcare" id="pkcare" hidden>+ from US$300 a month</em></div>
+              <span class="pkplus" id="pkplus"></span>
+              <ul class="pklist" id="pklist"></ul>
+              <div class="svopts" role="group" aria-label="Monthly care"><button type="button" aria-pressed="false" data-v="care">+ Monthly care</button></div>
+              <span class="svnote">Monthly care, from US$300 a month, adds new skills and video styles, fixes, and updates as the AI tools add features.</span>
+            </div>
+            <p class="small">You pay for your own AI subscription and any tools you use, such as your social media scheduler. You decide what a person checks before anything is posted or sent.</p>
           </div>
         </div>
       </article>
+      <article class="tile sv sv8 reveal sheen" id="svgm">
+        <p class="k">Games</p>
+        <h3>Mobile games</h3>
+        <p>A simple, polished game for iPhone and Android, from your idea to store-ready builds: design, sound, levels, ads or purchases if you want them, and the store listing.</p>
+        <div class="stagec svstage">
+          <div class="sq glass" id="sq" tabindex="0" aria-label="Mobile game demo. Hold the space bar, or press and hold, to puff the dot up">
+            <canvas id="sqcv" aria-label="A tiny game: hold to puff our dot up, let go to shrink it through the gaps" role="img"></canvas>
+            <span class="sqhud"><span>Score <b id="sqscore">0</b></span><span>Best <b id="sqbest">0</b></span></span>
+            <span class="hintpill glass sqhint" id="sqhint">Hold to puff up, let go to shrink</span>
+          </div>
+        </div>
+        <div class="svprice glass" data-price="gm">
+          <div class="svfig"><small>From</small><b>US$<span data-count="6000">6,000</span></b></div>
+          <span class="svnote">A simple casual game on iPhone and Android. Bigger games are quoted.</span>
+        </div>
+      </article>
+      <article class="tile sv sv9 reveal sheen" style="--d:1" id="svmg">
+        <p class="k">Campaigns</p>
+        <h3>Branded mini-games</h3>
+        <p>A short game in your brand for a campaign, such as Ramadan, a product launch or a contest. People play it from a link in any phone browser, with no app store needed. It can include a high-score board and a prize or lead form.</p>
+        <div class="stagec svstage">
+          <div class="mg glass" id="mg" style="--mg:#FF6A3D">
+            <span class="mgbar"><i></i><span>yourbrand.com/play</span></span>
+            <div class="mgarena" id="mgarena">
+              <canvas id="mgcv" tabindex="0" aria-label="Gather: move the dot to gather every glass dot into its ring. Arrow keys work too."></canvas>
+              <div class="mghud"><span class="mgpill" id="mgcount">0 of 12</span><span class="mgr"><span class="mgpill" id="mgtimer">0.0 s</span><button type="button" class="mgpill" id="mgmute" aria-pressed="false">Sound on</button></span></div>
+              <div class="mgover" id="mgstart"><div class="mgcard glass"><span class="mgey">Gather</span><b>Gather every dot</b><span>Move the dot to catch the glass dots. They drift away when you get close.</span><button type="button" class="mgbtn" id="mgplay">Play</button></div></div>
+              <div class="mgover hide" id="mgdone"><div class="mgcard glass"><span class="mgey">Ring complete</span><b class="mgbig" id="mgfinal">0.0 s</b><span id="mgbest"></span><span class="mgprize">Your prize or sign-up form goes here</span><button type="button" class="mgbtn" id="mgagain">Play again</button></div></div>
+            </div>
+          </div>
+          <span class="swat mgsw" id="mgsw" role="group" aria-label="Try it in your brand colour"></span>
+        </div>
+        <p class="proof">This is Gather, the little game from our <a href="games.html">games page</a>. It plays in any phone browser, with no download.</p>
+        <div class="svprice glass" data-price="mg">
+          <div class="svfig"><small>From</small><b>US$<span data-count="1500">1,500</span></b></div>
+          <div class="svopts" role="group" aria-label="Kind of game"><button type="button" aria-pressed="true" data-v="ready">Ready-made, in your brand</button><button type="button" aria-pressed="false" data-v="custom">A new game for your campaign</button></div>
+          <span class="svnote">One of our game styles with your look, words and prizes. About 1 to 2 weeks.</span>
+        </div>
+      </article>
+      <article class="tile sv sv7 reveal sheen" style="--d:1" id="svc">
+        <div class="c7">
+          <div>
+            <p class="k">Custom-built apps</p>
+            <h3>An app or game made just for you</h3>
+            <p class="d">Every custom app is different, so it gets its own quote. Tell us the one job it should do, and we reply with how we would make it and what it would take.</p>
+            <p class="proof">Fondo, Cactara and Tilo, designed, built and launched by us.</p>
+            <a class="btn" href="#start" id="svcgo">Tell us your idea</a>
+          </div>
+          <div class="orbit" id="orbit" aria-hidden="true"><div class="ring"><i style="--k:0;--s:16px"></i><i style="--k:1;--s:9px"></i><i style="--k:2;--s:12px"></i><i style="--k:3;--s:7px"></i><i style="--k:4;--s:14px"></i><i style="--k:5;--s:8px"></i><i style="--k:6;--s:11px"></i><i style="--k:7;--s:7px"></i><i style="--k:8;--s:15px"></i><i style="--k:9;--s:9px"></i><i style="--k:10;--s:12px"></i><i style="--k:11;--s:8px"></i></div><i class="core"></i></div>
+        </div>
+      </article>
     </div>
+    <div class="terms">
+      <p class="eyebrow tterm reveal">How we work</p>
+      <div class="term glass reveal sheen" style="--d:0"><span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="10" rx="3"/></svg></span><b>Yours to keep</b><span>Once the final payment is made, the app, the code, the designs and the store listing are yours, under your own developer account.</span></div>
+      <div class="term glass reveal sheen" style="--d:1"><span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/></svg></span><b>Half now, half on delivery</b><span>Half when we start, half when the work is delivered. Monthly services are billed each month.</span></div>
+      <div class="term glass reveal sheen" style="--d:2"><span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span><b>Two rounds of changes</b><span>Included in every service. If you want more, we quote them first.</span></div>
+      <div class="term glass reveal sheen" style="--d:3"><span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.4 2.5 13.6 0 16M12 4c-2.5 2.4-2.5 13.6 0 16"/></svg></span><b>Anywhere, remotely</b><span>We work with clients anywhere, in English or Arabic.</span></div>
+    </div>
+    <p class="svnote2 reveal">Prices are in US dollars and are starting points. Tell us what you need and we reply with a quote before any work starts.</p>
   </section>
 
   <section id="why">
@@ -702,25 +1130,10 @@ nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255
     </div>
     <div class="steps" id="steps">
       <div class="track" id="track" aria-hidden="true"><i id="trackfill"></i></div>
-      <div class="step glass reveal sheen" style="--d:0"><small>Step 1</small><h3>Tell us the one job</h3><p>A few answers in the form below: what it does, who it is for, and when you would like it out.</p></div>
+      <div class="step glass reveal sheen" style="--d:0"><small>Step 1</small><h3>Share your idea</h3><p>A few answers in the form below: what it does, who it is for, and when you would like it out.</p></div>
       <div class="step glass reveal sheen" style="--d:1"><small>Step 2</small><h3>Tap through it first</h3><p>We send a design you can try on your own phone before any building starts.</p></div>
       <div class="step glass reveal sheen" style="--d:2"><small>Step 3</small><h3>We build and test</h3><p>On real iPhones and Android phones, in every language you need, until it feels right.</p></div>
       <div class="step glass reveal sheen" style="--d:3"><small>Step 4</small><h3>We launch it with you</h3><p>The store listing, the screenshots and the films that announce it.</p></div>
-    </div>
-  </section>
-
-  <section id="questions">
-    <div class="sh reveal">
-      <p class="eyebrow">Questions</p>
-      <h2 class="split">Good to <span class="nw">know<span class="stop"></span></span></h2>
-    </div>
-    <div class="faq">
-      <details class="glass reveal"><summary>What does it cost?</summary><p>It depends on what your app needs to do. Tell us the one job, and we will reply with a plan and a quote before any work starts.</p></details>
-      <details class="glass reveal"><summary>How long does it take?</summary><p>It depends on the size of the job. You get a timeline with the quote, and keeping the app to one job keeps that timeline honest.</p></details>
-      <details class="glass reveal"><summary>Which devices does it run on?</summary><p>iPhone, iPad and Android phones and tablets, from one project.</p></details>
-      <details class="glass reveal"><summary>Can it be in my language?</summary><p>Yes. Our own apps ship in English, Spanish and Arabic, including right-to-left layouts, and we can add the languages your customers speak.</p></details>
-      <details class="glass reveal"><summary>How does the social media service work?</summary><p>We set it up inside your own Claude account and connect it to the scheduling tool you use. Each week it prepares your posts and captions, then waits. Nothing goes out until you approve it, and your accounts and content stay yours.</p></details>
-      <details class="glass reveal"><summary>What happens after launch?</summary><p>We can keep improving it with you: fixes, new versions, and updates for new phones and new store rules.</p></details>
     </div>
   </section>
 
@@ -737,7 +1150,8 @@ nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255
         </div>
         <div>
           <form class="aform" id="aform" novalidate>
-            <fieldset id="f-kind"><legend class="lab">What are you making?</legend><div class="pills" data-group="kind"><button type="button" aria-pressed="false">An app</button><button type="button" aria-pressed="false">A game</button><button type="button" aria-pressed="false">A tool for my team</button><button type="button" aria-pressed="false">Social media automation</button><button type="button" aria-pressed="false">Not sure yet</button></div></fieldset>
+            <fieldset id="f-kind"><legend class="lab">What do you need? Pick as many as you like</legend><div class="pills" data-group="kind"><button type="button" aria-pressed="false">An app</button><button type="button" aria-pressed="false">A game</button><button type="button" aria-pressed="false">A branded mini-game</button><button type="button" aria-pressed="false">A tool for my team</button><button type="button" aria-pressed="false">A website</button><button type="button" aria-pressed="false">App translation</button><button type="button" aria-pressed="false">A store launch kit</button><button type="button" aria-pressed="false">A brand kit</button><button type="button" aria-pressed="false">Social media automation</button><button type="button" aria-pressed="false">An AI studio</button><button type="button" aria-pressed="false">Not sure yet</button></div></fieldset>
+            <fieldset id="f-extra" class="extra" hidden><legend class="lab">Any extras?</legend><div class="pills" id="extras"></div></fieldset>
             <div id="f-job"><label class="lab" for="job">The one job it should do</label><textarea id="job" rows="3"></textarea></div>
             <fieldset class="picked" id="picked" hidden><legend class="lab">Features you picked</legend><div class="pills" id="pickedchips"></div></fieldset>
             <fieldset><legend class="lab">When would you like it?</legend><div class="pills" data-group="when"><button type="button" aria-pressed="false">As soon as possible</button><button type="button" aria-pressed="false">In the next few months</button><button type="button" aria-pressed="false">Just exploring</button></div></fieldset>
@@ -757,6 +1171,33 @@ nav a[aria-current=page]:not(.pill){color:var(--ink);background:rgba(255,255,255
       </div>
     </div>
   </section>
+
+  <section id="questions">
+    <div class="sh reveal">
+      <p class="eyebrow">Questions</p>
+      <h2 class="split">Good to <span class="nw">know<span class="stop"></span></span></h2>
+    </div>
+    <div class="qwrap reveal"><div class="qf glass" id="qf" role="group" aria-label="Show questions about"><span class="thumb" aria-hidden="true"></span><button type="button" aria-pressed="true" data-f="all">All</button><button type="button" aria-pressed="false" data-f="price">Prices</button><button type="button" aria-pressed="false" data-f="how">How it works</button><button type="button" aria-pressed="false" data-f="ai">AI and privacy</button></div></div>
+    <div class="faq" id="faq">
+      <details class="glass reveal" name="faq" data-c="price"><summary>What does it cost?</summary><p>Each service above shows where its price starts, and adding services to your list keeps a running total. An app or a game depends on what it needs to do, so tell us the one job and we reply with a plan and a quote before any work starts.</p></details>
+      <details class="glass reveal" name="faq" data-c="price"><summary>How do payments work?</summary><p>Half when we start, and half when the work is delivered. Monthly services, such as social media and monthly care, are billed each month.</p></details>
+      <details class="glass reveal" name="faq" data-c="price"><summary>Are there costs on top of your price?</summary><p>Only the things that stay in your name. For a website, the hosting and the domain. For the AI studio, your own AI subscription. For the AI studio and social media, tools in your name, such as your social media scheduler. For an app, Apple and Google charge their own fees for a developer account.</p></details>
+      <details class="glass reveal" name="faq" data-c="price"><summary>Can I book one service, or combine a few?</summary><p>Both. Pick the services you want, combine as many as you like and add any extras. We send you one quote with the full price.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>How long does it take?</summary><p>It depends on the size of the job. You get a timeline with the quote, and keeping the app to one job keeps that timeline honest.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>How many rounds of changes are included?</summary><p>Two rounds of changes are included in every service. More can be added, and we quote them first.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>Who owns the app, the code and the designs?</summary><p>You do. Once the final payment is made, the app, the code, the designs and the store listing are yours, published under your own developer account.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>Which devices does it run on?</summary><p>iPhone, iPad and Android phones and tablets, from one project.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>Can it be in my language?</summary><p>Yes. Our own apps ship in English, Spanish and Arabic, including right-to-left layouts, and we can add the languages your customers speak.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>Do people need to download a mini-game?</summary><p>No. A branded mini-game plays from a link in any phone browser, so people can share it and play straight away, with no app store needed.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>Do you work with clients outside Jordan?</summary><p>Yes. We work remotely with clients anywhere, in English or Arabic.</p></details>
+      <details class="glass reveal" name="faq" data-c="how"><summary>What happens after launch?</summary><p>We can keep improving it with you: fixes, new versions, and updates for new phones and new store rules. For the AI studio, monthly care adds new skills and video styles, fixes and updates.</p></details>
+      <details class="glass reveal" name="faq" data-c="ai"><summary>Which AI do you use?</summary><p>A range of AI tools, chosen for the job you want done. Once we start working together, we recommend the right mix for what you need, your team and your workload.</p></details>
+      <details class="glass reveal" name="faq" data-c="ai"><summary>Do I get to check things before they go out?</summary><p>That is up to you. It depends on the kind of content or service, and on how hands-on you want to be: you can check every post before it goes out, or let a planned week run on its own.</p></details>
+      <details class="glass reveal" name="faq" data-c="ai"><summary>How does social media automation work?</summary><p>You get our set of tools for planning, writing, making and scheduling your posts, set up around your brand. Each week they prepare your content and line it up in your scheduler, and you choose how much you check before it goes out. Your accounts and your content stay yours.</p></details>
+    </div>
+    <p class="qmore reveal">Still wondering about something? Write to us at <a href="mailto:hello.minimalhabits@gmail.com">hello.minimalhabits@gmail.com</a>.</p>
+  </section>
+
 
 </main>
 
@@ -883,19 +1324,6 @@ addEventListener('DOMContentLoaded', () => {
     if (act === 'stock') { stocked = !stocked; chip.classList.toggle('done', stocked); swapText(chip, 'Stock', stocked ? 'All restocked' : '3 items running low'); }
     if (act === 'store') { const on = chip.classList.toggle('done'); const l = chip.querySelector('.lbl'); l.style.opacity = 0; setTimeout(() => { l.textContent = on ? `Installed from ${chip.dataset.store}` : `Get it on ${chip.dataset.store}`; l.style.opacity = 1; }, 200); }
   }));
-
-  // ---------- the marketing week: approve once, each day gets scheduled ----------
-  const daysEl = $('#days'), approve = $('#approve'), wknote = $('#wknote');
-  const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  daysEl.innerHTML = DAYS.map((d) => `<span class="day glass"><span>${d}</span><i class="thumb"></i><em>18:00</em></span>`).join('');
-  const dayEls = [...daysEl.children];
-  let approved = false;
-  approve.addEventListener('click', () => {
-    approved = !approved; burstAt($('#week'), approve);
-    approve.textContent = approved ? 'Undo' : 'Approve the week';
-    wknote.textContent = approved ? 'Scheduled. Each post goes out at 18:00.' : 'Seven posts are ready for your review.';
-    dayEls.forEach((d, i) => setTimeout(() => { d.classList.toggle('done', approved); d.querySelector('em').textContent = approved ? 'Set' : '18:00'; }, reduce ? 0 : i * 110));
-  });
 
   // ---------- the game tile: our dot follows your pointer or finger and pushes the glass dots ----------
   const game = $('#game'), gtile = $('#gametile'), ghint = $('#gamehint');
@@ -1033,19 +1461,50 @@ addEventListener('DOMContentLoaded', () => {
   // ---------- the ask: a short form that hands everything to your email app ----------
   const form = $('#aform'), job = $('#job'), nm = $('#nm'), askEl = $('#ask'), pickedEl = $('#picked'), pickedChips = $('#pickedchips');
   const choice = {};
-  form.querySelectorAll('[data-group]').forEach((g) => g.addEventListener('click', (e) => {
+  // "when" is one answer; "what do you need" takes several, and each brings its own extras
+  form.querySelectorAll('[data-group=when]').forEach((g) => g.addEventListener('click', (e) => {
     const b = e.target.closest('button'); if (!b) return;
     const on = b.getAttribute('aria-pressed') !== 'true';
     g.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b && on));
     choice[g.dataset.group] = on ? b.textContent : null;
-    g.closest('fieldset').classList.remove('need');
   }));
+  const kindG = form.querySelector('[data-group=kind]'), kindBtns = [...kindG.querySelectorAll('button')], exFs = $('#f-extra'), exG = $('#extras');
+  const kinds = new Set(), extras = new Set();
+  const PACKS = ['Starter package', 'Studio package', 'Full studio package'];
+  const EXTRAS = { 'An app': ['Arabic and English', 'Updates after launch'], 'A game': ['Arabic and English', 'Updates after launch'], 'A tool for my team': ['Arabic and English', 'Updates after launch'],
+    'A website': ['Up to five pages', 'Spanish too'], 'App translation': ['Spanish too'], 'A store launch kit': ['Both stores', 'Arabic listing', 'Spanish listing'],
+    'An AI studio': [...PACKS, 'Monthly care'], 'A branded mini-game': ['Ready-made game in your brand', 'Custom campaign game', 'High-score board', 'Prize or lead form'] };
+  const MGS = ['Ready-made game in your brand', 'Custom campaign game'], ONE_OF = [PACKS, MGS], groupOf = (x) => ONE_OF.find((gr) => gr.includes(x));
+  let shownEx = [];
+  function syncKinds() {
+    kindBtns.forEach((b) => b.setAttribute('aria-pressed', kinds.has(b.textContent)));
+    choice.kind = kinds.size ? [...kinds].join(', ') : null;
+    const list = [...new Set([...kinds].flatMap((k) => EXTRAS[k] || []))];
+    [...extras].forEach((x) => { if (!list.includes(x)) extras.delete(x); });
+    exG.innerHTML = list.map((x) => `<button type="button" aria-pressed="${extras.has(x)}" class="${shownEx.includes(x) ? '' : 'svin'}">${x}</button>`).join('');
+    shownEx = list; exFs.hidden = !list.length; renderPicked();
+    if (kinds.size) $('#f-kind').classList.remove('need');
+  }
+  kindG.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return; const t = b.textContent;
+    if (kinds.has(t)) kinds.delete(t); else { if (t === 'Not sure yet') kinds.clear(); else kinds.delete('Not sure yet'); kinds.add(t); }
+    syncKinds();
+  });
+  exG.addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return; const t = b.textContent;
+    if (extras.has(t)) extras.delete(t); else { groupOf(t)?.forEach((p) => extras.delete(p)); extras.add(t); }   // one AI package, one kind of mini-game
+    exG.querySelectorAll('button').forEach((x) => { x.classList.remove('svin'); x.setAttribute('aria-pressed', extras.has(x.textContent)); });
+  });
+  // the list bar and the buttons on the page hand their picks to the form through this
+  const setKinds = (ks, ex = []) => { ks.forEach((k) => { kinds.delete('Not sure yet'); kinds.add(k); }); syncKinds(); ex.forEach((x) => { if (shownEx.includes(x)) { groupOf(x)?.forEach((p) => extras.delete(p)); extras.add(x); } }); exG.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', extras.has(x.textContent))); };
+  // the app features picked higher up only matter when the visitor is asking for an app, a game or a team tool
+  function appish() { return !kinds.size || [...kinds].some((k) => ['An app', 'A game', 'A tool for my team', 'Not sure yet'].includes(k)); }
   function renderPicked() {
-    pickedEl.hidden = !picks.size;
+    pickedEl.hidden = !picks.size || !appish();
     pickedChips.innerHTML = [...picks].map((k) => `<button type="button" data-k="${k}" aria-label="Remove ${BYKEY[k][1]}">${BYKEY[k][1]}</button>`).join('');
   }
   pickedChips.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) togglePick(b.dataset.k); });
-  $('#sendpick').addEventListener('click', () => { if (!choice.kind) { const b = form.querySelector('[data-group=kind] button'); b.click(); } });
+  $('#sendpick').addEventListener('click', () => { if (!kinds.size) setKinds(['An app']); });
   // the empty box suggests a few one-line jobs, typed out slowly
   const EX = ['Let my customers book a table in two taps', 'Track my team\'s closing checklist', 'A small puzzle game for the bus ride', 'Post three videos a week without writing them myself'];
   let exI = 0, exC = 0, exDir = 1, exWait = 0;
@@ -1072,12 +1531,15 @@ addEventListener('DOMContentLoaded', () => {
     if (!nm.value.trim()) miss.push($('#f-name'));
     if (!/^\S+@\S+\.\S+$/.test(em.value.trim())) miss.push($('#f-email'));
     if (miss.length) { miss.forEach((m) => { m.classList.remove('need'); void m.offsetWidth; m.classList.add('need'); }); miss[0].querySelector('button,textarea,input').focus(); return; }
-    const lines = [`What I am making: ${choice.kind}`, `The one job: ${job.value.trim()}`];
-    if (picks.size) lines.push(`Features: ${[...picks].map((k) => BYKEY[k][1]).join(', ')}`);
+    const lines = [`What I need: ${choice.kind}`];
+    if (extras.size) lines.push(`Extras: ${[...extras].join(', ')}`);
+    lines.push(`The one job: ${job.value.trim()}`);
+    if (picks.size && appish()) lines.push(`Features: ${[...picks].map((k) => BYKEY[k][1]).join(', ')}`);
     if (choice.when) lines.push(`When: ${choice.when}`);
     const who = [nm.value.trim(), co.value.trim(), em.value.trim()].filter(Boolean).join(', ');
     message = lines.join('\n') + (who ? `\n\nFrom: ${who}` : '');
-    const subject = `${choice.kind}: ${job.value.trim().slice(0, 60)}`;
+    const gist = (job.value.trim().split('\n').map((s) => s.replace(/^- /, '').trim()).find((s) => s && s !== "I'd like:") || '').slice(0, 60);
+    const subject = kinds.size > 1 ? `${[...kinds][0]} and ${kinds.size - 1} more: ${gist}` : `${choice.kind}: ${gist}`;
     if (!W3F_KEY) {
       location.href = `mailto:${MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
       $('#senth').textContent = 'Your message is ready'; $('#sentp').textContent = 'Press send in your email app and we will reply with how we would make it.'; $('#copymsg').hidden = false;
@@ -1101,6 +1563,364 @@ addEventListener('DOMContentLoaded', () => {
   em.addEventListener('input', () => $('#f-email').classList.remove('need'));
   nm.addEventListener('input', () => $('#f-name').classList.remove('need'));
   syncBuild();
+  // ---------- studio services: every tile plays, and its price follows the options ----------
+  {
+    const fmt = (n) => n.toLocaleString('en-US');
+    const touch = (el) => el.closest('.tile').classList.add('touched');
+    let onPrice = () => {};
+    const price = (key, to, note) => {
+      const box = document.querySelector(`[data-price=${key}]`), num = box.querySelector('[data-count]'), from = +(num.dataset.v || num.dataset.count);
+      num.dataset.v = to;
+      if (reduce) num.textContent = fmt(to);
+      else { const st = performance.now(), f = (n) => { const p = clamp((n - st) / 650); num.textContent = fmt(Math.round(lerp(from, to, 1 - (1 - p) ** 3))); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }
+      box.classList.remove('pop'); void box.offsetWidth; box.classList.add('pop');
+      onPrice();
+      if (note != null) { const nt = box.querySelector('.svnote'); if (nt.textContent !== note) { nt.classList.add('swap'); setTimeout(() => { nt.textContent = note; nt.classList.remove('swap'); }, 200); } }
+    };
+    // move things to where they now belong with a spring, instead of jumping (used when a layout mirrors)
+    const flip = (els, change) => {
+      const before = els.map((e) => e.getBoundingClientRect()); change();
+      if (reduce) return;
+      els.forEach((e, i) => { const a = before[i], b = e.getBoundingClientRect(), dx = a.left - b.left, dy = a.top - b.top; if (Math.abs(dx) + Math.abs(dy) < 1) return;
+        e.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: 'none' }], { duration: 700, easing: 'cubic-bezier(.34,1.36,.64,1)' }); });
+    };
+    const seen = new Set();
+    const vis = new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? seen.add(e.target.id) : seen.delete(e.target.id))), { threshold: 0.4 });
+    const auto = (id, ms, fn) => { const el = $(id); vis.observe(el); if (!reduce) setInterval(() => { if (seen.has(el.id) && !el.classList.contains('touched') && !document.hidden) fn(); }, ms); };
+    const optsOf = (key) => document.querySelector(`[data-price=${key}] .svopts`);
+
+    // 1. websites: tap the language and the whole site mirrors; pick the size and the pages appear
+    const site = $('#site'), tabsEl = $('#sitetabs'), langBtn = $('#sitelang');
+    const TABS = { en: ['Home', 'Menu', 'About', 'Visit', 'Contact'], ar: ['الرئيسية', 'القائمة', 'من نحن', 'زورونا', 'تواصل'] };
+    let pages = 1;
+    const sw = [...site.querySelectorAll('.sw')]; sw.forEach((e) => { e.dataset.en = e.textContent; });
+    const drawTabs = (anim) => { const l = site.dir === 'rtl' ? 'ar' : 'en'; tabsEl.innerHTML = TABS[l].slice(0, pages).map((t, i) => `<span class="${anim && i ? 'svin' : ''}" style="animation-delay:${i * 60}ms">${t}</span>`).join(''); };
+    const mirror = () => {
+      const rtl = site.dir !== 'rtl', moving = [...site.querySelectorAll('.site-dots,.site-tabs,.site-lang,.site-pic,.site-btn')];
+      site.classList.add('flip');
+      setTimeout(() => {
+        flip(moving, () => { site.dir = rtl ? 'rtl' : 'ltr'; site.lang = rtl ? 'ar' : 'en'; sw.forEach((e) => { e.textContent = rtl ? e.dataset.ar : e.dataset.en; }); langBtn.textContent = rtl ? 'English' : 'العربية'; langBtn.lang = rtl ? 'en' : 'ar'; drawTabs(false); });
+        site.classList.remove('flip');
+      }, reduce ? 0 : 180);
+    };
+    langBtn.addEventListener('click', () => { touch(langBtn); mirror(); });
+    drawTabs(false);
+    auto('#svweb', 3600, mirror);
+    optsOf('web').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return; touch(b);
+      b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+      pages = +b.dataset.v; drawTabs(true);
+      price('web', pages === 1 ? 560 : 1400, pages === 1 ? 'A one-page site. Hosting and domain are paid by you.' : 'Up to five pages. Hosting and domain are paid by you.');
+    });
+
+    // 2. translation: the message steps through every language the app ships in
+    const trmsg = $('#trmsg'), trlangs = $('#trlangs');
+    const MSG = [['en', 'ltr', 'Hello, your table is ready'], ['ar', 'rtl', 'مرحبا، طاولتك جاهزة'], ['es', 'ltr', 'Hola, tu mesa está lista']];
+    let trEs = false, trI = 0;
+    const trShow = (i) => {
+      const list = trEs ? MSG : MSG.slice(0, 2); trI = i % list.length; const [l, d, t] = list[trI];
+      trmsg.classList.add('flip');
+      setTimeout(() => {
+        flip([trmsg.querySelector('.av'), trmsg.querySelector('svg')], () => { trmsg.dir = d; const mt = trmsg.querySelector('.mt'); mt.lang = l; mt.textContent = t; });
+        trmsg.classList.remove('flip');
+        [...trlangs.children].forEach((s, j) => s.classList.toggle('on', j === trI));
+      }, reduce ? 0 : 180);
+    };
+    trmsg.addEventListener('click', () => { touch(trmsg); trShow(trI + 1); });
+    auto('#svtr', 2600, () => trShow(trI + 1));
+    optsOf('tr').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return; touch(b);
+      trEs = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', trEs);
+      if (trEs) { const s = document.createElement('span'); s.lang = 'es'; s.textContent = 'Español'; s.className = 'svin'; trlangs.append(s); trShow(2); } else { trlangs.lastElementChild.remove(); if (trI === 2) trShow(0); }
+      price('tr', trEs ? 1250 : 900, trEs ? 'Arabic and Spanish, up to about 2,000 words. Larger apps quoted per app.' : 'A small app, up to about 2,000 words. Larger apps quoted per app.');
+    });
+
+    // 3. launch kit: choose the stores and languages; the listing installs when tapped
+    const lk = { ios: true, play: false, ar: false, es: false }, lkTags = $('#lktags');
+    const lkDraw = (newKey) => {
+      const tags = [['ios', 'App Store'], ['play', 'Google Play'], ['en', 'English'], ['ar', 'العربية'], ['es', 'Español']].filter(([k]) => k === 'en' || lk[k]);
+      lkTags.innerHTML = tags.map(([k, t]) => `<span class="${k === newKey ? 'svin' : ''}"${k === 'ar' ? ' lang="ar"' : ''}>${t}</span>`).join('');
+    };
+    lkDraw();
+    optsOf('lk').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return; touch(b); const k = b.dataset.v;
+      if ((k === 'ios' || k === 'play') && lk[k] && !lk[k === 'ios' ? 'play' : 'ios']) { if (!reduce) b.animate([{ translate: '-4px 0' }, { translate: '4px 0' }, { translate: '0 0' }], { duration: 300 }); return; }  // keep at least one store
+      lk[k] = !lk[k]; b.setAttribute('aria-pressed', lk[k]); lkDraw(lk[k] ? k : null);
+      const both = lk.ios && lk.play, extra = (lk.ar ? 1 : 0) + (lk.es ? 1 : 0);
+      const langs = ['English', lk.ar && 'Arabic', lk.es && 'Spanish'].filter(Boolean);
+      price('lk', (both ? 800 : 450) + 250 * extra, `${both ? 'Both stores' : 'One store'}, in ${langs.length > 2 ? 'English, Arabic and Spanish' : langs.join(' and ')}.`);
+    });
+    const getb = $('#getb');
+    getb.addEventListener('click', () => {
+      touch(getb); const sp = getb.querySelector('span');
+      if (sp.textContent === 'Open') { sp.textContent = 'Get'; return; }
+      getb.classList.add('load'); setTimeout(() => { getb.classList.remove('load'); sp.textContent = 'Open'; burstAt(getb.closest('.stagec'), getb); }, reduce ? 0 : 1100);
+    });
+
+    // 4. brand kit: a colour changes the dot, the layouts and the swatches together
+    const bk = $('#bk'), swat = $('#swat'), PAL = ['#FF6A3D', '#2F7BF6', '#1F9D6B', '#8A5CF6', '#16181D'];
+    swat.innerHTML = PAL.map((c, i) => `<button type="button" style="--c:${c}" aria-pressed="${!i}" aria-label="Colour ${i + 1}"></button>`).join('');
+    let bkI = 0;
+    const bkSet = (i) => { bkI = i % PAL.length; bk.style.setProperty('--bdot', PAL[bkI]); [...swat.children].forEach((b, j) => b.setAttribute('aria-pressed', j === bkI)); const wm = bk.querySelector('.wm'); wm.classList.remove('pop'); void wm.offsetWidth; wm.classList.add('pop'); };
+    swat.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; touch(b); bkSet([...swat.children].indexOf(b)); });
+    auto('#svbk', 2200, () => bkSet(bkI + 1));
+
+    // 5. your own AI studio: pick a package and watch what's inside line up; the brief below writes itself
+    const aitx = $('#aitx'), aiwho = $('#aiwho'), airt = $('#airt');
+    const RT = [['Morning brief', 'Morning brief, 8:00', 'Good morning. Three new orders came in overnight, two invoices are due today, and you have one meeting at 11.'],
+      ['A post', 'Content helper', 'Draft for Thursday: "Fresh out of the oven at 7. Come early, the cardamom buns go first." Ready for your yes.'],
+      ['Weekly report', 'Weekly report, Sunday', 'This week: 42 orders, up 6 on last week. Your best post was Tuesday\'s video.']];
+    airt.innerHTML = RT.map(([n], i) => `<button type="button" aria-pressed="${!i}">${n}</button>`).join('');
+    let aiI = 0, aiTimer = 0;
+    const aiType = (i) => {
+      aiI = i % RT.length; [...airt.children].forEach((b, j) => b.setAttribute('aria-pressed', j === aiI)); aiwho.textContent = RT[aiI][1];
+      const text = RT[aiI][2]; clearInterval(aiTimer);
+      if (reduce) { aitx.textContent = text; return; }
+      let n = 0; aitx.textContent = ''; aiTimer = setInterval(() => { n += 2; aitx.textContent = text.slice(0, n); if (n >= text.length) clearInterval(aiTimer); }, 26);
+    };
+    airt.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; touch(b); aiType([...airt.children].indexOf(b)); });
+    aitx.textContent = RT[0][2];
+    auto('#svai', 6000, () => aiType(aiI + 1));
+    const PK = [
+      { who: 'For one person', price: 1200, plus: '', items: ['Up to 5 connectors to the apps you use', 'Up to 5 custom skills: brand voice, quotes, customer replies, meeting notes and more', 'A morning brief: emails, meetings and what needs you', 'A content helper that writes posts and captions in your voice', 'Arabic and English', 'A 1-hour training session and 2 weeks of support'] },
+      { who: 'For up to 5 people', price: 3000, plus: 'Everything in Starter, plus:', items: ['A social media engine: a weekly plan and posts in your voice, scheduled and waiting for your approval', 'A video and motion kit: branded short-video templates, motion graphics and captions', 'Your own team plugin', 'A company brain: prices, services, questions and policies in one shared place', 'A weekly report', 'An email helper that drafts replies for a person to check', '2 training sessions, a team guide and 30 days of support'] },
+      { who: 'For up to 15 people', price: 5500, plus: 'Everything in Studio, plus:', items: ['A content machine: short videos every week, made, captioned and scheduled, waiting for your approval. It is how we run our own channels', 'Helpers for each department: sales, marketing, HR and finance', 'A live dashboard of your numbers', 'Monthly check-ins for 3 months'] }];
+    const pkseg = $('#pkseg'), pkBtns = [...pkseg.querySelectorAll('button')], pklist = $('#pklist'), pkwho = $('#pkwho'), pkplus = $('#pkplus');
+    const pkDraw = (i, anim) => {
+      const p = PK[i]; pkBtns.forEach((b, j) => b.setAttribute('aria-selected', j === i)); pkseg.style.setProperty('--i', i);
+      pkwho.textContent = p.who; pkplus.textContent = p.plus; pkplus.hidden = !p.plus;
+      pklist.innerHTML = p.items.map((t, j) => `<li class="${anim ? 'svin' : ''}" style="animation-delay:${j * 55}ms">${t}</li>`).join('');
+      if (anim) price('ai', p.price);
+    };
+    pkDraw(0, false);
+    pkseg.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; touch(b); pkDraw(pkBtns.indexOf(b), true); });
+    optsOf('ai').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return; touch(b); const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on);
+      const box = document.querySelector('[data-price=ai]'); box.classList.remove('pop'); void box.offsetWidth; box.classList.add('pop');
+      const c = $('#pkcare'); c.hidden = !on; c.classList.toggle('svin', on); onPrice();
+    });
+
+    // 6. social media: approve the week and the three posts are scheduled
+    const so = $('#so'), soBtn = $('#soapprove');
+    soBtn.addEventListener('click', () => { const ok = so.classList.toggle('ok'); soBtn.textContent = ok ? 'Scheduled for the week' : 'Approve the week'; if (ok) burstAt(so.closest('.stagec'), soBtn); });
+
+    // 7. custom-built apps: the ring leans towards the pointer; the button starts the form with "An app"
+    const svc = $('#svc'), orbit = $('#orbit');
+    if (fine && !reduce) { svc.addEventListener('pointermove', (e) => { const b = svc.getBoundingClientRect(); orbit.style.transform = `translate(${((e.clientX - b.left) / b.width - 0.5) * 24}px,${((e.clientY - b.top) / b.height - 0.5) * 18}px)`; }); svc.addEventListener('pointerleave', () => { orbit.style.transform = ''; }); }
+    $('#svcgo').addEventListener('click', () => { svc.classList.add('go'); setTimeout(() => svc.classList.remove('go'), 1600); setKinds(['An app']); });
+
+    // ---- games ----
+    // 8. mobile games: hold to puff our dot up, let go to shrink it. Narrow gaps need it small; wide gaps carry a glass
+    //    dot that only a big, puffed-up dot can catch (+5). It speeds up as you go. While nobody plays, it plays itself.
+    {
+      const box = $('#sq'), cv = $('#sqcv'), g = cv.getContext('2d'), scoreEl = $('#sqscore'), bestEl = $('#sqbest'), hint = $('#sqhint');
+      let w = 0, h = 0, hold = false, human = false, state = 'demo', r = 10, score = 0, best = 0, popT = 0, walls = [], last = 0, on = false, shake = 0, floats = [], passed = 0;
+      const SMALL = 9, BIG = 25;
+      const size = () => { const d = Math.min(2, devicePixelRatio || 1); w = box.clientWidth; h = box.clientHeight; cv.width = w * d; cv.height = h * d; g.setTransform(d, 0, 0, d, 0, 0); };
+      function nextGap(wl) { const narrow = Math.random() < 0.5; wl.gap = narrow ? 28 + Math.random() * 10 : 70 + Math.random() * 36; wl.coin = !narrow && Math.random() < 0.8; wl.got = false; wl.passed = false; }
+      const reset = () => { walls = []; for (let i = 0; i < 4; i++) { const wl = { y: h + 30 + i * 125 }; nextGap(wl); walls.push(wl); } score = 0; passed = 0; r = SMALL; floats = []; };
+      const begin = () => { human = true; state = 'play'; hint.style.opacity = 0; reset(); };
+      const press = (v) => { hold = v; if (!v) return; if (!human || state === 'over') { if (state !== 'over' || popT > 0.6) begin(); } };
+      box.addEventListener('pointerdown', (e) => { e.preventDefault(); try { box.setPointerCapture(e.pointerId); } catch (_) {} box.closest('.tile').classList.add('touched'); press(true); });
+      ['pointerup', 'pointercancel', 'lostpointercapture'].forEach((t) => box.addEventListener(t, () => press(false)));
+      box.addEventListener('keydown', (e) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); if (!e.repeat) press(true); } });
+      box.addEventListener('keyup', (e) => { if (e.code === 'Space' || e.key === 'Enter') press(false); });
+      new IntersectionObserver(([e]) => { on = e.isIntersecting; if (on) { last = performance.now(); requestAnimationFrame(step); } }, { threshold: 0.1 }).observe(box);
+      const glassDot = (x, y, rr) => { g.fillStyle = 'rgba(22,24,29,.72)'; g.beginPath(); g.arc(x, y, rr, 0, 6.283); g.fill(); g.strokeStyle = 'rgba(255,255,255,.85)'; g.lineWidth = 1.2; g.beginPath(); g.arc(x, y, rr - 0.6, 3.6, 5.8); g.stroke(); };
+      function step(now) {
+        if (!on) return;
+        const dt = Math.min(0.04, (now - last) / 1000); last = now;
+        const cy = h * 0.4, cx = w / 2, speed = Math.min(150, 72 + passed * 3);
+        if (!human) { const nx = walls.filter((x) => x.y > cy - 14).sort((a, b) => a.y - b.y)[0]; hold = nx ? (nx.gap > 60 || nx.y - cy > 80) : true; }   // the demo player
+        if (state !== 'over') {
+          r += ((hold ? BIG : SMALL) - r) * Math.min(1, dt * (hold ? 6 : 10));
+          for (const wl of walls) {
+            wl.y -= speed * dt * (reduce ? 0.4 : 1);
+            const near = Math.abs(wl.y - cy) < 6 + r * 0.25;
+            if (near && r > wl.gap / 2 - 1) { state = 'over'; popT = 0; shake = 1; best = Math.max(best, score); break; }
+            if (wl.coin && !wl.got && Math.abs(wl.y - cy) < r) { if (r > 17) { wl.got = true; score += 5; floats.push({ x: cx + 26, y: cy, t: 0, s: '+5' }); } }
+            if (!wl.passed && wl.y < cy - 10) { wl.passed = true; passed++; score++; }
+            if (wl.y < -20) { wl.y = Math.max(...walls.map((x) => x.y)) + 115 + Math.random() * 30; nextGap(wl); }
+          }
+        } else {
+          popT += dt;
+          if (!human && popT > 0.9) { state = 'demo'; reset(); }
+        }
+        scoreEl.textContent = score; bestEl.textContent = Math.max(best, score);
+        shake *= Math.pow(0.02, dt);
+        g.setTransform(Math.min(2, devicePixelRatio || 1), 0, 0, Math.min(2, devicePixelRatio || 1), 0, 0);
+        g.clearRect(0, 0, w, h);
+        g.save(); g.translate((Math.random() - 0.5) * 10 * shake, (Math.random() - 0.5) * 10 * shake);
+        for (const wl of walls) {     // two dark glass slabs with a gap; wide gaps carry a glass dot
+          const half = wl.gap / 2;
+          g.fillStyle = 'rgba(22,24,29,.74)'; g.beginPath(); g.roundRect(-12, wl.y - 6, cx - half + 12, 12, 6); g.roundRect(cx + half, wl.y - 6, w - cx - half + 12, 12, 6); g.fill();
+          g.fillStyle = 'rgba(255,255,255,.4)'; g.fillRect(0, wl.y - 5, cx - half - 4, 1.2); g.fillRect(cx + half + 4, wl.y - 5, w, 1.2);
+          if (wl.coin && !wl.got) glassDot(cx, wl.y, 7);
+        }
+        if (state !== 'over') {
+          if (hold && human) { g.strokeStyle = 'rgba(255,106,61,.35)'; g.lineWidth = 2; g.beginPath(); g.arc(cx, cy, r + 6, 0, 6.283); g.stroke(); }
+          g.fillStyle = '#FF6A3D'; g.beginPath(); g.arc(cx, cy, r, 0, 6.283); g.fill();
+          g.fillStyle = 'rgba(255,255,255,.45)'; g.beginPath(); g.arc(cx - r * 0.32, cy - r * 0.35, r * 0.28, 0, 6.283); g.fill();
+        } else {
+          for (let i = 0; i < 12; i++) { const a = i * 0.524, d = 10 + popT * 110; g.globalAlpha = Math.max(0, 1 - popT * 1.3); g.fillStyle = '#FF6A3D'; g.beginPath(); g.arc(cx + Math.cos(a) * d, cy + Math.sin(a) * d, 4, 0, 6.283); g.fill(); }
+          g.globalAlpha = 1;
+          if (human) { g.textAlign = 'center'; g.fillStyle = '#16181D'; g.font = '800 30px Inter, sans-serif'; g.fillText('Pop!', cx, h * 0.62); g.font = '600 13px Inter, sans-serif'; g.fillStyle = '#5F5B54'; g.fillText(popT > 0.6 ? 'Hold to go again' : ' ', cx, h * 0.62 + 24); }
+        }
+        floats = floats.filter((f) => (f.t += dt) < 0.8);
+        for (const f of floats) { g.globalAlpha = 1 - f.t / 0.8; g.fillStyle = '#C2410C'; g.font = '800 16px Inter, sans-serif'; g.textAlign = 'left'; g.fillText(f.s, f.x, f.y - f.t * 40); g.globalAlpha = 1; }
+        g.restore();
+        requestAnimationFrame(step);
+      }
+      size(); reset(); addEventListener('resize', () => { const ow = w; size(); if (Math.abs(w - ow) > 1) reset(); });   // phones fire resize when the address bar moves
+    }
+
+    // 9. branded mini-games: Gather, from our games page, inside a phone browser. The swatches put it in "your" brand.
+    {
+      const mg = $('#mg'), arena = $('#mgarena'), cv = $('#mgcv'), ctx = cv.getContext('2d'), sw = $('#mgsw');
+      const countEl = $('#mgcount'), timeEl = $('#mgtimer'), startov = $('#mgstart'), endov = $('#mgdone');
+      const N = 12, INK = '22,24,29', COLS = ['#FF6A3D', '#2F7BF6', '#1F9D6B', '#8A5CF6', '#E0457B'];
+      let W = 0, H = 0, S = 1, brand = COLS[0], on = false;
+      sw.innerHTML = COLS.map((c, i) => `<button type="button" style="--c:${c}" aria-pressed="${!i}" aria-label="Brand colour ${i + 1}"></button>`).join('');
+      sw.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; touch(b); brand = b.style.getPropertyValue('--c'); mg.style.setProperty('--mg', brand); [...sw.children].forEach((x) => x.setAttribute('aria-pressed', x === b)); });
+      function fit() { const d = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0); S = Math.max(0.55, Math.min(W, H) / 420); }
+      function glass(x, y, r) {
+        if (r < 0.3) return;
+        ctx.save(); ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.save(); ctx.clip();
+        ctx.fillStyle = `rgba(${INK},.7)`; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+        const hl = ctx.createRadialGradient(x - r * 0.3, y - r * 0.55, 0, x - r * 0.3, y - r * 0.55, r * 1.1); hl.addColorStop(0, 'rgba(255,255,255,.22)'); hl.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = hl; ctx.fillRect(x - r, y - r, 2 * r, 2 * r); ctx.restore();
+        if (r > 1.6) { const lw = Math.max(0.8, r * 0.05), e = ctx.createLinearGradient(0, y - r, 0, y + r); e.addColorStop(0, 'rgba(255,255,255,.95)'); e.addColorStop(0.5, 'rgba(255,255,255,.25)'); e.addColorStop(1, 'rgba(255,255,255,.6)'); ctx.lineWidth = lw; ctx.strokeStyle = e; ctx.beginPath(); ctx.arc(x, y, r - lw / 2, 0, 6.283); ctx.stroke(); }
+        ctx.restore();
+      }
+      // soft glass notes rising up a pentatonic scale, made in the browser (only after someone presses Play)
+      let ac = null, out = null, muted = false;
+      const NOTES = [523.25, 587.33, 659.25, 783.99, 880, 1046.5, 1174.66, 1318.51, 1567.98, 1760];
+      function audio() { if (ac) return; try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (_) { return; }
+        out = ac.createGain(); out.gain.value = 0.45; out.connect(ac.destination);
+        const rev = ac.createConvolver(), len = ac.sampleRate * 2, ir = ac.createBuffer(2, len, ac.sampleRate);
+        for (let c = 0; c < 2; c++) { const ch = ir.getChannelData(c); for (let i = 0; i < len; i++) ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3.2); }
+        rev.buffer = ir; const wet = ac.createGain(); wet.gain.value = 0.35; rev.connect(wet).connect(out); out.rev = rev; }
+      function ping(f, at = 0, level = 0.16) { if (!ac || muted) return; const t = ac.currentTime + at;
+        [[1, level], [2.01, level * 0.25], [3.98, level * 0.08]].forEach(([m, gn]) => { const o = ac.createOscillator(), v = ac.createGain(); o.type = 'sine'; o.frequency.value = f * m;
+          v.gain.setValueAtTime(0, t); v.gain.linearRampToValueAtTime(gn, t + 0.008); v.gain.exponentialRampToValueAtTime(0.0001, t + 1.4 / m); o.connect(v); v.connect(out); v.connect(out.rev); o.start(t); o.stop(t + 1.6); }); }
+      $('#mgmute').addEventListener('click', (e) => { muted = !muted; e.currentTarget.textContent = muted ? 'Sound off' : 'Sound on'; e.currentTarget.setAttribute('aria-pressed', muted); });
+      let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      let dots = [], P = { x: 0, y: 0 }, T = { x: 0, y: 0 }, state = 'ready', t0 = 0, caught = 0, spin = 0, finishT = 0, keys = {}, best = 0;
+      function reset() {
+        seed = 7 + Math.floor(Math.random() * 1000); P = { x: W / 2, y: H / 2 }; T = { ...P }; caught = 0; spin = 0;
+        dots = Array.from({ length: N }, (_, i) => { let x, y, k = 0; do { x = W * (0.1 + rnd() * 0.8); y = H * (0.2 + rnd() * 0.7); } while (Math.hypot(x - P.x, y - P.y) < 90 * S && ++k < 40);
+          return { x, y, vx: 0, vy: 0, r: (i % 5 === 0 ? 8 + rnd() * 3 : 4.5 + rnd() * 3) * Math.max(0.8, S), ph: rnd() * 6.283, slot: -1 }; });
+        countEl.textContent = `0 of ${N}`; timeEl.textContent = '0.0 s';
+      }
+      function start() { touch(mg); audio(); if (ac && ac.state === 'suspended') ac.resume(); reset(); state = 'play'; t0 = performance.now(); startov.classList.add('hide'); endov.classList.add('hide'); arena.classList.add('playing'); cv.focus({ preventScroll: true }); }
+      $('#mgplay').addEventListener('click', start); $('#mgagain').addEventListener('click', start);
+      const aim = (e) => { const b = cv.getBoundingClientRect(); T.x = clamp(e.clientX - b.left, 10, W - 10); T.y = clamp(e.clientY - b.top, 10, H - 10); };
+      arena.addEventListener('pointermove', (e) => { if (state === 'play' && (fine || e.buttons)) aim(e); });
+      arena.addEventListener('pointerdown', (e) => { if (state === 'play') { aim(e); try { arena.setPointerCapture(e.pointerId); } catch (_) {} } });
+      cv.addEventListener('keydown', (e) => { if (e.key.startsWith('Arrow')) { keys[e.key] = true; e.preventDefault(); } if ((e.key === 'Enter' || e.key === ' ') && state !== 'play') { e.preventDefault(); start(); } });
+      cv.addEventListener('keyup', (e) => { keys[e.key] = false; });
+      function finish(now) {
+        state = 'done'; finishT = now; arena.classList.remove('playing'); const secs = (now - t0) / 1000, isBest = !best || secs < best; if (isBest) best = secs;
+        $('#mgfinal').textContent = `${secs.toFixed(1)} s`; $('#mgbest').textContent = isBest ? 'A new best time' : `Best: ${best.toFixed(1)} s`;
+        [0, 2, 4, 7].forEach((n, i) => ping(NOTES[n] / 2, i * 0.09, 0.13)); setTimeout(() => endov.classList.remove('hide'), 900);
+      }
+      new IntersectionObserver(([e]) => { const was = on; on = e.isIntersecting; if (on && !was) { last = performance.now(); requestAnimationFrame(frame); } }, { threshold: 0.05 }).observe(arena);
+      let last = performance.now();
+      function frame(now) {
+        if (!on) return;
+        const dt = Math.min(0.05, (now - last) / 1000), t = now / 1000; last = now;
+        const kx = (keys.ArrowRight ? 1 : 0) - (keys.ArrowLeft ? 1 : 0), ky = (keys.ArrowDown ? 1 : 0) - (keys.ArrowUp ? 1 : 0);
+        if (kx || ky) { T.x = clamp(T.x + kx * 300 * S * dt, 10, W - 10); T.y = clamp(T.y + ky * 300 * S * dt, 10, H - 10); }
+        if (state === 'ready') { T.x = W / 2 + Math.cos(t * 0.7) * W * 0.2; T.y = H * 0.55 + Math.sin(t * 1.1) * H * 0.14; }
+        P.x = lerp(P.x, T.x, 1 - Math.pow(0.0008, dt)); P.y = lerp(P.y, T.y, 1 - Math.pow(0.0008, dt));
+        const ringR = (24 + caught * 2.2) * S; spin += dt * (state === 'done' ? 2.2 : 0.6);
+        for (const d of dots) {
+          if (d.slot >= 0) { const a = (d.slot / N) * 6.283 + spin, k = 1 - Math.pow(0.002, dt); d.x = lerp(d.x, P.x + Math.cos(a) * ringR, k); d.y = lerp(d.y, P.y + Math.sin(a) * ringR, k); continue; }
+          d.vx += Math.cos(t * 0.6 + d.ph) * 6 * S * dt; d.vy += Math.sin(t * 0.5 + d.ph * 1.3) * 6 * S * dt;
+          const dx = d.x - P.x, dy = d.y - P.y, dist = Math.hypot(dx, dy) || 1, near = 110 * S;
+          if (state === 'play' && dist < near) { const f = (1 - dist / near) * 220 * S * dt; d.vx += (dx / dist) * f; d.vy += (dy / dist) * f; }
+          const mx = d.r + 10 * S, top = 46 * S + d.r, zone = 50 * S;
+          if (d.x < mx + zone) d.vx += (1 - (d.x - mx) / zone) * 110 * S * dt; if (d.x > W - mx - zone) d.vx -= (1 - (W - mx - d.x) / zone) * 110 * S * dt;
+          if (d.y < top + zone) d.vy += (1 - (d.y - top) / zone) * 110 * S * dt; if (d.y > H - mx - zone) d.vy -= (1 - (H - mx - d.y) / zone) * 110 * S * dt;
+          const sp = Math.hypot(d.vx, d.vy), cap = 130 * S; if (sp > cap) { d.vx *= cap / sp; d.vy *= cap / sp; }
+          d.vx *= Math.pow(0.35, dt); d.vy *= Math.pow(0.35, dt); d.x += d.vx * dt; d.y += d.vy * dt;
+          if (d.x < mx) { d.x = mx; d.vx = Math.abs(d.vx) * 0.5; } if (d.x > W - mx) { d.x = W - mx; d.vx = -Math.abs(d.vx) * 0.5; }
+          if (d.y < top) { d.y = top; d.vy = Math.abs(d.vy) * 0.5; } if (d.y > H - mx) { d.y = H - mx; d.vy = -Math.abs(d.vy) * 0.5; }
+          if (state === 'play' && dist < 11 * S + d.r + 4) { d.slot = caught++; ping(NOTES[Math.min(NOTES.length - 1, Math.floor((caught - 1) * 0.8))]); countEl.textContent = `${caught} of ${N}`; if (caught === N) finish(now); }
+        }
+        if (state === 'play') timeEl.textContent = `${((now - t0) / 1000).toFixed(1)} s`;
+        ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1;
+        const loose = dots.filter((d) => d.slot < 0), lim = 100 * S;
+        for (let i = 0; i < loose.length; i++) for (let j = i + 1; j < loose.length; j++) { const a = loose[i], b = loose[j], dd = Math.hypot(a.x - b.x, a.y - b.y); if (dd < lim) { ctx.strokeStyle = `rgba(${INK},${0.12 * (1 - dd / lim)})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); } }
+        if (caught > 1) { const glow = state === 'done' ? clamp((now - finishT) / 600) : 0; ctx.strokeStyle = `rgba(${INK},${0.16 + glow * 0.2})`; ctx.beginPath(); ctx.arc(P.x, P.y, ringR, 0, 6.283); ctx.stroke(); }
+        for (const d of dots) glass(d.x, d.y, d.slot >= 0 ? d.r * 0.75 : d.r);
+        const pr = 11 * S * (state === 'done' ? 1 + Math.sin(clamp((now - finishT) / 500) * Math.PI) * 0.35 : 1);
+        ctx.fillStyle = brand; ctx.beginPath(); ctx.arc(P.x, P.y, pr, 0, 6.283); ctx.fill();
+        requestAnimationFrame(frame);
+      }
+      fit(); reset();
+      addEventListener('resize', () => { const ox = W, oy = H; fit(); if (!ox || !oy) return; const sx = W / ox, sy = H / oy; dots.forEach((d) => { d.x *= sx; d.y *= sy; }); P.x *= sx; P.y *= sy; T.x *= sx; T.y *= sy; });
+      optsOf('mg').addEventListener('click', (e) => {
+        const b = e.target.closest('button'); if (!b) return; touch(b);
+        b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+        const custom = b.dataset.v === 'custom';
+        price('mg', custom ? 4500 : 1500, custom ? 'A new game idea built for your campaign. About 3 to 5 weeks.' : 'One of our game styles with your look, words and prizes. About 1 to 2 weeks.');
+      });
+    }
+    // 8. my list: add any service, our dot flies to a glass bar that keeps a running "from" total and fills in the form
+    const val = (sel) => document.querySelector(sel);
+    const pressed = (sel) => val(sel)?.getAttribute('aria-pressed') === 'true';
+    const pkIndex = () => pkBtns.findIndex((b) => b.getAttribute('aria-selected') === 'true');
+    const ITEMS = {
+      web: { pill: 'A website', get: () => pressed('[data-price=web] [data-v="5"]') ? ['A website, up to five pages', 1400, 0] : ['A one-page website', 560, 0] },
+      tr: { pill: 'App translation', get: () => pressed('[data-price=tr] [data-v=es]') ? ['App translation into Arabic and Spanish', 1250, 0] : ['App translation into Arabic', 900, 0] },
+      lk: { pill: 'A store launch kit', get: () => { const both = lk.ios && lk.play, ex = (lk.ar ? 1 : 0) + (lk.es ? 1 : 0), st = both ? 'both stores' : lk.ios ? 'App Store' : 'Google Play', ln = ['English', lk.ar && 'Arabic', lk.es && 'Spanish'].filter(Boolean).join(', ');
+        return [`App Store launch kit (${st}; ${ln})`, (both ? 800 : 450) + 250 * ex, 0]; } },
+      bk: { pill: 'A brand kit', get: () => ['Brand starter kit', 560, 0] },
+      so: { pill: 'Social media automation', get: () => (list.has('ai') && pkIndex() >= 1) ? ['Social media automation (included in your AI studio)', 0, 0] : ['Social media automation', 350, 350] },
+      gm: { pill: 'A game', get: () => ['A mobile game', 6000, 0] },
+      mg: { pill: 'A branded mini-game', get: () => pressed('[data-price=mg] [data-v=custom]') ? ['A custom campaign mini-game', 4500, 0] : ['A ready-made mini-game in your brand', 1500, 0] },
+      ai: { pill: 'An AI studio', get: () => { const i = pkIndex(); return [`Your own AI studio: ${['Starter', 'Studio', 'Full studio'][i]}${pressed('[data-price=ai] [data-v=care]') ? ', with monthly care' : ''}`, PK[i].price, pressed('[data-price=ai] [data-v=care]') ? 300 : 0]; } } };
+    const list = new Set();
+    const bar = document.createElement('div'); bar.className = 'basket glass'; bar.setAttribute('aria-live', 'polite');
+    bar.innerHTML = '<ul class="blist" id="blist"></ul><button type="button" class="bsum" id="bsum" aria-expanded="false"><span class="bcount" id="bcount">0</span><span class="btext"><b id="btotal"></b><small id="bmonth"></small></span></button><a class="btn" href="#start" id="bsend">Send my list</a>';
+    document.body.append(bar);
+    const bcount = $('#bcount'), btotal = $('#btotal'), bmonth = $('#bmonth'), blist = $('#blist'), bsum = $('#bsum');
+    const draw = () => {
+      let once = 0, month = 0; const rows = [];
+      for (const k of list) { const [label, o, m] = ITEMS[k].get(); once += o; month += m; rows.push(`<li><span>${label}</span><button type="button" data-k="${k}" aria-label="Remove ${label}">×</button></li>`); }
+      bcount.textContent = list.size; btotal.textContent = `From US$${fmt(once)}`; bmonth.textContent = month ? `+ from US$${fmt(month)} a month` : `${list.size} ${list.size === 1 ? 'service' : 'services'}`;
+      blist.innerHTML = rows.join(''); bar.classList.toggle('on', list.size > 0); if (!list.size) bar.classList.remove('open');
+      document.querySelectorAll('.addb').forEach((b) => { const on = list.has(b.dataset.k); b.setAttribute('aria-pressed', on); b.querySelector('span').textContent = on ? 'On your list' : 'Add to my list'; });
+    };
+    onPrice = () => { if (list.size) draw(); };
+    const flyTo = (from) => {
+      if (reduce) return; const a = from.getBoundingClientRect(), b = bcount.getBoundingClientRect(), d = document.createElement('span'); d.className = 'flyb'; document.body.append(d);
+      const x0 = a.left + 18, y0 = a.top + a.height / 2, x1 = b.left + b.width / 2, y1 = b.top + b.height / 2, mx = (x0 + x1) / 2, my = Math.min(y0, y1) - 120;
+      d.animate([{ transform: `translate(${x0}px,${y0}px) scale(1)` }, { transform: `translate(${mx}px,${my}px) scale(1.3)`, offset: 0.45 }, { transform: `translate(${x1}px,${y1}px) scale(.6)` }], { duration: 750, easing: 'cubic-bezier(.4,0,.2,1)' }).onfinish = () => { d.remove(); bcount.animate([{ scale: 1 }, { scale: 1.35 }, { scale: 1 }], { duration: 450, easing: 'cubic-bezier(.34,1.36,.64,1)' }); };
+    };
+    document.querySelectorAll('.svprice[data-price]').forEach((box) => {
+      const k = box.dataset.price, b = document.createElement('button'); b.type = 'button'; b.className = 'addb'; b.dataset.k = k; b.setAttribute('aria-pressed', 'false'); b.innerHTML = '<i aria-hidden="true"></i><span>Add to my list</span>'; box.append(b);
+      b.addEventListener('click', () => { touch(b); if (list.has(k)) list.delete(k); else { list.add(k); burstAt(box, b); } const add = list.has(k); draw(); if (add) setTimeout(() => flyTo(b), 30); });
+    });
+    blist.addEventListener('click', (e) => { const b = e.target.closest('button[data-k]'); if (!b) return; list.delete(b.dataset.k); draw(); });
+    bsum.addEventListener('click', () => { const o = bar.classList.toggle('open'); bsum.setAttribute('aria-expanded', o); });
+    let ours = '';
+    $('#bsend').addEventListener('click', () => {
+      bar.classList.remove('open');
+      const lines = [...list].map((k) => { const [label, o, m] = ITEMS[k].get(); return `- ${label}${o ? ` (from US$${fmt(o)}${m ? ` + US$${fmt(m)} a month` : ''})` : ''}`; });
+      if (!job.value.trim() || job.value === ours) { ours = `I'd like:\n${lines.join('\n')}`; job.value = ours; job.dispatchEvent(new Event('input')); }
+      // every service on the list is picked in the form, with the extras its options asked for
+      const ex = [];
+      if (list.has('web') && pressed('[data-price=web] [data-v="5"]')) ex.push('Up to five pages');
+      if (list.has('tr') && pressed('[data-price=tr] [data-v=es]')) ex.push('Spanish too');
+      if (list.has('lk')) { if (lk.ios && lk.play) ex.push('Both stores'); if (lk.ar) ex.push('Arabic listing'); if (lk.es) ex.push('Spanish listing'); }
+      if (list.has('mg')) ex.push(pressed('[data-price=mg] [data-v=custom]') ? 'Custom campaign game' : 'Ready-made game in your brand');
+      if (list.has('ai')) { ex.push(PACKS[pkIndex()]); if (pressed('[data-price=ai] [data-v=care]')) ex.push('Monthly care'); }
+      setKinds([...list].map((k) => ITEMS[k].pill), ex);
+    });
+    new IntersectionObserver(([e]) => bar.classList.toggle('away', e.isIntersecting), { threshold: 0.15 }).observe($('#start'));
+  }
 
   // ---------- the ask's backdrop: a slow ring of light glass dots on ink, leaning towards the pointer ----------
   const askCv = $('#askdots'), actx = askCv.getContext('2d'), AD = makeDots(48);
@@ -1154,12 +1974,26 @@ addEventListener('DOMContentLoaded', () => {
   if (document.fonts) document.fonts.ready.then(measure);
   if (window.ResizeObserver) { const ro = new ResizeObserver(() => measure()); ro.observe(steps); ro.observe(document.querySelector('main')); }
 
+// ---------- questions: pick a topic, the pill slides to it; one answer open at a time ----------
+  {
+    const qf = $('#qf'), qBtns = [...qf.querySelectorAll('button')], qThumb = qf.querySelector('.thumb'), qs = [...document.querySelectorAll('#faq details')];
+    const place = () => { const b = qBtns.find((x) => x.getAttribute('aria-pressed') === 'true'); qThumb.style.width = `${b.offsetWidth}px`; qThumb.style.transform = `translateX(${b.offsetLeft}px)`; };
+    qf.addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return; const f = b.dataset.f;
+      qBtns.forEach((x) => x.setAttribute('aria-pressed', x === b)); place();
+      qs.forEach((d, i) => { const show = f === 'all' || d.dataset.c === f; if (!show) d.open = false; if (d.hidden === !show) return; d.hidden = !show; if (show && !reduce) d.animate([{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'none' }], { duration: 500, delay: i % 4 * 50, easing: 'cubic-bezier(.23,1,.32,1)', fill: 'backwards' }); });
+    });
+    // browsers without the "name" attribute on details: close the others by hand
+    qs.forEach((d) => d.addEventListener('toggle', () => { if (d.open) qs.forEach((o) => { if (o !== d && o.open) o.open = false; }); }));
+    place(); addEventListener('resize', place); if (document.fonts) document.fonts.ready.then(place);
+  }
+
   if (reduce) { drawHero(performance.now(), 0); drawSteps(1e9); drawGame(0, 0); typeHint(0); drawAsk(0, 0); const rl = () => { drawCmp(); requestAnimationFrame(rl); }; rl(); return; }
 
   const countUp = (root) => root.querySelectorAll('[data-count]').forEach((el, j) => {
     const to = +el.dataset.count, from = el.dataset.from != null ? +el.dataset.from : 0, start = performance.now() + 700 + j * 160;
     const step = (now) => { if (el.closest('.touched')) return;      // a tap has taken over
-      const p = clamp((now - start) / 1300), v = Math.round(lerp(from, to, 1 - Math.pow(1 - p, 3))); el.textContent = v; if (p < 1) requestAnimationFrame(step); };
+      const p = clamp((now - start) / 1300), v = Math.round(lerp(from, to, 1 - Math.pow(1 - p, 3))); el.textContent = v.toLocaleString('en-US'); if (p < 1) requestAnimationFrame(step); };
     el.textContent = from; requestAnimationFrame(step);
   });
   const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add('in'); if (e.target.classList.contains('tile')) countUp(e.target); io.unobserve(e.target); }), { rootMargin: '0px 0px -10% 0px' });
